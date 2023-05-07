@@ -228,9 +228,10 @@ GameObject:
   - component: {fileID: 812245925}
   - component: {fileID: 812245926}
   - component: {fileID: 812245927}
+  - component: {fileID: 812245928}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812245922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.24, y: -4.15, z: 0}
+  m_LocalPosition: {x: 15.08, y: -4.15, z: 0}
   m_LocalScale: {x: 1.2996374, y: 1.5787989, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -379,6 +380,26 @@ MonoBehaviour:
   inputDirection: {x: 0, y: 0}
   speed: 200
   jumpForce: 13
+--- !u!114 &812245928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812245922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e105ee321be27e5409688d41049c255f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coll: {fileID: 0}
+  isGround: 0
+  isInWater: 0
+  bottomOffset: {x: -0.05, y: 0}
+  checkRaduis: 0.13
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1088100191
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,11 +430,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 812245924}
-  moveTime: 5
+  moveTime: 50
   cameraXLeftScale: -18
   cameraXRightScale: 18
-  cameraYDownScale: -4.76
   cameraYUpScale: -0.22
+  cameraYDownScale: -4.89
   deltaYPos: 4
 --- !u!4 &1088100193
 Transform:

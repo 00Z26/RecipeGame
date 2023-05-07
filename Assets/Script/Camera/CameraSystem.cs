@@ -18,7 +18,7 @@ public class CameraSystem : MonoBehaviour
     private void LateUpdate()
     {   float posY = Mathf.Clamp(playerTarget.position.y + deltaYPos, cameraYDownScale, cameraYUpScale);
         float posX = Mathf.Clamp(playerTarget.position.x, cameraXLeftScale, cameraXRightScale);
-        Debug.Log(posX);
+        //Debug.Log(posX);
         posTarget = new Vector3(posX, posY, transform.position.z);
         if (playerTarget != null)
         {   if(transform.position != posTarget)
