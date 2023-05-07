@@ -34,6 +34,9 @@ public class Transport : MonoBehaviour
 
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1); //获取新加载场景的序号
         SceneManager.SetActiveScene(newScene);
+        
+        //触发事件去让相机修改边界值
+        EventHandler.CallUpdateCameraScale(to);
 
 
         //yield return Fade(0);//变化结束后，渐变白

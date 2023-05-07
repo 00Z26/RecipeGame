@@ -52,7 +52,7 @@ public class CameraSystem : MonoBehaviour
     private void onUpdateCameraScale(string sceneName)
     {
         background = GameObject.FindGameObjectWithTag(sceneName);
-        Debug.Log(sceneName);
+        Debug.Log(background);
         cameraXLeftScale = background.GetComponent<Background>().GetcameraXLeftScale();
         cameraXRightScale = background.GetComponent<Background>().GetcameraXRightScale();
         cameraYUpScale = background.GetComponent<Background>().GetcameraYUpScale();
