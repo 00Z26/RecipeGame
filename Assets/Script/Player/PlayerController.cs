@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,19 @@ public class PlayerController : MonoBehaviour
     public Vector2 inputDirection;
     [Header("基本参数")]
     public float speed;
+    public float jumpForce;
 
 
     private void Awake()
     {
         inputControl = new PlayerInputControl();
         rb = GetComponent<Rigidbody2D>();
+
+        inputControl.Gameplay.Jump.started += Jump;
     }
+
+
+
     private void OnEnable()
     {
         inputControl.Enable();
@@ -42,5 +49,9 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.velocity.y);
     }
 
+    private void Jump(InputAction.CallbackContext obj)
+    {
+        rb.AddForce(jumpForce * transform.up, ForceMode2D.Impulse);
+    }
 
 }
