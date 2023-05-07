@@ -17,7 +17,7 @@ public class Transport : MonoBehaviour
     public void Transition(string from, string to)
     {
         
-            Debug.Log("press");
+            //Debug.Log("press");
             StartCoroutine(TransitionToScene(from, to));
         
     }

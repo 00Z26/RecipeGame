@@ -20,6 +20,8 @@ public class SwapScene : MonoBehaviour
         if (Keyboard.current.eKey.wasPressedThisFrame && isDoor)
         {
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to);
+            //触发事件去让相机修改边界值
+            EventHandler.CallUpdateCameraScale(to);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -16,7 +16,6 @@ public class MainFood : MonoBehaviour
         {
             //修改bool状态
             isInRange = true;
-            //弹出操作说明
             Debug.Log("按e");
         }
     }
@@ -24,6 +23,6 @@ public class MainFood : MonoBehaviour
     {
         //修改bool
         isInRange = false;
-        //操作说明消失
     }
+
 }
