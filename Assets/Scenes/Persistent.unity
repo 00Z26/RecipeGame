@@ -410,9 +410,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 812245924}
   moveTime: 5
-  deltaYPos: 4
   cameraXLeftScale: -18
   cameraXRightScale: 18
+  cameraYDownScale: -4.76
+  cameraYUpScale: -0.22
+  deltaYPos: 4
 --- !u!4 &1088100193
 Transform:
   m_ObjectHideFlags: 0
@@ -421,7 +423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088100191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.64, y: -0.54, z: 0}
+  m_LocalPosition: {x: -3.64, y: -0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
