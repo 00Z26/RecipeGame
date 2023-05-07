@@ -7,11 +7,15 @@ public class CameraSystem : MonoBehaviour
     public Transform playerTarget;
     public float moveTime;
     public float deltaYPos;
+    public float cameraXLeftScale;
+    public float cameraXRightScale;
 
     private Vector3 posTarget;
     private void LateUpdate()
     {
-        posTarget = new Vector3(playerTarget.position.x, transform.position.y, transform.position.z);//playerTarget.position.y + deltaYPos
+        float posX = Mathf.Clamp(playerTarget.position.x, cameraXLeftScale, cameraXRightScale);
+        Debug.Log(posX);
+        posTarget = new Vector3(posX, transform.position.y, transform.position.z);//playerTarget.position.y + deltaYPos
         if (playerTarget != null)
         {   if(transform.position != posTarget)
             {
