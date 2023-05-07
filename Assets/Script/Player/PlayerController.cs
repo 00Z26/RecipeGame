@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("基本参数")]
     public float speed;
+    public float swimSpeed;
     public float jumpForce;
     public float swimJumpForce;
     public float swimGravity;
@@ -45,12 +46,17 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         inputDirection = inputControl.Gameplay.Move.ReadValue<Vector2>();
+        if (physicsCheck.isInWater)
+        {
+            Swim();
+        }
     }
+    
     private void FixedUpdate()
     {
             Move();
-        
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Water"))
@@ -84,10 +90,17 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(jumpForce * transform.up, ForceMode2D.Impulse);
         }
-        if (physicsCheck.isInWater == true)
-        {
-            rb.AddForce(swimJumpForce * transform.up, ForceMode2D.Impulse);
-        }
+        //if (physicsCheck.isInWater == true)
+        //{
+        //    rb.AddForce(swimJumpForce * transform.up, ForceMode2D.Impulse);
+        //}
     }
 
+    private void Swim()
+    {
+        if(Keyboard.current.wKey.isPressed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, swimSpeed * Time.deltaTime);
+        }
+    }
 }

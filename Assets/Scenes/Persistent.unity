@@ -379,7 +379,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputDirection: {x: 0, y: 0}
   speed: 200
+  swimSpeed: 0
   jumpForce: 13
+  swimJumpForce: 2
+  swimGravity: 0.5
+  groundGravity: 0
 --- !u!114 &812245928
 MonoBehaviour:
   m_ObjectHideFlags: 0
