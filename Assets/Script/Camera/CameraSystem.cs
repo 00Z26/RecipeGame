@@ -9,8 +9,9 @@ public class CameraSystem : MonoBehaviour
     public float moveTime;
     Scene scene;
     GameObject background;
+    private PhysicsCheck physicsCheck;
 
-   [Header("地图相机限制")]
+    [Header("地图相机限制")]
     public float cameraXLeftScale;
     public float cameraXRightScale;
     public float cameraYUpScale;
@@ -52,7 +53,7 @@ public class CameraSystem : MonoBehaviour
     private void onUpdateCameraScale(string sceneName)
     {
         background = GameObject.FindGameObjectWithTag(sceneName);
-        Debug.Log(background);
+        Debug.Log(sceneName);
         cameraXLeftScale = background.GetComponent<Background>().GetcameraXLeftScale();
         cameraXRightScale = background.GetComponent<Background>().GetcameraXRightScale();
         cameraYUpScale = background.GetComponent<Background>().GetcameraYUpScale();

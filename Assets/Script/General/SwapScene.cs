@@ -8,7 +8,7 @@ public class SwapScene : MonoBehaviour
     // Start is called before the first frame update
     public string from;
     public string to;
-    private bool isDoor;
+    private bool isTransport;
     void Start()
     {
         
@@ -17,7 +17,7 @@ public class SwapScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame && isDoor)
+        if (Keyboard.current.eKey.wasPressedThisFrame && isTransport)
         {
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to);
             
@@ -27,13 +27,13 @@ public class SwapScene : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            isDoor = true;
+            isTransport = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isDoor = false;
+        isTransport = false;
     }
 
 }

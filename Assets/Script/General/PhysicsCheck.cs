@@ -5,9 +5,12 @@ using UnityEngine;
 public class PhysicsCheck : MonoBehaviour
 {
     public CapsuleCollider2D coll;
+    public GameObject talkNPC;
     [Header("状态")]
     public bool isGround;
     public bool isInWater;
+    public bool isDialogue;
+
     [Header("参数")]
     public Vector2 bottomOffset;
     public float checkRaduis; //碰撞体的检测范围
@@ -24,18 +27,27 @@ public class PhysicsCheck : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {  
-        
+        //行动检测
         if(collision.gameObject.layer == LayerMask.NameToLayer("Water")) //4是water所在层
         {
             isInWater = true;
         }
-        
+        if (collision.gameObject.tag == "NPC")
+        {
+            isDialogue = true;
+            talkNPC = collision.gameObject;
+        }
+
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Water")) 
         {
             isInWater = false;
+        }
+        if (collision.gameObject.tag == "NPC")
+        {
+            isDialogue = false;
         }
     }
 

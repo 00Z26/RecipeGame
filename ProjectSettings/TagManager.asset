@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Kitchen
   - Outside
+  - Draw Game
+  - NPC
   layers:
   - Default
   - TransparentFX

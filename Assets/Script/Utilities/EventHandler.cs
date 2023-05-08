@@ -8,6 +8,14 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
     {
         updateCameraScale?.Invoke(sceneName);
     }
+
+    public static event Action<string> ShowDialogueEvent;
+    public static void CallShowDialogueEvent(string data)
+    {
+        ShowDialogueEvent?.Invoke(data);
+    }
+
+
     public static event Action BeforeSceneUnloadEvent;
     public static void CallBeforeSceneUnloadEvent()  //场景切换前保存物品存在的字典信息
     {

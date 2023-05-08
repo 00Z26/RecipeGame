@@ -50,6 +50,11 @@ public class PlayerController : MonoBehaviour
         {
             Swim();
         }
+
+        if (physicsCheck.isDialogue)
+        {
+            Talk();
+        }
     }
     
     private void FixedUpdate()
@@ -101,6 +106,16 @@ public class PlayerController : MonoBehaviour
         if(Keyboard.current.wKey.isPressed)
         {
             rb.velocity = new Vector2(rb.velocity.x, swimSpeed * Time.deltaTime);
+        }
+    }
+
+    private void Talk()
+    {
+        if(Keyboard.current.eKey.wasPressedThisFrame)
+        {   //按e触发对话
+            Debug.Log(physicsCheck.talkNPC.name);
+            physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue();
+
         }
     }
 }
