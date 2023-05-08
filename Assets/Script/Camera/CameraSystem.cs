@@ -17,10 +17,12 @@ public class CameraSystem : MonoBehaviour
     public float cameraYUpScale;
     public float cameraYDownScale;
     public float deltaYPos;//相机与人的高度差
+    public float YMoveDis;
 
     private void Awake()
     {
         scene = SceneManager.GetSceneAt(1);
+        YMoveDis = 0;
 
 
     }
@@ -28,6 +30,7 @@ public class CameraSystem : MonoBehaviour
     private void OnEnable()
     {
         EventHandler.updateCameraScale += onUpdateCameraScale;
+ 
     }
 
 
@@ -50,8 +53,10 @@ public class CameraSystem : MonoBehaviour
 
     }
 
+    
     private void onUpdateCameraScale(string sceneName)
     {
+        //切换场景时被触发，获取新场景的偏移值
         background = GameObject.FindGameObjectWithTag(sceneName);
         Debug.Log(sceneName);
         cameraXLeftScale = background.GetComponent<Background>().GetcameraXLeftScale();
@@ -65,7 +70,8 @@ public class CameraSystem : MonoBehaviour
     private Vector3 posTarget;
     private void LateUpdate()
     {
-        
+        //从事件中获取到bool状态，和新的deltaY的值，if bool YDis就有值，不然就改回0
+
         float posY = Mathf.Clamp(playerTarget.position.y + deltaYPos, cameraYDownScale, cameraYUpScale);
         float posX = Mathf.Clamp(playerTarget.position.x, cameraXLeftScale, cameraXRightScale);
         //Debug.Log(posX);

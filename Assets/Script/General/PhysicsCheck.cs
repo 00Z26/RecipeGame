@@ -9,7 +9,7 @@ public class PhysicsCheck : MonoBehaviour
     [Header("状态")]
     public bool isGround;
     public bool isInWater;
-    public bool isDialogue;
+    public bool isDialogue;//在对话范围内
 
     [Header("参数")]
     public Vector2 bottomOffset;

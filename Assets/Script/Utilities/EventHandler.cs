@@ -3,16 +3,28 @@ using UnityEngine;
 
 public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
 {
-    public static event Action<string> updateCameraScale;  //订阅方法
+    public static event Action<string> updateCameraScale;  //切换场景修改相机限制
     public static void CallUpdateCameraScale(string sceneName)
     {
         updateCameraScale?.Invoke(sceneName);
     }
 
-    public static event Action<string> ShowDialogueEvent;
-    public static void CallShowDialogueEvent(string data)
+    public static event Action<string, float> ShowDialogueEvent;//从controller发出，展示UI事件
+    public static void CallShowDialogueEvent(string data, float YMoveDis)
     {
-        ShowDialogueEvent?.Invoke(data);
+        ShowDialogueEvent?.Invoke(data, YMoveDis);
+    }
+
+    public static event Action<bool, float> UpdateDialogueCamera; //从对话UI发出，将对话镜头下移
+    public static void CallUpdateDialogueCamera(bool isDialogueOn, float YMoveDis)
+    {
+        UpdateDialogueCamera?.Invoke(isDialogueOn, YMoveDis);
+    }
+
+    public static event Action<bool> ExitDialogueCamera; //从对话UI发出,给出状态改变，将镜头位置还原
+    public static void CallExitDialogueCamera(bool isDialogueOn)
+    {
+        ExitDialogueCamera?.Invoke(isDialogueOn);
     }
 
 
