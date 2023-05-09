@@ -3741,6 +3741,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2.9
+  dialoges: {fileID: 11400000, guid: a14a8b9d8b031eb4590b2ac03624e873, type: 2}
+  nextIndex: 0
+  currentDialogue:
+    index: 0
+    speakerName: 
+    pic: 
+    content: 
+    animiation: 
+    nextIndex: 0
+    choice: 
 --- !u!1 &1602923110
 GameObject:
   m_ObjectHideFlags: 0

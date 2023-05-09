@@ -9,6 +9,7 @@ public class DialogueUI : MonoBehaviour
     public TMP_Text textBox;
     public bool isDialogueOn;
 
+
     private void OnEnable()
     {
         EventHandler.ShowDialogueEvent += onShowDialogueEvent;
@@ -20,7 +21,7 @@ public class DialogueUI : MonoBehaviour
 
     private void onShowDialogueEvent(string dialogue, float YMoveDis)
     {
-        if (dialogue != string.Empty)
+        if (dialogue != null)
         {
             isDialogueOn = true;
             dialogueImage.SetActive(true);
