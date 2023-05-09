@@ -15,16 +15,16 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         ShowDialogueEvent?.Invoke(data, YMoveDis);
     }
 
-    public static event Action<bool, float> UpdateDialogueCamera; //从对话UI发出，将对话镜头下移
-    public static void CallUpdateDialogueCamera(bool isDialogueOn, float YMoveDis)
+    public static event Action<bool, float> UpdateDialogueState; //从对话UI发出，将对话镜头下移
+    public static void CallUpdateDialogueState(bool isDialogueOn, float YMoveDis)
     {
-        UpdateDialogueCamera?.Invoke(isDialogueOn, YMoveDis);
+        UpdateDialogueState?.Invoke(isDialogueOn, YMoveDis);
     }
 
-    public static event Action<bool> ExitDialogueCamera; //从对话UI发出,给出状态改变，将镜头位置还原
-    public static void CallExitDialogueCamera(bool isDialogueOn)
+    public static event Action<bool> ExitDialogueState; //从对话UI发出,给出状态改变，将镜头位置还原
+    public static void CallExitDialogueState(bool isDialogueOn)
     {
-        ExitDialogueCamera?.Invoke(isDialogueOn);
+        ExitDialogueState?.Invoke(isDialogueOn);
     }
 
 

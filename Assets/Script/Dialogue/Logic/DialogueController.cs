@@ -11,12 +11,13 @@ public class DialogueController : MonoBehaviour
     public int nextIndex;
     public DialogueStruct currentDialogue;
     public string content;
-
+    private DialogueState dialogueState;
 
     private void Awake()
     {
 
         nextIndex = 0;
+        dialogueState = GetComponent<DialogueState>();
 
     }
     public void ShowDialogue()
@@ -35,9 +36,10 @@ public class DialogueController : MonoBehaviour
 
         EventHandler.CallShowDialogueEvent(content, YMoveDis);
         //对nextIndex根据状态或判断条件重赋值
-        //Debug.Log(dialogueUI.isDialogueOn);
-        //if( nextIndex == -1 && dialogueUI.isDialogueOn == false)
-        //    nextIndex = 0;
+        if(nextIndex == -1)
+        {
+            nextIndex = dialogueState.getNextDialogueIndex(nextIndex);
+        }
         
     }
 

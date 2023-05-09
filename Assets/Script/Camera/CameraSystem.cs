@@ -32,8 +32,8 @@ public class CameraSystem : MonoBehaviour
     private void OnEnable()
     {
         EventHandler.updateCameraScale += onUpdateCameraScale;
-        EventHandler.UpdateDialogueCamera += onUpdateDialogueCamera;
-        EventHandler.ExitDialogueCamera += onExitDialogueCamera;
+        EventHandler.UpdateDialogueState += onUpdateDialogueCamera;
+        EventHandler.ExitDialogueState += onExitDialogueCamera;
 
 
     }
@@ -43,8 +43,8 @@ public class CameraSystem : MonoBehaviour
     private void OnDisable()
     {
         EventHandler.updateCameraScale -= onUpdateCameraScale;
-        EventHandler.UpdateDialogueCamera -= onUpdateDialogueCamera;
-        EventHandler.ExitDialogueCamera -= onExitDialogueCamera;
+        EventHandler.UpdateDialogueState -= onUpdateDialogueCamera;
+        EventHandler.ExitDialogueState -= onExitDialogueCamera;
     }
 
 
