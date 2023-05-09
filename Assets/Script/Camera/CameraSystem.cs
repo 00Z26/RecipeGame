@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class CameraSystem : MonoBehaviour
 {
+
+    private Scene scene;
+    private GameObject background;
+    private PhysicsCheck physicsCheck;
+    private bool moveDialogueCamera;
+
+    [Header("地图相机设置")]
     public Transform playerTarget;
     public float moveTime;
-    Scene scene;
-    GameObject background;
-    private PhysicsCheck physicsCheck;
-
-    [Header("地图相机限制")]
     public float cameraXLeftScale;
     public float cameraXRightScale;
     public float cameraYUpScale;
     public float cameraYDownScale;
     public float deltaYPos;//相机与人的高度差
-    public float YMoveDis;
+    private float YMoveDis;
 
     private void Awake()
     {
@@ -30,7 +32,10 @@ public class CameraSystem : MonoBehaviour
     private void OnEnable()
     {
         EventHandler.updateCameraScale += onUpdateCameraScale;
- 
+        EventHandler.UpdateDialogueCamera += onUpdateDialogueCamera;
+        EventHandler.ExitDialogueCamera += onExitDialogueCamera;
+
+
     }
 
 
@@ -38,7 +43,10 @@ public class CameraSystem : MonoBehaviour
     private void OnDisable()
     {
         EventHandler.updateCameraScale -= onUpdateCameraScale;
+        EventHandler.UpdateDialogueCamera -= onUpdateDialogueCamera;
+        EventHandler.ExitDialogueCamera -= onExitDialogueCamera;
     }
+
 
 
     private void Start()
@@ -65,17 +73,29 @@ public class CameraSystem : MonoBehaviour
         cameraYDownScale = background.GetComponent<Background>().GetcameraYDownScale();
     }
 
-
+    private void onUpdateDialogueCamera(bool isDialogueOn, float delta)
+    {
+        moveDialogueCamera = isDialogueOn;
+        YMoveDis = delta;
+    }
+    private void onExitDialogueCamera(bool isDialogueOn)
+    {
+        moveDialogueCamera = isDialogueOn;
+    }
 
     private Vector3 posTarget;
     private void LateUpdate()
     {
-        //从事件中获取到bool状态，和新的deltaY的值，if bool YDis就有值，不然就改回0
+        //从触发剧情事件中获取到bool状态，和新的deltaY的值，if bool YDis就有值，不然就改回0
+        if(!moveDialogueCamera)
+        {
+            YMoveDis = 0;
+        }
 
         float posY = Mathf.Clamp(playerTarget.position.y + deltaYPos, cameraYDownScale, cameraYUpScale);
         float posX = Mathf.Clamp(playerTarget.position.x, cameraXLeftScale, cameraXRightScale);
         //Debug.Log(posX);
-        posTarget = new Vector3(posX, posY, transform.position.z);
+        posTarget = new Vector3(posX, posY + YMoveDis, transform.position.z);
         if (playerTarget != null)
         {   if(transform.position != posTarget)
             {

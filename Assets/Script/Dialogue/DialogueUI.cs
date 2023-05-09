@@ -25,6 +25,7 @@ public class DialogueUI : MonoBehaviour
             isDialogueOn = true;
             dialogueImage.SetActive(true);
             //触发相机下移事件
+            EventHandler.CallUpdateDialogueCamera(isDialogueOn, YMoveDis);
         }
 
         else
@@ -32,6 +33,7 @@ public class DialogueUI : MonoBehaviour
             isDialogueOn = false;
             dialogueImage.SetActive(false);
             //触发相机归位事件
+            EventHandler.CallExitDialogueCamera(isDialogueOn);
         }
 
         textBox.text = dialogue;

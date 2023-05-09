@@ -674,7 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTarget: {fileID: 812245924}
-  moveTime: 50
+  moveTime: 0.009
   cameraXLeftScale: -4.63
   cameraXRightScale: -0.22
   cameraYUpScale: -0.22
@@ -909,3 +909,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueImage: {fileID: 1418510480}
   textBox: {fileID: 135749912}
+  isDialogueOn: 0
