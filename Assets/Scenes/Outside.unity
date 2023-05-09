@@ -123,6 +123,83 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &17854568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17854569}
+  - component: {fileID: 17854570}
+  m_Layer: 0
+  m_Name: AutoCheck
+  m_TagString: AutoDialogue
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &17854569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17854568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 708984339}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &17854570
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17854568}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.1982147, y: -0.18148685}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.158221, y: 1.3629737}
+  m_EdgeRadius: 0
 --- !u!1 &138267314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,9 +1938,12 @@ GameObject:
   m_Component:
   - component: {fileID: 708984339}
   - component: {fileID: 708984338}
+  - component: {fileID: 708984343}
+  - component: {fileID: 708984340}
+  - component: {fileID: 708984341}
   m_Layer: 0
   m_Name: Potato
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1931,10 +2011,85 @@ Transform:
   m_LocalPosition: {x: 10.13, y: -3.74, z: 0}
   m_LocalScale: {x: 1.5867, y: 1.3667, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 17854569}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708984340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708984337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de33b608d1b395f40abcc2bbd4d992ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YMoveDis: -2.9
+  dialoges: {fileID: 11400000, guid: c1a3907e82bddde4d99ba7f897bc427a, type: 2}
+  autoDialoges: {fileID: 11400000, guid: 4459ab22b01f8ee43b0dbb7923f25379, type: 2}
+  nextIndex: 0
+  currentDialogue:
+    index: 0
+    speakerName: 
+    pic: {fileID: 0}
+    content: 
+    animiation: 
+    nextIndex: 0
+    choice: 
+  content: 
+--- !u!114 &708984341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708984337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91851dbb4245fdf42a1478bfc0d982eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDialogueOnState: 0
+  hasAutoDialogue: 0
+--- !u!70 &708984343
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708984337}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
 --- !u!1 &718014861
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,7 +3750,6 @@ GameObject:
   - component: {fileID: 1580571445}
   - component: {fileID: 1580571444}
   - component: {fileID: 1580571448}
-  - component: {fileID: 1580571449}
   - component: {fileID: 1580571450}
   - component: {fileID: 1580571451}
   m_Layer: 0
@@ -3707,28 +3861,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
---- !u!114 &1580571449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580571443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e105ee321be27e5409688d41049c255f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coll: {fileID: 0}
-  talkNPC: {fileID: 0}
-  isGround: 0
-  isInWater: 0
-  isDialogue: 0
-  bottomOffset: {x: 0, y: 0}
-  checkRaduis: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &1580571450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,11 +3875,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YMoveDis: -2.9
   dialoges: {fileID: 11400000, guid: a14a8b9d8b031eb4590b2ac03624e873, type: 2}
+  autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
     index: 0
     speakerName: 
-    pic: 
+    pic: {fileID: 0}
     content: 
     animiation: 
     nextIndex: 0
@@ -3766,6 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDialogueOnState: 0
+  hasAutoDialogue: 0
 --- !u!1 &1602923110
 GameObject:
   m_ObjectHideFlags: 0

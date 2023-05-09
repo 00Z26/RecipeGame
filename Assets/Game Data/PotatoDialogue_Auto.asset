@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0701fd391c77f4b42abe9e03e94a278e, type: 3}
+  m_Name: PotatoDialogue_Auto
+  m_EditorClassIdentifier: 
+  dialogueList:
+  - index: 0
+    speakerName: "\u571F\u8C46"
+    pic: {fileID: 21300000, guid: 7dd21f826a119274bb085376073e5cbd, type: 3}
+    content: "\u81EA\u52A8\u89E6\u53D1\u6211\u4EEC\u8D70\u554A"
+    animiation: 
+    nextIndex: 1
+    choice: 
+  - index: 1
+    speakerName: "\u83E0\u841D"
+    pic: {fileID: 21300000, guid: c2b79727230842b4d89c658c13fd4e24, type: 3}
+    content: "\u81EA\u52A8\u89E6\u53D1\u53BB\u54EA"
+    animiation: 
+    nextIndex: 2
+    choice: 
+  - index: 2
+    speakerName: "\u571F\u8C46"
+    pic: {fileID: 21300000, guid: 7dd21f826a119274bb085376073e5cbd, type: 3}
+    content: "\u81EA\u52A8\u89E6\u53D1\u9547\u5B50\uFF01"
+    animiation: 
+    nextIndex: -1
+    choice: 

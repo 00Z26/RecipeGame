@@ -7,7 +7,7 @@ public class DialogueState : MonoBehaviour
     //获取蔬菜的对话状态
 
     public bool isDialogueOnState; //从UI处获取，当前
-
+    public bool hasAutoDialogue;//是否已进行过自动对话
 
     private void OnEnable()
     {
@@ -34,6 +34,7 @@ public class DialogueState : MonoBehaviour
     {
         if (!isDialogueOnState)
         {
+            //设置为下次对话的起始
             index = 0;
             return index;
         }

@@ -21,7 +21,7 @@ public class DialogueUI : MonoBehaviour
         EventHandler.ShowDialogueEvent -= onShowDialogueEvent;
     }
 
-    private void onShowDialogueEvent(string dialogue, float YMoveDis,Sprite speakerImg)
+    private void onShowDialogueEvent(string dialogue, float YMoveDis,Sprite speakerImg,GameObject autoObj)
     {
         if (dialogue != null)
         {
@@ -37,6 +37,7 @@ public class DialogueUI : MonoBehaviour
             isDialogueOn = false;
             dialogueImage.SetActive(false);
             headImg.sprite = null;
+            autoObj?.SetActive(false);
             //触发相机归位事件
             EventHandler.CallExitDialogueState(isDialogueOn);
         }

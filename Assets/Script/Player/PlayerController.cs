@@ -37,11 +37,14 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         inputControl.Enable();
+        EventHandler.TriggerAutoDialogue += onTriggerAutoDialogue;
     }
     private void OnDisable()
     {
         inputControl?.Disable();
+        EventHandler.TriggerAutoDialogue -= onTriggerAutoDialogue;
     }
+
 
     private void Update()
     {
@@ -51,10 +54,10 @@ public class PlayerController : MonoBehaviour
             Swim();
         }
 
-        if (physicsCheck.isDialogue)
-        {
+
+
             Talk();
-        }
+        
     }
     
     private void FixedUpdate()
@@ -111,11 +114,21 @@ public class PlayerController : MonoBehaviour
 
     private void Talk()
     {
-        if(Keyboard.current.eKey.wasPressedThisFrame)
+        if(Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue)
         {   //按e触发对话
             Debug.Log(physicsCheck.talkNPC.name);
-            physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue();
+            physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
 
         }
+
     }
+
+    private void onTriggerAutoDialogue()
+    {
+        //自动触发范围的事件，触发第一次自动对话，之后开启对话状态为true
+        physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
+        physicsCheck.isDialogue = true;
+
+    }
+
 }

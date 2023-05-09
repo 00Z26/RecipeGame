@@ -8,6 +8,7 @@ TagManager:
   - Outside
   - Draw Game
   - NPC
+  - AutoDialogue
   layers:
   - Default
   - TransparentFX

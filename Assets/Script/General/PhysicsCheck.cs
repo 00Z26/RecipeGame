@@ -10,6 +10,7 @@ public class PhysicsCheck : MonoBehaviour
     public bool isGround;
     public bool isInWater;
     public bool isDialogue;//在对话范围内
+    public bool isAutoDialogue;
 
     [Header("参数")]
     public Vector2 bottomOffset;
@@ -25,6 +26,20 @@ public class PhysicsCheck : MonoBehaviour
         Check();       
     }
 
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {   
+        //自动对话范围触发
+        if (collision.gameObject.tag == "AutoDialogue")
+        {
+            talkNPC = collision.gameObject.transform.parent.gameObject;
+            isAutoDialogue = true;
+            EventHandler.CallTriggerAutoDialogue();
+            
+            
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {  
         //行动检测
@@ -33,8 +48,10 @@ public class PhysicsCheck : MonoBehaviour
             isInWater = true;
         }
         if (collision.gameObject.tag == "NPC")
-        {
+        {   
+            
             isDialogue = true;
+            //Debug.Log(isDialogue);
             talkNPC = collision.gameObject;
         }
 
@@ -45,9 +62,13 @@ public class PhysicsCheck : MonoBehaviour
         {
             isInWater = false;
         }
-        if (collision.gameObject.tag == "NPC")
+        if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "AutoDialogue")
         {
             isDialogue = false;
+        }
+        if (collision.gameObject.tag == "AutoDialogue")
+        {
+            isAutoDialogue = false;
         }
     }
 
