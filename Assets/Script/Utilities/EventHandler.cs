@@ -9,10 +9,10 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         updateCameraScale?.Invoke(sceneName);
     }
 
-    public static event Action<string, float> ShowDialogueEvent;//从controller发出，展示UI事件
-    public static void CallShowDialogueEvent(string data, float YMoveDis)
+    public static event Action<string, float,Sprite> ShowDialogueEvent;//从controller发出，展示UI事件
+    public static void CallShowDialogueEvent(string data, float YMoveDis, Sprite pic)
     {
-        ShowDialogueEvent?.Invoke(data, YMoveDis);
+        ShowDialogueEvent?.Invoke(data, YMoveDis,pic);
     }
 
     public static event Action<bool, float> UpdateDialogueState; //从对话UI发出，将对话镜头下移

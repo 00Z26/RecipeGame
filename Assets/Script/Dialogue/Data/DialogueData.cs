@@ -12,7 +12,7 @@ public class DialogueStruct
 {
     public int index;
     public string speakerName;
-    public string pic;
+    public Sprite pic;
     public string content;
     public string animiation;
     public int nextIndex;

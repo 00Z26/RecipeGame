@@ -15,35 +15,35 @@ MonoBehaviour:
   dialogueList:
   - index: 0
     speakerName: "\u756A\u8304\u5B50"
-    pic: 
+    pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
     content: "\u4F60\u597D"
     animiation: 
     nextIndex: 1
     choice: 0
   - index: 1
     speakerName: "\u5927\u83E0\u841D"
-    pic: boluo
+    pic: {fileID: 21300000, guid: c2b79727230842b4d89c658c13fd4e24, type: 3}
     content: "\u6211\u4E0D\u597D"
     animiation: boluo1
     nextIndex: 2
     choice: 0
   - index: 2
     speakerName: "\u756A\u8304\u5B50"
-    pic: qiezi1
+    pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
     content: "\u50BB\u5B50"
     animiation: qiezi1
     nextIndex: -1
     choice: "3:\u4F60\u624D\u662F\u50BB\u5B50;4:\u6CA1\u9519\u6211\u5C31\u662F\uFF08\u81EA\u8C6A\uFF09"
   - index: 3
     speakerName: "\u756A\u8304\u5B50"
-    pic: qiezi1
+    pic: {fileID: 0}
     content: "\u6211\u4E0D\u662F\uFF0C\u4F60\u624D\u662F"
     animiation: qiezi1
     nextIndex: -1
     choice: 0
   - index: 4
     speakerName: "\u756A\u8304\u5B50"
-    pic: fanqie1
+    pic: {fileID: 0}
     content: "\u6211\u4E0D\u662F\uFF0C\u4F60\u624D\u662F"
     animiation: fanqie2
     nextIndex: -1

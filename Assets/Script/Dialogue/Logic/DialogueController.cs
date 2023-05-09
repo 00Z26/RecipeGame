@@ -12,6 +12,7 @@ public class DialogueController : MonoBehaviour
     public DialogueStruct currentDialogue;
     public string content;
     private DialogueState dialogueState;
+    private Sprite speakerImage;
 
     private void Awake()
     {
@@ -28,13 +29,14 @@ public class DialogueController : MonoBehaviour
             currentDialogue = getDialoguesContent();
             content = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
+            speakerImage = currentDialogue.pic;
         }
         else
         {
             content = null;
         }
 
-        EventHandler.CallShowDialogueEvent(content, YMoveDis);
+        EventHandler.CallShowDialogueEvent(content, YMoveDis,speakerImage);
         //对nextIndex根据状态或判断条件重赋值
         if(nextIndex == -1)
         {

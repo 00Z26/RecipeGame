@@ -784,12 +784,12 @@ GameObject:
   - component: {fileID: 1418510483}
   - component: {fileID: 1418510482}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DialogueBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1418510481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -986,4 +986,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueImage: {fileID: 1418510480}
   textBox: {fileID: 135749912}
+  headImg: {fileID: 536216384}
   isDialogueOn: 0
