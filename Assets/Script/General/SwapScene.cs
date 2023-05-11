@@ -17,11 +17,15 @@ public class SwapScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.eKey.wasPressedThisFrame && isTransport)
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        if ((Keyboard.current.eKey.wasPressedThisFrame && isTransport) || 
+            (Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(mousePos))?.gameObject.tag == "GameExit" && Mouse.current.leftButton.wasPressedThisFrame))
         {
+            Debug.Log("Exit");
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to);
             
         }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
