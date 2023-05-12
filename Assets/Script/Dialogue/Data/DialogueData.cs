@@ -28,5 +28,5 @@ public class DialogueStruct
 public class State
 {
     public bool isAbnormal;
-    public bool isEnableChange;
+    public bool isChanged; //±ª∂·…·
 }

@@ -1941,6 +1941,7 @@ GameObject:
   - component: {fileID: 708984343}
   - component: {fileID: 708984340}
   - component: {fileID: 708984341}
+  - component: {fileID: 708984344}
   m_Layer: 0
   m_Name: Potato
   m_TagString: NPC
@@ -2008,7 +2009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708984337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.13, y: -3.74, z: 0}
+  m_LocalPosition: {x: 10.13, y: -4.16, z: 0}
   m_LocalScale: {x: 1.5867, y: 1.3667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2036,10 +2037,13 @@ MonoBehaviour:
     index: 0
     speakerName: 
     pic: {fileID: 0}
+    chatPartner: 
     content: 
     animiation: 
     nextIndex: 0
-    choice: 
+    choice_1: 
+    choice_2: 
+    choice_3: 
   content: 
 --- !u!114 &708984341
 MonoBehaviour:
@@ -2055,6 +2059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDialogueOnState: 0
   hasAutoDialogue: 0
+  hasChanged: 0
 --- !u!70 &708984343
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2087,9 +2092,25 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: 0.41598642}
+  m_Size: {x: 1, y: 1.160972}
   m_Direction: 0
+--- !u!114 &708984344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708984337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d45cacc84a08640afabaa7f14c2af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSprite: {fileID: 0}
+  playerSprite: {fileID: 0}
+  previousNpcs: []
+  previousNpc: {fileID: 0}
 --- !u!1 &718014861
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,6 +3773,7 @@ GameObject:
   - component: {fileID: 1580571448}
   - component: {fileID: 1580571450}
   - component: {fileID: 1580571451}
+  - component: {fileID: 1580571452}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: NPC
@@ -3819,7 +3841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580571443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.39, y: -3.7, z: 0}
+  m_LocalPosition: {x: -2.39, y: -4.19, z: 0}
   m_LocalScale: {x: 1.1545532, y: 1.0676085, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3858,8 +3880,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: 0.45492902}
+  m_Size: {x: 1, y: 1.081439}
   m_Direction: 0
 --- !u!114 &1580571450
 MonoBehaviour:
@@ -3881,10 +3903,13 @@ MonoBehaviour:
     index: 0
     speakerName: 
     pic: {fileID: 0}
+    chatPartner: 
     content: 
     animiation: 
     nextIndex: 0
-    choice: 
+    choice_1: 
+    choice_2: 
+    choice_3: 
   content: 
 --- !u!114 &1580571451
 MonoBehaviour:
@@ -3900,6 +3925,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDialogueOnState: 0
   hasAutoDialogue: 0
+  hasChanged: 0
+--- !u!114 &1580571452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580571443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d45cacc84a08640afabaa7f14c2af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcSprite: {fileID: 0}
+  playerSprite: {fileID: 0}
+  previousNpcs: []
+  previousNpc: {fileID: 0}
 --- !u!1 &1602923110
 GameObject:
   m_ObjectHideFlags: 0
