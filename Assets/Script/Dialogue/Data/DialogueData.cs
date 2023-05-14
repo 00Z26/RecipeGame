@@ -11,19 +11,20 @@ public class DialogueData : ScriptableObject
 [System.Serializable]
 public class DialogueStruct
 {
-    public int index;
-    public string speakerName;
+    public int index; //当前id
     public Sprite pic;
-    public string chatPartner;
-    public List<State> chatPartnerState;
-    public string content;
-    public string animiation;
-    public int nextIndex;
-    public string choice_1;//nextIndex : 剧情内容
-    public string choice_2;
-    public string choice_3;
-
-    //分周目生成数据，聊天对象作为一个标识保存
+    public string triggerName; //触发对话的人
+    public string chatPartnerName; //当前说话的人
+    public List<int> teamMembers; //队伍内成员
+    public int openDoorTimes; //开启触发对话人这个门的次数
+    public int Conversations; //与触发对话的人的交互次数
+    public List<State> chatPartnerState; //说话人的状态
+    public string content; //说话内容
+    public string animiation; //动画
+    public int nextIndex;//下一句
+    public List<string> choices;//剧情内容 + nextIndex
+    //选项更改随便某个人状态
+    //选项打开面板
 }
 public class State
 {

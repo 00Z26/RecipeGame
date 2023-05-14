@@ -2037,7 +2037,11 @@ MonoBehaviour:
     index: 0
     speakerName: 
     pic: {fileID: 0}
-    chatPartner: 
+    triggerName: 
+    chatPartnerName: 
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
     content: 
     animiation: 
     nextIndex: 0
@@ -3773,7 +3777,6 @@ GameObject:
   - component: {fileID: 1580571448}
   - component: {fileID: 1580571450}
   - component: {fileID: 1580571451}
-  - component: {fileID: 1580571452}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: NPC
@@ -3903,7 +3906,11 @@ MonoBehaviour:
     index: 0
     speakerName: 
     pic: {fileID: 0}
-    chatPartner: 
+    triggerName: 
+    chatPartnerName: 
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
     content: 
     animiation: 
     nextIndex: 0
@@ -3926,22 +3933,6 @@ MonoBehaviour:
   isDialogueOnState: 0
   hasAutoDialogue: 0
   hasChanged: 0
---- !u!114 &1580571452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580571443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d45cacc84a08640afabaa7f14c2af7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcSprite: {fileID: 0}
-  playerSprite: {fileID: 0}
-  previousNpcs: []
-  previousNpc: {fileID: 0}
 --- !u!1 &1602923110
 GameObject:
   m_ObjectHideFlags: 0

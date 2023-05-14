@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
@@ -32,6 +33,14 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
     {
         TriggerAutoDialogue?.Invoke();
     }
+
+    public static event Action<List<string>> UpdateChoicesEvent; //有选项时触发事件，传当前对话的选项内容给UI显示选项
+    public static void CallUpdateChoicesEvent(List<string> choices)
+    {
+        UpdateChoicesEvent?.Invoke(choices);
+    }
+
+
 
 
 

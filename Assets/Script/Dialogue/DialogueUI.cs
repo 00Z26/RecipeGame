@@ -9,16 +9,21 @@ public class DialogueUI : MonoBehaviour
     public GameObject dialogueImage;
     public TMP_Text textBox;
     public Image headImg;
+    public GameObject dialogueChoices;
     public bool isDialogueOn;
 
 
     private void OnEnable()
     {
         EventHandler.ShowDialogueEvent += onShowDialogueEvent;
+        EventHandler.UpdateChoicesEvent += onUpdateChoicesEvent;
     }
+
+
     private void OnDisable()
     {
         EventHandler.ShowDialogueEvent -= onShowDialogueEvent;
+        EventHandler.UpdateChoicesEvent -= onUpdateChoicesEvent;
     }
 
     private void onShowDialogueEvent(string dialogue, float YMoveDis,Sprite speakerImg,GameObject autoObj)
@@ -44,4 +49,24 @@ public class DialogueUI : MonoBehaviour
 
         textBox.text = dialogue;
     }
+
+    private void onUpdateChoicesEvent(List<string> choices)
+    {
+        dialogueChoices.SetActive(true);
+        for (int i = 0;i < choices.Count;i++)
+        {
+            
+            if(choices[i] != "")
+            {
+                
+                GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
+               
+                choice.GetComponentInChildren<TMP_Text>().text = choices[i];
+                Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
+                choice.SetActive(true);
+            }
+        }
+        choices.Clear();
+    }
+
 }

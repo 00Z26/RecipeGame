@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float swimJumpForce;
     public float swimGravity;
     public float groundGravity;
+    public List<int> teamMembers;
 
 
 
