@@ -115,12 +115,16 @@ public class PlayerController : MonoBehaviour
 
     private void Talk()
     {
-        if(Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue)
-        {   //按e触发对话
-            Debug.Log(physicsCheck.talkNPC.name);
-            physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
+        if(GameObject.Find("Choice0") == null)
+        {
+            if (Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue)
+            {   //按e触发对话
+                Debug.Log(physicsCheck.talkNPC.name);
+                physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
 
+            }
         }
+
 
     }
 

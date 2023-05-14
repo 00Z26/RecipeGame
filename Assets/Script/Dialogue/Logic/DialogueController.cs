@@ -50,8 +50,6 @@ public class DialogueController : MonoBehaviour
             content = null;
         }
 
-      
-
 
         //参数：剧情内容，相机偏移，头像，自动对话刚体关闭（需要在UI关闭时，停止自动检测）
         //UI显示剧情内容
@@ -82,6 +80,8 @@ public class DialogueController : MonoBehaviour
         }
         
     }
+
+
     //根据当前对话状态获取到本次对话的起始条目
     private DialogueStruct getFirstDialogue()
     {
@@ -108,7 +108,7 @@ public class DialogueController : MonoBehaviour
             
         }
     }
-
+    //分割选项的下一步
     private void GetChoiceSpilt()
     {
         foreach (var choice in currentDialogue.choices)
