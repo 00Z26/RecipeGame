@@ -21,7 +21,7 @@ MonoBehaviour:
     teamMembers: 00000000
     openDoorTimes: 1
     Conversations: 1
-    content: "\u4F60\u597D"
+    content: "\u4F60\u597D\\n\u6211\u662F\u8304\u5B50"
     animiation: xi
     nextIndex: 1
     choices: []

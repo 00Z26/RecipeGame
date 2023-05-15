@@ -7,17 +7,20 @@ public class ButtonClick : MonoBehaviour
     public int buttonReply;
     public void SetButton0Val()
     {
-        Debug.Log("click");
+        //Debug.Log("click");
         buttonReply = 0;
+        EventHandler.CallSendButtionValEvent(buttonReply);
         
     }
     public void SetButton1Val()
     {
         buttonReply = 1;
+        EventHandler.CallSendButtionValEvent(buttonReply);
     }
     public void SetButton2Val()
     {
         buttonReply = 2;
+        EventHandler.CallSendButtionValEvent(buttonReply);
     }
 
 

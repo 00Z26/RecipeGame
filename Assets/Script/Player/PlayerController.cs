@@ -119,8 +119,9 @@ public class PlayerController : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue)
             {   //按e触发对话
-                Debug.Log(physicsCheck.talkNPC.name);
+                Debug.Log("触发对话");
                 physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
+                //EventHandler.CallTriggerDialogueEvent(physicsCheck.isAutoDialogue, this.gameObject);
 
             }
         }

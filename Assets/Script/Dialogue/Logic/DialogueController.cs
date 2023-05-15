@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 
 
 public class DialogueController : MonoBehaviour
@@ -12,29 +13,86 @@ public class DialogueController : MonoBehaviour
     public int nextIndex;
     public DialogueStruct currentDialogue;
     public string content;
-    public string choice0;
-    public string choice1;
-    public string choice2;
+    //public string choice0;
+    //public string choice1;
+    //public string choice2;
     
 
     
     private DialogueState dialogueState;
     private Sprite speakerImage;
     private GameObject autoObj;
-    private List<int> choiceNextIndex;
-    private List<string> choices;
 
+    [SerializeField]
+    private List<int> choiceNextIndex;
+
+    private List<string> choices;
+    private List<int> choiceOperation;
+    private int buttonVal;
+
+    [DllImport("user32.dll", EntryPoint = "keybd_event")]
+    public static extern void keybd_event(
+
+        byte bVk,    //虚拟键值 对应按键的ascll码十进制值  
+
+        byte bScan,// 0  
+
+        int dwFlags,  //0 为按下，1按住，2为释放  
+
+        int dwExtraInfo  // 0  
+
+    );
 
     private void Awake()
     {
 
         nextIndex = 0;
+        buttonVal = -1;
         dialogueState = GetComponent<DialogueState>();
         autoObj = null;
         choiceNextIndex = new List<int>();
+        choiceOperation = new List<int>();
         choices = new List<string>();
 
     }
+
+
+    private void OnEnable()
+    {
+        
+        EventHandler.SendButtonValEvent += OnSendButtonValEvent;
+    }
+    private void OnDisable()
+    {
+        
+        EventHandler.SendButtonValEvent -= OnSendButtonValEvent;
+    }
+
+    private void OnSendButtonValEvent(int val)
+    {
+        buttonVal = val;
+        ButtonOperation();
+    }
+
+    private void ButtonOperation()
+    {
+        
+        if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] > 0)
+        {
+            //执行展示下一句的操作
+            
+            nextIndex = choiceNextIndex[buttonVal];
+            Debug.Log(nextIndex);
+            keybd_event(69, 0, 0, 0);
+            keybd_event(101, 0, 0, 0);
+            Debug.Log("结束按键事件");
+
+        }
+    }
+
+
+
+
     public void ShowDialogue(bool isAuto, GameObject player)//这个player当前没用到，应该会在state里获取
     {   //获取该显示的那句话 or 两个选项
         //分情况传值到UI
@@ -49,21 +107,15 @@ public class DialogueController : MonoBehaviour
         {
             content = null;
         }
-
-
         //参数：剧情内容，相机偏移，头像，自动对话刚体关闭（需要在UI关闭时，停止自动检测）
         //UI显示剧情内容
         EventHandler.CallShowDialogueEvent(content, YMoveDis, speakerImage, autoObj);
-        //在这添加选项相关操作比较好，前面内容读取完,从controller获得触发事件的选项
+        //在这添加选项相关操作
         if (currentDialogue.choices.Count != 0 )
         {
             GetChoiceSpilt();
             EventHandler.CallUpdateChoicesEvent(choices);
         }
-
-
-
-
 
         //对nextIndex根据状态或判断条件重赋值 这里应该elif 在没有选项的时候进行触发
         if (nextIndex == -1 && currentDialogue.choices.Count == 0)
@@ -80,6 +132,7 @@ public class DialogueController : MonoBehaviour
         }
         
     }
+
 
 
     //根据当前对话状态获取到本次对话的起始条目
@@ -118,9 +171,27 @@ public class DialogueController : MonoBehaviour
                 string[] temp = choice.Split("+");
                 
                 choices.Add(temp[0]);
-                Debug.Log(choices[0]);
+                
                 choiceNextIndex.Add(int.Parse(temp[1]));
+                
+                //把操作那步的对象拆出来
+                if (temp.Length > 2)
+                {
+                    choiceOperation.Add(int.Parse(temp[2]));
+                }
+                else
+                {
+                    choiceOperation.Add(-1);
+                }
+              
             }
         }
     }
+    //获取到button的传值
+
+
+    //private void GetChoiceOperation()
+    //{
+    //    foreach(var )
+    //}
 }

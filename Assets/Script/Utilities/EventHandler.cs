@@ -40,6 +40,18 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         UpdateChoicesEvent?.Invoke(choices);
     }
 
+    public static event Action<int> SendButtonValEvent; //发送按钮给的值
+    public static void CallSendButtionValEvent(int val)
+    {
+        SendButtonValEvent?.Invoke(val);
+    }
+
+    //public static event Action<bool, GameObject> TriggerDialogueEvent; //player内触发对话
+    //public static void CallTriggerDialogueEvent(bool isAuto,GameObject player)
+    //{
+    //    TriggerDialogueEvent?.Invoke(isAuto, player);
+    //}
+
 
 
 

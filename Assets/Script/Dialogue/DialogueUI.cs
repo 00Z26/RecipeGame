@@ -47,7 +47,7 @@ public class DialogueUI : MonoBehaviour
             EventHandler.CallExitDialogueState(isDialogueOn);
         }
 
-        textBox.text = dialogue;
+        textBox.text = dialogue.Replace("\\n", "\n");
     }
 
     private void onUpdateChoicesEvent(List<string> choices)
@@ -62,11 +62,11 @@ public class DialogueUI : MonoBehaviour
                 GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
                
                 choice.GetComponentInChildren<TMP_Text>().text = choices[i];
-                Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
+                //Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
                 choice.SetActive(true);
             }
         }
-        choices.Clear();
+        //choices.Clear();
     }
 
 }
