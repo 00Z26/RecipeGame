@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         physicsCheck = GetComponent<PhysicsCheck>();
         groundGravity = rb.gravityScale;
 
+        teamMembers = new List<int>(); //统计小队里有谁
         inputControl.Gameplay.Jump.started += Jump;
     }
 

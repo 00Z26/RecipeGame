@@ -9,7 +9,7 @@ public class DialogueState : MonoBehaviour
     public bool isDialogueOnState; //从UI处获取，当前
     public bool hasAutoDialogue;//是否已进行过自动对话
     //public bool hasChanged;//是否已被夺舍过
-    public int openDoorTimes;
+    public int openDoorTimes = 1;
     public int conversations;
     public string npcName;
     public GameObject playerObject;
@@ -44,7 +44,7 @@ public class DialogueState : MonoBehaviour
         isDialogueOnState = dialogueState;
     }
 
-    public int getNextDialogueIndex(int index)
+    public int resetDialogueIndex(int index)
     {
         if (!isDialogueOnState)
         {
@@ -66,6 +66,11 @@ public class DialogueState : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public int getNextDialogueStartIndex()
+    {
+        return 0;
     }
 
 

@@ -1585,8 +1585,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1592016812}
   - component: {fileID: 1592016811}
+  - component: {fileID: 1592016813}
   m_Layer: 0
-  m_Name: ChangeManager
+  m_Name: NpcManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,12 +1605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d45cacc84a08640afabaa7f14c2af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcSprite: {fileID: 0}
   player: {fileID: 812245922}
-  playerSprite: {fileID: 0}
-  previousNpcs: []
-  previousNpc: {fileID: 0}
-  other: {fileID: 0}
   npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!4 &1592016812
 Transform:
@@ -1626,6 +1622,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1592016813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592016810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a71db2d83b8f94dba7b891e3ea0513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 812245922}
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!1 &1616757360
 GameObject:
   m_ObjectHideFlags: 0

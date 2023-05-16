@@ -12,6 +12,7 @@ public class DialogueData : ScriptableObject
 public class DialogueStruct
 {
     public int index; //当前id
+    public int loop;
     public Sprite pic;
     public string triggerName; //触发对话的人
     public string chatPartnerName; //当前说话的人

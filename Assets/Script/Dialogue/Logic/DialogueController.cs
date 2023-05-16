@@ -30,18 +30,6 @@ public class DialogueController : MonoBehaviour
     private List<int> choiceOperation;
     private int buttonVal;
 
-    [DllImport("user32.dll", EntryPoint = "keybd_event")]
-    public static extern void keybd_event(
-
-        byte bVk,    //虚拟键值 对应按键的ascll码十进制值  
-
-        byte bScan,// 0  
-
-        int dwFlags,  //0 为按下，1按住，2为释放  
-
-        int dwExtraInfo  // 0  
-
-    );
 
     private void Awake()
     {
@@ -83,9 +71,6 @@ public class DialogueController : MonoBehaviour
             
             nextIndex = choiceNextIndex[buttonVal];
             this.ShowDialogue(false);
-            //Debug.Log(nextIndex);
-            //keybd_event(69, 0, 0, 0);
-            //keybd_event(101, 0, 0, 0);
             Debug.Log("结束选项下一句对话事件");
 
         }
@@ -97,6 +82,15 @@ public class DialogueController : MonoBehaviour
             //触发夺舍
             EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
         }
+
+        if(choices.Count != 0 && choiceNextIndex[buttonVal] == -3)
+        {
+            nextIndex = -1;
+            this.ShowDialogue(false);
+            Debug.Log("选项执行跟随");
+            //触发对应npc跟随
+            EventHandler.CallTriggerFollowEvent(choiceOperation[buttonVal]);
+        }
     }
 
 
@@ -104,10 +98,19 @@ public class DialogueController : MonoBehaviour
 
     public void ShowDialogue(bool isAuto, GameObject player = null)//这个player当前没用到，应该会在state里获取
     {   //获取该显示的那句话 or 两个选项
+
+        //加载数据库和第一句的判断
+        if(nextIndex == 0)
+        {
+            int fist =  dialogueState.getNextDialogueStartIndex();
+        }
+
         //分情况传值到UI
         if(nextIndex != -1)
         {   
             currentDialogue = getDialoguesContent(isAuto);
+            if (nextIndex == 0 && isAuto == false)
+                this.GetComponent<DialogueState>().openDoorTimes++;
             content = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
             speakerImage = currentDialogue.pic;
@@ -123,7 +126,9 @@ public class DialogueController : MonoBehaviour
         if (currentDialogue.choices.Count != 0 && nextIndex != -1 )
         {
             choices = new List<string>();
-            //其他list 也需要清除
+            choiceNextIndex = new List<int>();
+            choiceOperation = new List<int>();
+            
             GetChoiceSpilt();
             EventHandler.CallUpdateChoicesEvent(choices);
         }
@@ -139,7 +144,7 @@ public class DialogueController : MonoBehaviour
                 dialogueState.hasAutoDialogue = true;
              
             }
-            nextIndex = dialogueState.getNextDialogueIndex(nextIndex); //将index复原为0，由于多状态转换不能在本次获得下次起始
+            nextIndex = dialogueState.resetDialogueIndex(nextIndex); //将index复原为0，由于多状态转换不能在本次获得下次起始
         }
         
     }

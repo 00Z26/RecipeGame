@@ -11,4 +11,9 @@ public class NpcData : ScriptableObject
         return playerName[index];
     }
 
+    public int GetPlayerIndex(string name)
+    {
+        return playerName.IndexOf(name);
+    }
+
 }

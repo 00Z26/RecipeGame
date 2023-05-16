@@ -3761,6 +3761,7 @@ GameObject:
   - component: {fileID: 1580571448}
   - component: {fileID: 1580571450}
   - component: {fileID: 1580571451}
+  - component: {fileID: 1580571452}
   m_Layer: 0
   m_Name: Tomato
   m_TagString: NPC
@@ -3808,7 +3809,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1724713777
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3918,6 +3919,20 @@ MonoBehaviour:
   conversations: 0
   npcName: 
   playerObject: {fileID: 0}
+--- !u!114 &1580571452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580571443}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6944241e4ba184ca18626e16b225d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 5
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!1 &1602923110
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class ChangeController : MonoBehaviour
 {
-    public Sprite npcSprite;
+    private Sprite npcSprite;
     public GameObject player;
-    public Sprite playerSprite;
-    public GameObject[] previousNpcs;
-    public GameObject previousNpc;
+    private Sprite playerSprite;
+    private GameObject[] previousNpcs;
+    private GameObject previousNpc;
 
-    public Collider2D other;
+    //public Collider2D other;
     public NpcData npcData;
 
     private void OnEnable()

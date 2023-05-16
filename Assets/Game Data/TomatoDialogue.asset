@@ -37,7 +37,7 @@ MonoBehaviour:
     nextIndex: 0
     choices:
     - "\u9009\u98790+2"
-    - "\u9009\u98791+-2+1"
+    - "\u9009\u98791+-3+1"
   - index: 2
     pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
     triggerName: "\u756A\u8304\u5B50"

@@ -53,6 +53,11 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerChangeEvent?.Invoke(val);
     }
 
+    public static event Action<int> TriggerFollowEvent; //选项触发跟随事件，传给followController
+    public static void CallTriggerFollowEvent(int val)
+    {
+       TriggerFollowEvent?.Invoke(val);
+    }
 
 
 
