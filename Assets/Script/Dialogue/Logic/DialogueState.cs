@@ -8,7 +8,7 @@ public class DialogueState : MonoBehaviour
 
     public bool isDialogueOnState; //从UI处获取，当前
     public bool hasAutoDialogue;//是否已进行过自动对话
-    public bool hasChanged;//是否已被夺舍过
+    //public bool hasChanged;//是否已被夺舍过
     public int openDoorTimes;
     public int conversations;
     public string npcName;

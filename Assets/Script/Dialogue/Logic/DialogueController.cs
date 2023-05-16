@@ -82,18 +82,27 @@ public class DialogueController : MonoBehaviour
             //执行展示下一句的操作
             
             nextIndex = choiceNextIndex[buttonVal];
-            Debug.Log(nextIndex);
-            keybd_event(69, 0, 0, 0);
-            keybd_event(101, 0, 0, 0);
-            Debug.Log("结束按键事件");
+            this.ShowDialogue(false);
+            //Debug.Log(nextIndex);
+            //keybd_event(69, 0, 0, 0);
+            //keybd_event(101, 0, 0, 0);
+            Debug.Log("结束选项下一句对话事件");
 
+        }
+
+        if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)
+        {
+            nextIndex = -1;
+            this.ShowDialogue(false);
+            //触发夺舍
+            EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
         }
     }
 
 
 
 
-    public void ShowDialogue(bool isAuto, GameObject player)//这个player当前没用到，应该会在state里获取
+    public void ShowDialogue(bool isAuto, GameObject player = null)//这个player当前没用到，应该会在state里获取
     {   //获取该显示的那句话 or 两个选项
         //分情况传值到UI
         if(nextIndex != -1)
@@ -111,18 +120,20 @@ public class DialogueController : MonoBehaviour
         //UI显示剧情内容
         EventHandler.CallShowDialogueEvent(content, YMoveDis, speakerImage, autoObj);
         //在这添加选项相关操作
-        if (currentDialogue.choices.Count != 0 )
+        if (currentDialogue.choices.Count != 0 && nextIndex != -1 )
         {
+            choices = new List<string>();
+            //其他list 也需要清除
             GetChoiceSpilt();
             EventHandler.CallUpdateChoicesEvent(choices);
         }
 
         //对nextIndex根据状态或判断条件重赋值 这里应该elif 在没有选项的时候进行触发
-        if (nextIndex == -1 && currentDialogue.choices.Count == 0)
+        if (nextIndex == -1 )//&& currentDialogue.choices.Count == 0)
         {
             if(isAuto == true)
             {
-                //修改这个物体auto的已触发状态，把已触发改为ftrue
+                //修改这个物体auto的已触发状态，把已触发改为true
                 //获取自动触发的物体
                 autoObj = this.gameObject.transform.GetChild(0).gameObject;
                 dialogueState.hasAutoDialogue = true;

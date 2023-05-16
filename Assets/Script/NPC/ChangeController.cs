@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,50 @@ using UnityEngine;
 public class ChangeController : MonoBehaviour
 {
     public Sprite npcSprite;
+    public GameObject player;
     public Sprite playerSprite;
     public GameObject[] previousNpcs;
     public GameObject previousNpc;
 
+    public Collider2D other;
+    public NpcData npcData;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnEnable()
     {
-        
-        npcSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;        
-        playerSprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;
-        Debug.Log(playerSprite.name);
-        previousNpc = getPreviousNpc(playerSprite.name);
-        other.gameObject.GetComponent<SpriteRenderer>().sprite = npcSprite;
-
-        Debug.Log(previousNpc?.name);
-        this.gameObject.SetActive(false);
-        previousNpc?.SetActive(true);
+        EventHandler.TriggerChangeEvent += OnTriggerChangeEvent;
     }
+    private void OnDisable()
+    {
+        EventHandler.TriggerChangeEvent -= OnTriggerChangeEvent;
+    }
+
+    private void OnTriggerChangeEvent(int npcIndex)
+    {
+        //用事件获取到对应的npc的object，这样后面就未必用other。
+        String name = npcData.GetPlayerName(npcIndex);
+        GameObject gameObject = GameObject.Find(name);
+        //Debug.Log(name);
+
+        if (gameObject != null)
+        {
+            npcSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+            playerSprite = player.GetComponent<SpriteRenderer>().sprite;
+            //Debug.Log(playerSprite.name);
+            previousNpc = getPreviousNpc(playerSprite.name);
+            player.GetComponent<SpriteRenderer>().sprite = npcSprite;
+
+            //Debug.Log(previousNpc?.name);
+            gameObject.SetActive(false);
+            previousNpc?.SetActive(true);
+        }
+
+
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    other = collision;
+    //}
     private GameObject getPreviousNpc(string name)
     {
         previousNpcs = Resources.FindObjectsOfTypeAll<GameObject>();

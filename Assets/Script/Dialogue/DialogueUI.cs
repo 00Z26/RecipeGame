@@ -47,7 +47,7 @@ public class DialogueUI : MonoBehaviour
             EventHandler.CallExitDialogueState(isDialogueOn);
         }
 
-        textBox.text = dialogue.Replace("\\n", "\n");
+        textBox.text = dialogue?.Replace("\\n", "\n");
     }
 
     private void onUpdateChoicesEvent(List<string> choices)
