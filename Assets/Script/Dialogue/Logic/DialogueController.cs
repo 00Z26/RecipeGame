@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
-
+using System;
 
 public class DialogueController : MonoBehaviour
 {
@@ -77,16 +77,16 @@ public class DialogueController : MonoBehaviour
 
         if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)
         {
-            nextIndex = -1;
-            this.ShowDialogue(false);
+            //nextIndex = -1;
+            //this.ShowDialogue(false);
             //触发夺舍
             EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
         }
 
         if(choices.Count != 0 && choiceNextIndex[buttonVal] == -3)
         {
-            nextIndex = -1;
-            this.ShowDialogue(false);
+            ////nextIndex = -1;
+            ////this.ShowDialogue(false);
             Debug.Log("选项执行跟随");
             //触发对应npc跟随
             EventHandler.CallTriggerFollowEvent(choiceOperation[buttonVal]);
@@ -98,27 +98,31 @@ public class DialogueController : MonoBehaviour
 
     public void ShowDialogue(bool isAuto, GameObject player = null)//这个player当前没用到，应该会在state里获取
     {   //获取该显示的那句话 or 两个选项
-
         //加载数据库和第一句的判断
         if(nextIndex == 0)
         {
-            int fist =  dialogueState.getNextDialogueStartIndex();
-        }
-
-        //分情况传值到UI
-        if(nextIndex != -1)
+            currentDialogue =  dialogueState.GetNextDialogueStart();
+            if(currentDialogue == null)
+                throw new Exception("未找到对应第一句");
+            if (isAuto == false)
+                this.GetComponent<DialogueState>().conversations++;
+            content = currentDialogue.content;
+            nextIndex = currentDialogue.nextIndex;
+            speakerImage = currentDialogue.pic;
+        } 
+        //不是0的时候，直接按照index找下一句
+        else if(nextIndex != -1)
         {   
             currentDialogue = getDialoguesContent(isAuto);
-            if (nextIndex == 0 && isAuto == false)
-                this.GetComponent<DialogueState>().openDoorTimes++;
             content = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
             speakerImage = currentDialogue.pic;
         }
-        else
+        else if(nextIndex == -1)
         {
             content = null;
         }
+
         //参数：剧情内容，相机偏移，头像，自动对话刚体关闭（需要在UI关闭时，停止自动检测）
         //UI显示剧情内容
         EventHandler.CallShowDialogueEvent(content, YMoveDis, speakerImage, autoObj);

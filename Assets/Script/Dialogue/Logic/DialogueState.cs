@@ -13,6 +13,15 @@ public class DialogueState : MonoBehaviour
     public int conversations;
     public string npcName;
     public GameObject playerObject;
+    [SerializeField]
+    private DialogueData dialogues;
+    private NpcData npcData;
+
+    private void Start()
+    {
+        //获取当前的剧本
+        dialogues = this.GetComponent<DialogueController>().dialoges;
+    }
 
     private void OnEnable()
     {
@@ -68,9 +77,42 @@ public class DialogueState : MonoBehaviour
         return false;
     }
 
-    public int getNextDialogueStartIndex()
+
+    //当前主角和triggerName之一吻合,当前主角的id和对应list[i]的triggername里的某一个吻合即可
+    //对话次数和当前吻合       
+    //开门次数和当前吻合        
+    //循环次数和当前吻合
+    public DialogueStruct GetNextDialogueStart()
+    {   for(int i = 0; i < dialogues.dialogueList.Count; i++)
+        {
+            if(getRightTriggerName(i)
+                && conversations == dialogues.dialogueList[i].Conversations 
+                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes 
+                && npcData.loop == dialogues.dialogueList[i].loop)
+            {
+                return dialogues.dialogueList[i];
+            } else
+            {
+                return null;
+            }
+            
+        }
+        return null;
+        
+    }
+
+    private bool getRightTriggerName(int i)
     {
-        return 0;
+        string name =  GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
+        Debug.Log(name);
+        int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
+        if(dialogues.dialogueList[i].teamMembers.Contains(playerIndex))
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
     }
 
 

@@ -15,6 +15,7 @@ MonoBehaviour:
   playerName: Pineapple
   dialogueList:
   - index: 0
+    loop: 0
     pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u756A\u8304\u5B50"
@@ -26,6 +27,7 @@ MonoBehaviour:
     nextIndex: 1
     choices: []
   - index: 1
+    loop: 0
     pic: {fileID: 21300000, guid: c2b79727230842b4d89c658c13fd4e24, type: 3}
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u83E0\u841D\u5B50"
@@ -34,11 +36,12 @@ MonoBehaviour:
     Conversations: 1
     content: "\u6211\u4E0D\u597D"
     animiation: boluo1
-    nextIndex: 0
+    nextIndex: 3
     choices:
     - "\u9009\u98790+2"
     - "\u9009\u98791+-3+1"
   - index: 2
+    loop: 0
     pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u756A\u8304\u5B50"
@@ -50,17 +53,19 @@ MonoBehaviour:
     nextIndex: -1
     choices: []
   - index: 3
+    loop: 0
     pic: {fileID: 0}
     triggerName: 
     chatPartnerName: 
     teamMembers: 
     openDoorTimes: 0
     Conversations: 0
-    content: "\u9009\u98791\u7ED3\u679C"
+    content: "\u6211\u8DDF\u968F\u4E86"
     animiation: qiezi1
     nextIndex: -1
     choices: []
   - index: 4
+    loop: 0
     pic: {fileID: 0}
     triggerName: 
     chatPartnerName: 
