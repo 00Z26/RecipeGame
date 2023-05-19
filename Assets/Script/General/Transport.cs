@@ -7,19 +7,32 @@ using UnityEngine.SceneManagement;
 public class Transport : MonoBehaviour
 {
     private bool isFade;
+    private GameObject player;
 
-    private void Update()
+
+    private void Awake()
     {
-        //Transition(from, to);   
+        //开始时先加载menu场景
+        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 
 
-    public void Transition(string from, string to)
+    private void OnEnable()
     {
-        
-            //Debug.Log("press");
-            StartCoroutine(TransitionToScene(from, to));
-        
+        //新游戏开始时加载到outside的事件
+        EventHandler.TriggerSwapNewGameEvent += Transition;
+    }
+    private void OnDisable()
+    {
+        EventHandler.TriggerSwapNewGameEvent -= Transition;
+    }
+    public void Transition(string from, string to, Vector3 playerToPos)
+    {
+
+        //Debug.Log("press");
+        player = GameObject.FindWithTag("Player");
+        StartCoroutine(TransitionToScene(from, to));
+        player.transform.position = playerToPos;
     }
 
     private IEnumerator TransitionToScene(string from, string to)
@@ -29,7 +42,8 @@ public class Transport : MonoBehaviour
         {
             yield return SceneManager.UnloadSceneAsync(from);
         }
-        Debug.Log("press");
+        //Debug.Log("press");
+        //player.SetActive(false);
         yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive); //执行后只有常驻和场景to
 
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1); //获取新加载场景的序号
@@ -41,6 +55,7 @@ public class Transport : MonoBehaviour
 
         //yield return Fade(0);//变化结束后，渐变白
     }
+
 
     //private IEnumerator Fade(float targetAlpha)
     //{

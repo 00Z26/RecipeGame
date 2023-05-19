@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PotatoRoom.unity
     guid: f696997b885456243964e38587aa175b
+  - enabled: 1
+    path: Assets/Scenes/Cook.unity
+    guid: adff9f5e879b5c64c846fbc7e99d10ae
   m_configObjects: {}

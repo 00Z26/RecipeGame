@@ -59,6 +59,14 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
        TriggerFollowEvent?.Invoke(val);
     }
 
+    public static event Action<string, string, Vector3> TriggerSwapNewGameEvent; //用来从主菜单切换场景到游戏,新游戏数据更新也用这个事件
+    public static void CallTriggerSwapNewGameEvent(string from, string to, Vector3 playerPos)
+    {
+        TriggerSwapNewGameEvent?.Invoke(from, to, playerPos);
+    }
+
+
+
 
 
 

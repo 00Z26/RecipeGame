@@ -8,6 +8,8 @@ public class SwapScene : MonoBehaviour
     // Start is called before the first frame update
     public string from;
     public string to;
+    public Vector3 playerToPos;//从门进入后的位置
+    
     private bool isTransport;
 
     public OpenDoorTimes openDoorTimes;
@@ -24,11 +26,14 @@ public class SwapScene : MonoBehaviour
             (Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(mousePos))?.gameObject.tag == "GameExit" && Mouse.current.leftButton.wasPressedThisFrame))
         {
             Debug.Log("Exit");
-            GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to);
-            if(from == "Outside" && openDoorTimes.doors.Contains(this.gameObject.name) )
+            GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to, playerToPos);
+            //进门增加总次数和本回合次数
+            Debug.Log(this.gameObject.name);
+            if (from == "Outside" && openDoorTimes.doors.Contains(this.gameObject.name) )
             {
+                Debug.Log(this.gameObject.name);
                openDoorTimes.SetDoorTimes(this.gameObject.name);
-                GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes++;
+               GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes++;
             }
             
         }

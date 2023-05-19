@@ -972,6 +972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: LemonRoom
   to: Outside
+  playerToPos: {x: -20.91, y: -4.49, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &1996107895
 BoxCollider2D:

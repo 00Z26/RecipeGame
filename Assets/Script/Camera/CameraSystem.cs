@@ -25,12 +25,11 @@ public class CameraSystem : MonoBehaviour
 
     private void Awake()
     {
-        scene = SceneManager.GetSceneAt(1);
+        //scene = SceneManager.GetSceneAt(1);
         YMoveDis = 0;
 
 
     }
-
     private void OnEnable()
     {
         EventHandler.updateCameraScale += onUpdateCameraScale;
@@ -52,10 +51,11 @@ public class CameraSystem : MonoBehaviour
 
 
     private void Start()
-    {   
+    {
+        scene = SceneManager.GetSceneAt(1);
         //此处在增加了主菜单之后也要使用事件来获取值
         background = GameObject.FindGameObjectWithTag(scene.name);
-        Debug.Log(background);
+        //Debug.Log(background);
         cameraXLeftScale = background.GetComponent<Background>().GetcameraXLeftScale();
         cameraXRightScale = background.GetComponent<Background>().GetcameraXRightScale();
         cameraYUpScale = background.GetComponent<Background>().GetcameraYUpScale();
@@ -68,7 +68,7 @@ public class CameraSystem : MonoBehaviour
     {
         //切换场景时被触发，获取新场景的偏移值
         background = GameObject.FindGameObjectWithTag(sceneName);
-        Debug.Log(sceneName);
+        //Debug.Log(sceneName);
         cameraXLeftScale = background.GetComponent<Background>().GetcameraXLeftScale();
         cameraXRightScale = background.GetComponent<Background>().GetcameraXRightScale();
         cameraYUpScale = background.GetComponent<Background>().GetcameraYUpScale();
