@@ -11,6 +11,7 @@ public class PhysicsCheck : MonoBehaviour
     public bool isInWater;
     public bool isDialogue;//在对话范围内
     public bool isAutoDialogue;
+    public int thisLoopOpenDoorTimes;
 
     [Header("参数")]
     public Vector2 bottomOffset;
@@ -20,6 +21,7 @@ public class PhysicsCheck : MonoBehaviour
     public void Awake()
     {
         coll = GetComponent<CapsuleCollider2D>();
+        thisLoopOpenDoorTimes = 0;
     }
     void Update()
     {

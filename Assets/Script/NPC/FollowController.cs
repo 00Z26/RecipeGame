@@ -26,6 +26,7 @@ public class FollowController : MonoBehaviour
         //激活对应npc的刚体和跟随脚本
         npcObj.GetComponent<CapsuleCollider2D>().enabled = false;
         npcObj.GetComponent<NpcFollow>().enabled = true;
-        
+        //改变场景时不被刷掉
+        npcObj.transform.SetParent(player.transform);
     }
 }

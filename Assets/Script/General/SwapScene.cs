@@ -9,6 +9,8 @@ public class SwapScene : MonoBehaviour
     public string from;
     public string to;
     private bool isTransport;
+
+    public OpenDoorTimes openDoorTimes;
     void Start()
     {
         
@@ -23,6 +25,11 @@ public class SwapScene : MonoBehaviour
         {
             Debug.Log("Exit");
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to);
+            if(from == "Outside" && openDoorTimes.doors.Contains(this.gameObject.name) )
+            {
+               openDoorTimes.SetDoorTimes(this.gameObject.name);
+                GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes++;
+            }
             
         }
 
