@@ -12,49 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0701fd391c77f4b42abe9e03e94a278e, type: 3}
   m_Name: TomatoDialogue
   m_EditorClassIdentifier: 
-  playerName: Pineapple
   dialogueList:
   - index: 0
+    nextIndex: 1
     loop: 0
-    pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
+    pic: 
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u756A\u8304\u5B50"
-    teamMembers: 00000000
+    teamMembers: 
     openDoorTimes: 1
     Conversations: 1
     content: "\u4F60\u597D\\n\u6211\u662F\u8304\u5B50"
     animiation: xi
-    nextIndex: 1
-    choices: []
+    choices: 
   - index: 1
+    nextIndex: 3
     loop: 0
-    pic: {fileID: 21300000, guid: c2b79727230842b4d89c658c13fd4e24, type: 3}
+    pic: 
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u83E0\u841D\u5B50"
-    teamMembers: 01000000
+    teamMembers: 
     openDoorTimes: 1
     Conversations: 1
     content: "\u6211\u4E0D\u597D"
     animiation: boluo1
-    nextIndex: 3
-    choices:
-    - "\u9009\u98790+2"
-    - "\u9009\u98791+-3+1"
+    choices: 
   - index: 2
+    nextIndex: -1
     loop: 0
-    pic: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
+    pic: 
     triggerName: "\u756A\u8304\u5B50"
     chatPartnerName: "\u756A\u8304\u5B50"
-    teamMembers: 01000000
+    teamMembers: 
     openDoorTimes: 1
     Conversations: 1
     content: "\u9009\u98790\u7ED3\u679C"
     animiation: qiezi1
-    nextIndex: -1
-    choices: []
+    choices: 
   - index: 3
+    nextIndex: -1
     loop: 0
-    pic: {fileID: 0}
+    pic: 
     triggerName: 
     chatPartnerName: 
     teamMembers: 
@@ -62,11 +60,11 @@ MonoBehaviour:
     Conversations: 0
     content: "\u6211\u8DDF\u968F\u4E86"
     animiation: qiezi1
-    nextIndex: -1
-    choices: []
+    choices: 
   - index: 4
+    nextIndex: -1
     loop: 0
-    pic: {fileID: 0}
+    pic: 
     triggerName: 
     chatPartnerName: 
     teamMembers: 
@@ -74,5 +72,4 @@ MonoBehaviour:
     Conversations: 0
     content: "\u6211\u4E0D\u662F\uFF0C\u4F60\u624D\u662F"
     animiation: fanqie2
-    nextIndex: -1
-    choices: []
+    choices: 

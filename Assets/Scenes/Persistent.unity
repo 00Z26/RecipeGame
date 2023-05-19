@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 109.7917, y: 52.692}
+  m_AnchoredPosition: {x: 109.7917, y: 71.3}
   m_SizeDelta: {x: 1620.1663, y: 94.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135749912
@@ -765,7 +765,7 @@ SpriteRenderer:
   m_SortingLayerID: -1724713777
   m_SortingLayer: 3
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: c2b79727230842b4d89c658c13fd4e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -823,8 +823,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07348216, y: 0.51225346}
-  m_Size: {x: 0.55910546, y: 1.026381}
+  m_Offset: {x: -0.05193545, y: 0.5198541}
+  m_Size: {x: 0.72531754, y: 0.956856}
   m_Direction: 0
 --- !u!50 &812245926
 Rigidbody2D:

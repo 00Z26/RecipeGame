@@ -13,6 +13,7 @@ public class NpcFollow : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         playerTransform = player.transform;
+        //this.GetComponent<CapsuleCollider2D>().enabled = false;
     }
     private void Update()
     {

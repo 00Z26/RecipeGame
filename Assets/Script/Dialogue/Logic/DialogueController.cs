@@ -12,7 +12,7 @@ public class DialogueController : MonoBehaviour
     public DialogueData autoDialoges;
     public int nextIndex;
     public DialogueStruct currentDialogue;
-    public string content;
+    private string textContent;
     //public string choice0;
     //public string choice1;
     //public string choice2;
@@ -29,6 +29,7 @@ public class DialogueController : MonoBehaviour
     private List<string> choices;
     private List<int> choiceOperation;
     private int buttonVal;
+    private DataTools dataTools;
 
 
     private void Awake()
@@ -41,7 +42,7 @@ public class DialogueController : MonoBehaviour
         choiceNextIndex = new List<int>();
         choiceOperation = new List<int>();
         choices = new List<string>();
-
+        dataTools = new DataTools();    
     }
 
 
@@ -78,7 +79,7 @@ public class DialogueController : MonoBehaviour
         if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)
         {
             //nextIndex = -1;
-            //this.ShowDialogue(false);
+            this.ShowDialogue(false);
             //触发夺舍
             EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
         }
@@ -86,7 +87,7 @@ public class DialogueController : MonoBehaviour
         if(choices.Count != 0 && choiceNextIndex[buttonVal] == -3)
         {
             ////nextIndex = -1;
-            ////this.ShowDialogue(false);
+            this.ShowDialogue(false);
             Debug.Log("选项执行跟随");
             //触发对应npc跟随
             EventHandler.CallTriggerFollowEvent(choiceOperation[buttonVal]);
@@ -105,34 +106,35 @@ public class DialogueController : MonoBehaviour
             if(currentDialogue == null)
                 throw new Exception("未找到对应第一句");
             if (isAuto == false)
+                Debug.Log("增加了次数");
                 this.GetComponent<DialogueState>().conversations++;
-            content = currentDialogue.content;
+            textContent = currentDialogue.chatPartnerName + ":\n" + currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
-            speakerImage = currentDialogue.pic;
+            //speakerImage = currentDialogue.pic;
         } 
         //不是0的时候，直接按照index找下一句
         else if(nextIndex != -1)
         {   
             currentDialogue = getDialoguesContent(isAuto);
-            content = currentDialogue.content;
+            textContent = currentDialogue.chatPartnerName + ":\n" + currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
-            speakerImage = currentDialogue.pic;
+            //speakerImage = currentDialogue.pic;
         }
         else if(nextIndex == -1)
         {
-            content = null;
+            textContent = null;
         }
 
         //参数：剧情内容，相机偏移，头像，自动对话刚体关闭（需要在UI关闭时，停止自动检测）
         //UI显示剧情内容
-        EventHandler.CallShowDialogueEvent(content, YMoveDis, speakerImage, autoObj);
+        EventHandler.CallShowDialogueEvent(textContent, YMoveDis, speakerImage, autoObj);
         //在这添加选项相关操作
-        if (currentDialogue.choices.Count != 0 && nextIndex != -1 )
+        if (currentDialogue.choices != "" && nextIndex != -1)
         {
             choices = new List<string>();
             choiceNextIndex = new List<int>();
             choiceOperation = new List<int>();
-            
+
             GetChoiceSpilt();
             EventHandler.CallUpdateChoicesEvent(choices);
         }
@@ -155,17 +157,6 @@ public class DialogueController : MonoBehaviour
 
 
 
-    //根据当前对话状态获取到本次对话的起始条目
-    private DialogueStruct getFirstDialogue()
-    {
-        foreach(var item in dialoges.dialogueList)
-        {
-            if (dialogueState.CheckFirstDialogue(item)){
-                return item;
-            }
-        }
-        return null;
-    }
     
     
     //根据修改的index获取下一条对话的index
@@ -176,24 +167,40 @@ public class DialogueController : MonoBehaviour
             return autoDialoges.dialogueList[nextIndex];
         } else
         {
-            Debug.Log(dialoges.dialogueList[nextIndex].content);
-            return dialoges.dialogueList[nextIndex];
+            Debug.Log(nextIndex);
+            return dialoges.dialogueList[GetDialogueListIndex(nextIndex)] ;
             
         }
+    }
+
+    private int GetDialogueListIndex(int tempIndex)
+    {
+        Debug.Log(tempIndex);
+        foreach(var item in dialoges.dialogueList)
+        {
+            if((item.index == tempIndex))
+            {
+                Debug.Log(dialoges.dialogueList.IndexOf(item));
+                return dialoges.dialogueList.IndexOf(item);
+            }
+        }
+        Debug.Log("没找到对应的下一句");
+        return -1;
     }
     //分割选项的下一步
     private void GetChoiceSpilt()
     {
-        foreach (var choice in currentDialogue.choices)
-        {            
-            if(choice != "")
+        List<string> choiceList = dataTools.GetChoicesList(currentDialogue.choices);
+        foreach (var choice in choiceList)
+        {
+            if (choice != "")
             {
                 string[] temp = choice.Split("+");
-                
+
                 choices.Add(temp[0]);
-                
+
                 choiceNextIndex.Add(int.Parse(temp[1]));
-                
+
                 //把操作那步的对象拆出来
                 if (temp.Length > 2)
                 {
@@ -203,15 +210,11 @@ public class DialogueController : MonoBehaviour
                 {
                     choiceOperation.Add(-1);
                 }
-              
+
             }
         }
     }
-    //获取到button的传值
 
 
-    //private void GetChoiceOperation()
-    //{
-    //    foreach(var )
-    //}
+
 }

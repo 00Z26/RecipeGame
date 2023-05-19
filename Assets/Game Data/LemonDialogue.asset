@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d216e8246d6eea459adffcc2173db9d, type: 3}
+  m_Name: LemonDialogue
+  m_EditorClassIdentifier: 
+  dialogueList:
+  - index: 0
+    nextIndex: 2002
+    loop: 1
+    pic: '%s_Test1'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 1
+    Conversations: 1
+    content: "\u662F\u6C99\u888B\uFF01"
+    animiation: '%s_Test1'
+    choices: "\u4E00\u62F3\u63CD\u98DE+2002"
+  - index: 2002
+    nextIndex: 2003
+    loop: 0
+    pic: Lemon_Test1
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6C99\u888B\uFF01"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u7B49\u3001\u7B49\u7B49\u7B49\u7B49\u4E00\u7B49\uFF01\\n\u4E0D\u8981\u63CD\u6211\u554A\u54C7\u54C7\u54C7\u54C7\u54C7\u2014\u2014\uFF01"
+    animiation: Lemon_Test1
+    choices: 
+  - index: 2003
+    nextIndex: 2004
+    loop: 0
+    pic: Lemon_Test2
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6C99\u888B\uFF01"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u518D\u3001\u518D\u518D\u518D\u7B49\u4E00\u7B49\uFF01\\n\u4E0D\u8981\u4E0D\u63CD\u6211\u54C7\u554A\u554A\u554A\u554A\u2014\u2014\uFF01"
+    animiation: Lemon_Test2
+    choices: 
+  - index: 2004
+    nextIndex: 2005
+    loop: 0
+    pic: Lemon_Test1
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6C99\u888B\uFF01"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u867D\u7136\u3001\u867D\u7136\u6211\u8BF4\u4E86\u4E0D\u8981\u63CD\u6211\uFF01\u4F46\u8FD9\u5E76\u4E0D\u4EE3\u8868\uFF0C\u6211\u771F\u7684\u5E0C\u671B\u4F60\u4E0D\u63CD\u6211\uFF01\u7136\u540E\u3001\u7136\u540E\u6211\u4E5F\u8BF4\u4E86\u4E0D\u8981\u4E0D\u63CD\u6211\uFF01\u4F46\u8FD9\u4E5F\u5E76\u4E0D\u4EE3\u8868\uFF0C\u6211\u771F\u7684\u4E0D\u5E0C\u671B\u4F60\u4E0D\u63CD\u6211\uFF01\u603B\u4E4B\u2014\u2014"
+    animiation: Lemon_Test1
+    choices: 
+  - index: 2005
+    nextIndex: 2012
+    loop: 0
+    pic: '%s_Test2'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u5B8C\u5168\u641E\u4E0D\u61C2\u8FD9\u662F\u5728\u5E72\u561B\u3002"
+    animiation: '%s_Test2'
+    choices: "\u603B\u4E4B\u63CD\u5C31\u662F\u4E86\uFF01+2007;\uFF08\u8F6C\u79FB\u8BDD\u9898\uFF09\u201C\u505C\u4E00\u505C\uFF0C\u542C\u6211\u8BF4\u66F4\u91CD\u8981\u7684\u4E8B\uFF01\u201D+-3+3"
+  - index: 2006
+    nextIndex: 2007
+    loop: 0
+    pic: Lemon_Test2
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6C99\u888B\u2014\u2014"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u545C\u554A\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014"
+    animiation: 
+    choices: 
+  - index: 2007
+    nextIndex: 2008
+    loop: 0
+    pic: '%s_Test1'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u554A\u3002\\n\u7C98\u5728\u5929\u82B1\u677F\u4E0A\u4E86\u3002"
+    animiation: 
+    choices: 
+  - index: 2008
+    nextIndex: 2009
+    loop: 0
+    pic: '%s_Test2'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u54C8\u55BD\u2014\u2014\\n\u8FD8\u6D3B\u7740\u5417\u2014\u2014"
+    animiation: 
+    choices: 
+  - index: 2009
+    nextIndex: 2010
+    loop: 0
+    pic: '%s_Test1'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u597D\u50CF\u53D8\u6210\u4E86\u751F\u6B7B\u4E0D\u660E\u7684\u60C5\u51B5\u8036\u3002"
+    animiation: 
+    choices: 
+  - index: 2010
+    nextIndex: 2011
+    loop: 0
+    pic: '%s_Test2'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u55EF\u55EF\u2026"
+    animiation: 
+    choices: 
+  - index: 2011
+    nextIndex: -1
+    loop: 0
+    pic: '%s_Test1'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u53BB\u627E\u522B\u4EBA\u5427\uFF01"
+    animiation: 
+    choices: 
+  - index: 2012
+    nextIndex: -1
+    loop: 0
+    pic: '%s_Test1'
+    triggerName: Mushroom,Tomato,Potato
+    chatPartnerName: "\u6211"
+    teamMembers: 
+    openDoorTimes: 0
+    Conversations: 0
+    content: "\u6B22\u8FCE\u52A0\u5165\uFF01"
+    animiation: 
+    choices: 

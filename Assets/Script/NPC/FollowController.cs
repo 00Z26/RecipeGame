@@ -24,6 +24,8 @@ public class FollowController : MonoBehaviour
         //小队人员记录
         player.GetComponent<PlayerController>().teamMembers.Add(npcIndex);
         //激活对应npc的刚体和跟随脚本
+        npcObj.GetComponent<CapsuleCollider2D>().enabled = false;
         npcObj.GetComponent<NpcFollow>().enabled = true;
+        
     }
 }

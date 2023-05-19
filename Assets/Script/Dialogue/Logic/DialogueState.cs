@@ -9,18 +9,29 @@ public class DialogueState : MonoBehaviour
     public bool isDialogueOnState; //从UI处获取，当前
     public bool hasAutoDialogue;//是否已进行过自动对话
     //public bool hasChanged;//是否已被夺舍过
-    public int openDoorTimes = 1;
-    public int conversations;
+    public int openDoorTimes; //累加部分还没做，要在transport里判断
+
+
+    public int conversations; //controller累加，加载第一句后，下次加载判断的值为2
     public string npcName;
     public GameObject playerObject;
-    [SerializeField]
-    private DialogueData dialogues;
-    private NpcData npcData;
 
+   
+    private DialogueData dialogues;
+    public NpcData npcData;
+
+    private DataTools dataTools;
+
+    private void Awake()
+    {
+        openDoorTimes = 1; //这里为1是为了模拟对话时已经加了1，累加部分在transport中补充
+        conversations = 1;
+    }
     private void Start()
     {
         //获取当前的剧本
         dialogues = this.GetComponent<DialogueController>().dialoges;
+        dataTools = new DataTools();
     }
 
     private void OnEnable()
@@ -67,15 +78,6 @@ public class DialogueState : MonoBehaviour
         }
     }
 
-    public bool CheckFirstDialogue(DialogueStruct dialogueListItem)
-    {
-        if (dialogueListItem.triggerName == this.name && dialogueListItem.openDoorTimes == openDoorTimes && dialogueListItem.Conversations == conversations)
-        {
-            //一个判断小队成员内容是否吻合的函数
-            return true;
-        }
-        return false;
-    }
 
 
     //当前主角和triggerName之一吻合,当前主角的id和对应list[i]的triggername里的某一个吻合即可
@@ -83,19 +85,21 @@ public class DialogueState : MonoBehaviour
     //开门次数和当前吻合        
     //循环次数和当前吻合
     public DialogueStruct GetNextDialogueStart()
-    {   for(int i = 0; i < dialogues.dialogueList.Count; i++)
+    {
+        //Debug.Log(dialogues.name);
+        for(int i = 0; i < dialogues.dialogueList.Count; i++)
         {
-            if(getRightTriggerName(i)
-                && conversations == dialogues.dialogueList[i].Conversations 
-                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes 
+            Debug.Log(i);
+            Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
+            
+            if (getRightTriggerName(i)
+                && conversations == dialogues.dialogueList[i].Conversations
+                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes
                 && npcData.loop == dialogues.dialogueList[i].loop)
             {
                 return dialogues.dialogueList[i];
-            } else
-            {
-                return null;
             }
-            
+
         }
         return null;
         
@@ -103,13 +107,16 @@ public class DialogueState : MonoBehaviour
 
     private bool getRightTriggerName(int i)
     {
-        string name =  GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
-        Debug.Log(name);
-        int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
-        if(dialogues.dialogueList[i].teamMembers.Contains(playerIndex))
+        string name = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
+        //Debug.Log(name);
+        //int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
+        //字符串转列表
+        List<string> triggerList = dataTools.GetTriggerNameList(dialogues.dialogueList[i].triggerName);       
+        if (triggerList.Contains(name))
         {
             return true;
-        }else
+        }
+        else
         {
             return false;
         }

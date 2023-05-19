@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &17854569
 Transform:
   m_ObjectHideFlags: 0
@@ -2029,12 +2029,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2.9
-  dialoges: {fileID: 11400000, guid: c1a3907e82bddde4d99ba7f897bc427a, type: 2}
-  autoDialoges: {fileID: 11400000, guid: 4459ab22b01f8ee43b0dbb7923f25379, type: 2}
+  dialoges: {fileID: 0}
+  autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
     index: 0
-    pic: {fileID: 0}
+    nextIndex: 0
+    loop: 0
+    pic: 
     triggerName: 
     chatPartnerName: 
     teamMembers: 
@@ -2042,9 +2044,7 @@ MonoBehaviour:
     Conversations: 0
     content: 
     animiation: 
-    nextIndex: 0
-    choices: []
-  content: 
+    choices: 
   choiceNextIndex: 
 --- !u!114 &708984341
 MonoBehaviour:
@@ -2064,6 +2064,7 @@ MonoBehaviour:
   conversations: 0
   npcName: 
   playerObject: {fileID: 0}
+  npcData: {fileID: 0}
 --- !u!70 &708984343
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3763,7 +3764,7 @@ GameObject:
   - component: {fileID: 1580571451}
   - component: {fileID: 1580571452}
   m_Layer: 0
-  m_Name: Tomato
+  m_Name: Lemon
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3810,7 +3811,7 @@ SpriteRenderer:
   m_SortingLayerID: -1724713777
   m_SortingLayer: 3
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: bd166eb19a3cbf24194aec06da39cf2e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62ea3073b49e56940bfa46b63af57760, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3884,12 +3885,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2.9
-  dialoges: {fileID: 11400000, guid: a14a8b9d8b031eb4590b2ac03624e873, type: 2}
+  dialoges: {fileID: 11400000, guid: 30cfab077487a134aa0cba9fe7ea2b0c, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
     index: 0
-    pic: {fileID: 0}
+    nextIndex: 0
+    loop: 0
+    pic: 
     triggerName: 
     chatPartnerName: 
     teamMembers: 
@@ -3897,9 +3900,7 @@ MonoBehaviour:
     Conversations: 0
     content: 
     animiation: 
-    nextIndex: 0
-    choices: []
-  content: 
+    choices: 
   choiceNextIndex: 
 --- !u!114 &1580571451
 MonoBehaviour:
@@ -3919,6 +3920,7 @@ MonoBehaviour:
   conversations: 0
   npcName: 
   playerObject: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!114 &1580571452
 MonoBehaviour:
   m_ObjectHideFlags: 0
