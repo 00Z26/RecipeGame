@@ -14,6 +14,8 @@ public class CameraSystem : MonoBehaviour
     [Header("地图相机设置")]
     public Transform playerTarget;
     public float moveTime;
+
+
     public float cameraXLeftScale;
     public float cameraXRightScale;
     public float cameraYUpScale;

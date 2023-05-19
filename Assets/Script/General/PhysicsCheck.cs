@@ -80,10 +80,10 @@ public class PhysicsCheck : MonoBehaviour
         {
             isInWater = false;
         }
-        //if (collision.gameObject.tag == "NPC" || collision.gameObject.tag == "AutoDialogue")
-        //{
-        //    isDialogue = false;
-        //}
+        if ((collision.gameObject.tag == "NPC" || collision.gameObject.tag == "AutoDialogue") && !GameObject.Find("DialogueBackground"))
+        {
+            isDialogue = false;
+        }
         if (collision.gameObject.tag == "AutoDialogue")
         {
             isAutoDialogue = false;

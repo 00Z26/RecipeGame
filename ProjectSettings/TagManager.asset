@@ -4,13 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Kitchen
   - Outside
   - Draw Game
   - NPC
   - AutoDialogue
   - DrawLine
   - GameExit
+  - LemonRoom
+  - PotatoRoom
+  - EggRoom
+  - CornRoom
   layers:
   - Default
   - TransparentFX

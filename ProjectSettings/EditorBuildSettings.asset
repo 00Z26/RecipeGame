@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent.unity
     guid: d7c2788fce12e3a4c8cd3453f97da710
   - enabled: 1
-    path: Assets/Scenes/Kitchen.unity
+    path: Assets/Scenes/LemonRoom.unity
     guid: 7fed499c264804b46a26444f7562f903
   - enabled: 1
     path: Assets/Scenes/Outside.unity
@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Draw Game.unity
     guid: ae31237a2bdbff84b991620f56971a80
+  - enabled: 1
+    path: Assets/Scenes/CornRoom.unity
+    guid: 13727bd873efee04c8fb1408549922b8
+  - enabled: 1
+    path: Assets/Scenes/EggRoom.unity
+    guid: fff86ffbd583c324b819522225633f3b
+  - enabled: 1
+    path: Assets/Scenes/PotatoRoom.unity
+    guid: f696997b885456243964e38587aa175b
   m_configObjects: {}

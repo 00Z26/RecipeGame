@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 806522258}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Kitchen
+  m_TagString: EggRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
