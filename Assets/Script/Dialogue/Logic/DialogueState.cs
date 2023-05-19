@@ -9,7 +9,8 @@ public class DialogueState : MonoBehaviour
     public bool isDialogueOnState; //从UI处获取，当前
     public bool hasAutoDialogue;//是否已进行过自动对话
     //public bool hasChanged;//是否已被夺舍过
-    public int openDoorTimes; //累加部分还没做，要在transport里判断
+    public OpenDoorTimes openDoorData;
+    private int openDoorTimes; 
 
 
     public int conversations; //controller累加，加载第一句后，下次加载判断的值为2
@@ -24,7 +25,7 @@ public class DialogueState : MonoBehaviour
 
     private void Awake()
     {
-        openDoorTimes = 1; //这里为1是为了模拟对话时已经加了1，累加部分在transport中补充
+        openDoorTimes = 0; //累加部分在swap内处理
         conversations = 1;
     }
     private void Start()
@@ -87,10 +88,12 @@ public class DialogueState : MonoBehaviour
     public DialogueStruct GetNextDialogueStart()
     {
         //Debug.Log(dialogues.name);
+        openDoorTimes = openDoorData.GetDoorTimes(this.gameObject.name + "Door");
+        Debug.Log(openDoorTimes);
         for(int i = 0; i < dialogues.dialogueList.Count; i++)
         {
-            Debug.Log(i);
-            Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
+            //Debug.Log(i);
+            //Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
             
             if (getRightTriggerName(i)
                 && conversations == dialogues.dialogueList[i].Conversations

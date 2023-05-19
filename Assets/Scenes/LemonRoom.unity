@@ -921,7 +921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDialogueOnState: 0
   hasAutoDialogue: 0
-  openDoorTimes: 0
+  openDoorData: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
   conversations: 0
   npcName: 
   playerObject: {fileID: 0}

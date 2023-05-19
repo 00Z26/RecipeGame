@@ -10,6 +10,7 @@ public class OpenDoorTimes : ScriptableObject
     
     public int GetDoorTimes(string doorName)
     {
+        Debug.Log(doorName);
         return openTimes[GetDoorIndex(doorName)];
     }
     public void SetDoorTimes(string doorName)
