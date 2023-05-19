@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be15c671b2971944da5d321adf274aaf, type: 3}
+  m_Name: 0
+  m_EditorClassIdentifier: 
+  dishName: "\u548C\u67E0\u6AAC\u5B50\u8D74\u6B7B"
+  dishPic: {fileID: 21300000, guid: 4f05b20a28cd0394a9dfe5ad2dd89981, type: 3}
+  dishDescription: "\u6211\u548C\u67E0\u6AAC\u5B50\u505A\u51FA\u7684\u83DC"
+  isShow: 0

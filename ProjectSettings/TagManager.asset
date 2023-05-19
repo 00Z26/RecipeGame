@@ -16,6 +16,7 @@ TagManager:
   - CornRoom
   - Cook
   - Menu
+  - Dish
   layers:
   - Default
   - TransparentFX
