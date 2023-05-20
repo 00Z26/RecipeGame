@@ -65,6 +65,21 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerSwapNewGameEvent?.Invoke(from, to, playerPos);
     }
 
+    public static event Action<string> TriggerShowRecipeTextEvent; //结算菜单的文字显示
+    public static void CallTriggerShowRecipeTextEvent(string text)
+    {
+        TriggerShowRecipeTextEvent?.Invoke(text);
+    }
+
+    public static event Action<string, string, Vector3> TriggerShowRecipeEvent; //主菜单切换到菜谱界面
+    public static void CallTriggerShowRecipeEvent(string from, string to, Vector3 playerPos)
+    {
+        TriggerShowRecipeEvent?.Invoke(from, to, playerPos);
+    }
+
+
+
+
 
 
 

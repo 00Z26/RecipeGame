@@ -17,6 +17,7 @@ TagManager:
   - Cook
   - Menu
   - Dish
+  - RecipeShow
   layers:
   - Default
   - TransparentFX

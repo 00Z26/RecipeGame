@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be15c671b2971944da5d321adf274aaf, type: 3}
   m_Name: 0
   m_EditorClassIdentifier: 
-  dishName: "\u548C\u67E0\u6AAC\u5B50\u8D74\u6B7B"
+  dishName: me lemon die
   dishPic: {fileID: 21300000, guid: 4f05b20a28cd0394a9dfe5ad2dd89981, type: 3}
-  dishDescription: "\u6211\u548C\u67E0\u6AAC\u5B50\u505A\u51FA\u7684\u83DC"
-  isShow: 0
+  dishDescription: me and lemon cooooook!
+  isShow: 1

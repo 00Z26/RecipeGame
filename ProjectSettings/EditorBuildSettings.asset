@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cook.unity
     guid: adff9f5e879b5c64c846fbc7e99d10ae
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7ef3f9d48efe795418bef292e9879556
+  - enabled: 1
+    path: Assets/Scenes/RecipeShow.unity
+    guid: a656c198e5d20b240bdb5b8212cc9d1d
   m_configObjects: {}

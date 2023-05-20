@@ -6,18 +6,25 @@ using UnityEngine.UI;
 public class RecipeShow : MonoBehaviour
 {
     public RecipeData dishData;
-    private Image image;
+    public Image image;
 
-    private void Awake()
-    {
-        image = this.GetComponent<Image>();
-    }
     public void ShowDish()
     {
-        image.sprite = dishData.dishPic;
-        //Œƒ◊÷∂¡»°œ‘ æ
 
-        image.enabled = dishData.isShow;
-        this.enabled = dishData.isShow;
+        if (dishData.isShow)
+        {
+            
+            this.enabled = dishData.isShow;
+            this.gameObject.SetActive(dishData.isShow);
+            image.sprite = dishData.dishPic;
+            
+        }
+        
     }
+
+    public void showTextEvent()
+    {
+        EventHandler.CallTriggerShowRecipeTextEvent(dishData.dishName + ":\n" + dishData.dishDescription);
+    }
+
 }

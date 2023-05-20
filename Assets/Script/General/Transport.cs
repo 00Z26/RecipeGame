@@ -13,7 +13,7 @@ public class Transport : MonoBehaviour
     private void Awake()
     {
         //开始时先加载menu场景
-        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
     }
 
 
@@ -21,10 +21,12 @@ public class Transport : MonoBehaviour
     {
         //新游戏开始时加载到outside的事件
         EventHandler.TriggerSwapNewGameEvent += Transition;
+        EventHandler.TriggerShowRecipeEvent += Transition;
     }
     private void OnDisable()
     {
         EventHandler.TriggerSwapNewGameEvent -= Transition;
+        EventHandler.TriggerShowRecipeEvent -= Transition;
     }
     public void Transition(string from, string to, Vector3 playerToPos)
     {
