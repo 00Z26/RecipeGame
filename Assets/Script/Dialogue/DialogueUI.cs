@@ -11,7 +11,7 @@ public class DialogueUI : MonoBehaviour
     public Image headImg;
     public GameObject dialogueChoices;
     public bool isDialogueOn;
-
+   
 
     private void OnEnable()
     {

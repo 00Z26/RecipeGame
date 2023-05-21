@@ -77,6 +77,13 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerShowRecipeEvent?.Invoke(from, to, playerPos);
     }
 
+    public static event Action<string, string, Vector3> TriggerSumToMenuEvent; //主菜单切换到菜谱界面
+    public static void CallTriggerSumToMenuEvent(string from, string to, Vector3 playerPos)
+    {
+        TriggerSumToMenuEvent?.Invoke(from, to, playerPos);
+    }
+
+
 
 
 

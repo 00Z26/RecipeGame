@@ -22,11 +22,13 @@ public class Transport : MonoBehaviour
         //新游戏开始时加载到outside的事件
         EventHandler.TriggerSwapNewGameEvent += Transition;
         EventHandler.TriggerShowRecipeEvent += Transition;
+        EventHandler.TriggerSumToMenuEvent += Transition;
     }
     private void OnDisable()
     {
         EventHandler.TriggerSwapNewGameEvent -= Transition;
         EventHandler.TriggerShowRecipeEvent -= Transition;
+        EventHandler.TriggerSumToMenuEvent -= Transition;
     }
     public void Transition(string from, string to, Vector3 playerToPos)
     {
