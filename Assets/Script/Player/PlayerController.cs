@@ -92,6 +92,17 @@ public class PlayerController : MonoBehaviour
             rb.gravityScale = groundGravity;
         }
         rb.velocity = new Vector2(inputDirection.x * speed * Time.deltaTime, rb.velocity.y);
+
+        float face = this.transform.localScale.x;
+        if (inputDirection.x > 0)
+        {
+            face = Mathf.Abs(this.transform.localScale.x);
+        }
+        if (inputDirection.x < 0)
+        {
+            face = -MathF.Abs(this.transform.localScale.x);
+        }
+        this.transform.localScale = new Vector3(face, this.transform.localScale.y, this.transform.localScale.z);
     }
 
     private void Jump(InputAction.CallbackContext obj)

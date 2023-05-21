@@ -83,7 +83,11 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerSumToMenuEvent?.Invoke(from, to, playerPos);
     }
 
-
+    public static event Action<bool> SwichLightAnimEvent; //进屋子的时候关灯
+    public static void CallSwitchAnimEvent(bool isLight)
+    {
+        SwichLightAnimEvent?.Invoke(isLight);
+    }
 
 
 

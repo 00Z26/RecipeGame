@@ -25,8 +25,10 @@ public class SwapScene : MonoBehaviour
         if ((Keyboard.current.eKey.wasPressedThisFrame && isTransport) || 
             (Physics2D.OverlapPoint(Camera.main.ScreenToWorldPoint(mousePos))?.gameObject.tag == "GameExit" && Mouse.current.leftButton.wasPressedThisFrame))
         {
-            Debug.Log("Exit");
+            switchLight();
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to, playerToPos);
+            
+            
             //进门增加总次数和本回合次数
             Debug.Log(this.gameObject.name);
             if (from == "Outside" && openDoorTimes.doors.Contains(this.gameObject.name) )
@@ -50,6 +52,20 @@ public class SwapScene : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTransport = false;
+    }
+
+    private void switchLight()
+    {
+        if(from == "PotatoRoom" )
+        {
+
+            EventHandler.CallSwitchAnimEvent(false);
+        } 
+        if(to == "PotatoRoom")
+        {
+            EventHandler.CallSwitchAnimEvent(true);
+        }
+
     }
 
 }
