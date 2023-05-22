@@ -13,6 +13,7 @@ public class ChangeController : MonoBehaviour
 
     //public Collider2D other;
     public NpcData npcData;
+    public DataTools dataTools;
 
     private void OnEnable()
     {
@@ -24,22 +25,29 @@ public class ChangeController : MonoBehaviour
     }
 
     private void OnTriggerChangeEvent(int npcIndex)
-    {
+    {   
+        dataTools = new DataTools();
         //用事件获取到对应的npc的object，这样后面就未必用other。
         String name = npcData.GetPlayerName(npcIndex);
-        GameObject gameObject = GameObject.Find(name);
+        GameObject npc = GameObject.Find(name);
         //Debug.Log(name);
 
-        if (gameObject != null)
+        if (npc != null)
         {
-            npcSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
-            playerSprite = player.GetComponent<SpriteRenderer>().sprite;
-            //Debug.Log(playerSprite.name);
-            previousNpc = getPreviousNpc(playerSprite.name);
-            player.GetComponent<SpriteRenderer>().sprite = npcSprite;
+            //npcSprite = npc.GetComponent<SpriteRenderer>().sprite;
+            //playerSprite = player.GetComponent<SpriteRenderer>().sprite;
+            ////Debug.Log(playerSprite.name);
+            //previousNpc = getPreviousNpc(playerSprite.name);
+            //player.GetComponent<SpriteRenderer>().sprite = npcSprite;
 
-            //Debug.Log(previousNpc?.name);
-            gameObject.SetActive(false);
+            //npc下的子物体换到player下面
+            npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
+            //关闭触发
+            npc.SetActive(false);
+            //把当前player的主角删除
+            Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+            npcData.controllerIndex = npcIndex;
+
             previousNpc?.SetActive(true);
         }
 

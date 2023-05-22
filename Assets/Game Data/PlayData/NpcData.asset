@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: NpcData
   m_EditorClassIdentifier: 
   loop: 1
+  controllerIndex: 0
   playerName:
   - Mushroom
   - Tomato
   - Potato
   - Lemon
+  animPrefab:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 5220148289566870078, guid: 9afe88ade835227429d9c500c425e3f8, type: 3}

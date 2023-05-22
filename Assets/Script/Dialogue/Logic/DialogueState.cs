@@ -110,8 +110,9 @@ public class DialogueState : MonoBehaviour
 
     private bool getRightTriggerName(int i)
     {
-        string name = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
-        //Debug.Log(name);
+        //string name = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
+        string name = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
+        Debug.Log(name);
         //int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
         //字符串转列表
         List<string> triggerList = dataTools.GetTriggerNameList(dialogues.dialogueList[i].triggerName);       

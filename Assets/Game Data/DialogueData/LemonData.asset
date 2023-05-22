@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d216e8246d6eea459adffcc2173db9d, type: 3}
-  m_Name: LemonDialogue
+  m_Name: LemonData
   m_EditorClassIdentifier: 
   dialogueList:
   - index: 0
@@ -154,6 +154,6 @@ MonoBehaviour:
     teamMembers: 
     openDoorTimes: 0
     Conversations: 0
-    content: "\u6B22\u8FCE\u52A0\u5165\uFF01"
+    content: "\u6211\u662F\u67E0\u6AAC\uFF01"
     animiation: 
     choices: 

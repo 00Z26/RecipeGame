@@ -17,6 +17,7 @@ public class PlayerAnimation : MonoBehaviour
 
     private void Update()
     {
+        //之后要改为对所有子物体获取组件
         animator = this.GetComponentInChildren<Animator>();
         if (animator != null)
         {

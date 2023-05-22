@@ -851,7 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputDirection: {x: 0, y: 0}
-  speed: 200
+  speed: 400
   swimSpeed: 300
   jumpForce: 13
   swimJumpForce: 2
@@ -2029,6 +2029,10 @@ PrefabInstance:
     - target: {fileID: 2281015958267585596, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281015958267585596, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
+      propertyPath: m_TagString
+      value: Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 2497372501485732986, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_SortingLayer

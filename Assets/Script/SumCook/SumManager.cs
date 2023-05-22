@@ -24,7 +24,9 @@ public class SumManager : MonoBehaviour
         //判断出哪个菜
         //修改那个菜的bool
         //循环所有的dish显示总结
-        string playerName = playerObj.GetComponent<SpriteRenderer>().sprite.name;
+        //string playerName = playerObj.GetComponent<SpriteRenderer>().sprite.name;
+        string playerName = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
+        Debug.Log(playerName);
         rawMaterial = new List<int>();
 
         rawMaterial.Add(npcData.GetPlayerIndex(playerName));

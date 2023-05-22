@@ -44,4 +44,18 @@ public class DataTools
         return result;
     }
 
+    public GameObject GetChildWithTag(GameObject farher,string tag)
+    {
+        foreach (Transform child in farher.transform)
+        {
+            if(child.tag == tag)
+            {
+                return child.gameObject;
+            }
+
+        }
+        return null;
+
+    }
+
 }

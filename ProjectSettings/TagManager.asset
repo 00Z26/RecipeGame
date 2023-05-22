@@ -18,6 +18,9 @@ TagManager:
   - Menu
   - Dish
   - RecipeShow
+  - Mushroom
+  - Mushroom_Dark
+  - Lemon
   layers:
   - Default
   - TransparentFX
