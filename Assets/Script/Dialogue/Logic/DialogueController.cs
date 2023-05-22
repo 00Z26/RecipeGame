@@ -13,10 +13,7 @@ public class DialogueController : MonoBehaviour
     public int nextIndex;
     public DialogueStruct currentDialogue;
     private string textContent;
-    //public string choice0;
-    //public string choice1;
-    //public string choice2;
-    
+
 
     
     private DialogueState dialogueState;
@@ -118,7 +115,7 @@ public class DialogueController : MonoBehaviour
             currentDialogue = getDialoguesContent(isAuto);
             textContent = currentDialogue.chatPartnerName + ":\n" + currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
-            //speakerImage = currentDialogue.pic;
+            //speakerImage = currentDialogue.pic;GetDialogueImage;
         }
         else if(nextIndex == -1)
         {
@@ -213,6 +210,23 @@ public class DialogueController : MonoBehaviour
 
             }
         }
+    }
+
+    //资源文件下图片转换
+    private Sprite GetDialogueImage()
+    {
+        string temp = null;
+        string name =  dialogueState.npcData.GetPlayerName(dialogueState.npcData.controllerIndex);
+        if(currentDialogue.pic.Contains("%s"))
+        {
+            temp = currentDialogue.pic.Replace("%s",name);
+        } else
+        {
+            temp = currentDialogue.pic;
+        }
+        //相当于放在根目录下面
+        return Resources.Load(temp) as Sprite;//获取对应路径下资源
+
     }
 
 

@@ -98,7 +98,7 @@ public class DialogueState : MonoBehaviour
             if (dialogues.dialogueList[i].index == 0
                 && getRightTriggerName(i)
                 && GetCorrectTeam(i)
-                && GetCorrectConTimes(i)// == int.Parse(dialogues.dialogueList[i].Conversations)
+                && GetCorrectConTimes(i)
                 && openDoorTimes == dialogues.dialogueList[i].openDoorTimes
                 && npcData.loop == dialogues.dialogueList[i].loop)
             {
@@ -154,7 +154,7 @@ public class DialogueState : MonoBehaviour
         }
         return false;
     }
-
+    //判断队员是否吻合
     private bool GetCorrectTeam(int i)
     {
         //配置队伍要求
