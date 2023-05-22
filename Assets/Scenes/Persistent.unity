@@ -768,7 +768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812245922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.26, y: -4.36, z: 0}
+  m_LocalPosition: {x: -13.42, y: 6.17, z: 0}
   m_LocalScale: {x: 0.2426423, y: 0.24070245, z: 0.1867}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -808,8 +808,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15325154, y: -0.35846916}
-  m_Size: {x: 4.251038, y: 6.61388}
+  m_Offset: {x: -0.33173907, y: -0.94585645}
+  m_Size: {x: 8.484344, y: 11.53562}
   m_Direction: 0
 --- !u!50 &812245926
 Rigidbody2D:
@@ -877,7 +877,7 @@ MonoBehaviour:
   isDialogue: 0
   isAutoDialogue: 0
   thisLoopOpenDoorTimes: 0
-  bottomOffset: {x: -0.04, y: -0.87}
+  bottomOffset: {x: -0.06, y: -1.61}
   checkRaduis: 0.13
   groundLayer:
     serializedVersion: 2
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   cameraXRightScale: -0.22
   cameraYUpScale: -0.22
   cameraYDownScale: -4.89
-  deltaYPos: 2
+  deltaYPos: 2.5
 --- !u!4 &1088100193
 Transform:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088100191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.81, y: -0.96, z: 0}
+  m_LocalPosition: {x: -1.77, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1972,11 +1972,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2281015958267585587, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2363878
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 2281015958267585587, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2463522
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 2281015958267585587, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_LocalScale.z
@@ -2080,7 +2080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5639928607565855592, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5639928607565855592, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_SortingLayerID
@@ -2092,7 +2092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6446894657504127190, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6446894657504127190, guid: 31ac3d761ee945a40b5ca1bb8d63f859, type: 3}
       propertyPath: m_SortingLayerID

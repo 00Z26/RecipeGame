@@ -21,6 +21,7 @@ TagManager:
   - Mushroom
   - Mushroom_Dark
   - Lemon
+  - TomatoRoom
   layers:
   - Default
   - TransparentFX
