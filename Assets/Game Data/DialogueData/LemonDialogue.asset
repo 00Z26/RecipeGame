@@ -72,7 +72,7 @@ MonoBehaviour:
     Conversations: 
     content: "\u5B8C\u5168\u641E\u4E0D\u61C2\u8FD9\u662F\u5728\u5E72\u561B\u3002"
     animiation: '%s_Test2'
-    choices: "\u603B\u4E4B\u63CD\u5C31\u662F\u4E86\uFF01+2007;\uFF08\u8F6C\u79FB\u8BDD\u9898\uFF09\u201C\u505C\u4E00\u505C\uFF0C\u542C\u6211\u8BF4\u66F4\u91CD\u8981\u7684\u4E8B\uFF01\u201D+-3+3"
+    choices: "\u603B\u4E4B\u63CD\u5C31\u662F\u4E86\uFF01+2006;\uFF08\u8F6C\u79FB\u8BDD\u9898\uFF09\u201C\u505C\u4E00\u505C\uFF0C\u542C\u6211\u8BF4\u66F4\u91CD\u8981\u7684\u4E8B\uFF01\u201D+-3+3"
   - index: 2006
     nextIndex: 2007
     loop: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     openDoorTimes: 0
     Conversations: 
     content: "\u545C\u554A\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014"
-    animiation: 
+    animiation: Sandbag1 Sandbag2
     choices: 
   - index: 2007
     nextIndex: 2008

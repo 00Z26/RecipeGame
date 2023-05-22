@@ -89,6 +89,15 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         SwichLightAnimEvent?.Invoke(isLight);
     }
 
+    public static event Action<string[]> ExcuDialogueAnimEvent;//触发对话的动画时执行
+    public static void CallExcuDialogueAnimEvent(string[] objArray)
+    {
+        ExcuDialogueAnimEvent?.Invoke(objArray); 
+    }
+
+
+
+
 
 
 

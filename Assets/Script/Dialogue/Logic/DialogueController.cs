@@ -121,6 +121,8 @@ public class DialogueController : MonoBehaviour
         {
             textContent = null;
         }
+        //触发执行动画的事件
+        ExcuAnimObj();
 
         //参数：剧情内容，相机偏移，头像，自动对话刚体关闭（需要在UI关闭时，停止自动检测）
         //UI显示剧情内容
@@ -164,7 +166,7 @@ public class DialogueController : MonoBehaviour
             return autoDialoges.dialogueList[nextIndex];
         } else
         {
-            Debug.Log(nextIndex);
+            //Debug.Log(nextIndex);
             return dialoges.dialogueList[GetDialogueListIndex(nextIndex)] ;
             
         }
@@ -172,12 +174,12 @@ public class DialogueController : MonoBehaviour
 
     private int GetDialogueListIndex(int tempIndex)
     {
-        Debug.Log(tempIndex);
+        //Debug.Log(tempIndex);
         foreach(var item in dialoges.dialogueList)
         {
             if((item.index == tempIndex))
             {
-                Debug.Log(dialoges.dialogueList.IndexOf(item));
+                //Debug.Log(dialoges.dialogueList.IndexOf(item));
                 return dialoges.dialogueList.IndexOf(item);
             }
         }
@@ -229,6 +231,16 @@ public class DialogueController : MonoBehaviour
 
     }
 
-
+    private void ExcuAnimObj()
+    {
+        
+        if(currentDialogue.animiation != null)
+        {
+            string[] res = currentDialogue.animiation.Split(" ");
+            //Debug.Log(res[0]);
+            EventHandler.CallExcuDialogueAnimEvent(res);          
+        }
+        
+    }
 
 }
