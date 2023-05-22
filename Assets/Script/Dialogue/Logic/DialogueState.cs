@@ -95,8 +95,9 @@ public class DialogueState : MonoBehaviour
             //Debug.Log(i);
             //Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
             
-            if (getRightTriggerName(i)
-                && conversations == dialogues.dialogueList[i].Conversations
+            if (dialogues.dialogueList[i].index == 0
+                && getRightTriggerName(i)
+                && GetCorrectConTimes(i)// == int.Parse(dialogues.dialogueList[i].Conversations)
                 && openDoorTimes == dialogues.dialogueList[i].openDoorTimes
                 && npcData.loop == dialogues.dialogueList[i].loop)
             {
@@ -111,7 +112,8 @@ public class DialogueState : MonoBehaviour
     private bool getRightTriggerName(int i)
     {
         //string name = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
-        string name = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
+        string name = npcData.GetPlayerName(npcData.controllerIndex);
+        //string name = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
         Debug.Log(name);
         //int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
         //字符串转列表
@@ -124,6 +126,32 @@ public class DialogueState : MonoBehaviour
         {
             return false;
         }
+    }
+
+    //增加对>n次对话的判断
+    private bool GetCorrectConTimes(int i)
+    {
+        Debug.Log(dialogues.dialogueList[i].Conversations);
+        if(dialogues.dialogueList[i].Conversations.Contains(">"))
+        {
+            string prefix = ">";
+            string temp = dialogues.dialogueList[i].Conversations.Replace(prefix,"");
+            //Debug.Log(int.Parse(temp));
+            
+            if (conversations >= int.Parse(temp))
+            {
+                Debug.Log(conversations);
+                return true;
+            } else
+            {
+                return false;
+            }
+
+        }else if(conversations == int.Parse(dialogues.dialogueList[i].Conversations))
+        {
+            return true;
+        }
+        return false;
     }
 
 
