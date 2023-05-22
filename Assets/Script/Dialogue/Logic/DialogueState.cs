@@ -97,6 +97,7 @@ public class DialogueState : MonoBehaviour
             
             if (dialogues.dialogueList[i].index == 0
                 && getRightTriggerName(i)
+                && GetCorrectTeam(i)
                 && GetCorrectConTimes(i)// == int.Parse(dialogues.dialogueList[i].Conversations)
                 && openDoorTimes == dialogues.dialogueList[i].openDoorTimes
                 && npcData.loop == dialogues.dialogueList[i].loop)
@@ -111,9 +112,9 @@ public class DialogueState : MonoBehaviour
 
     private bool getRightTriggerName(int i)
     {
-        //string name = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().sprite.name;
+        
         string name = npcData.GetPlayerName(npcData.controllerIndex);
-        //string name = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
+        
         Debug.Log(name);
         //int playerIndex = npcData.GetPlayerIndex(name);//要保证索引里有
         //字符串转列表
@@ -154,5 +155,39 @@ public class DialogueState : MonoBehaviour
         return false;
     }
 
+    private bool GetCorrectTeam(int i)
+    {
+        //配置队伍要求
+        if(dialogues.dialogueList[i].teamMembers == string.Empty)
+        {
+            return true;
+        }
+        int teamReuire = int.Parse(dialogues.dialogueList[i].teamMembers);
+        //当前队伍内容
+        List<int> teamList = GameObject.FindWithTag("Player").GetComponent<PlayerController>().teamMembers;
+        teamList.Add(npcData.controllerIndex);
+        if(teamReuire >= 0)
+        {
+            if(teamList.Contains(teamReuire))
+            {
+                return true;
+            }
+            else { return false; }
+        }
+        if(teamReuire < 0)
+        {
+            teamReuire = Mathf.Abs(teamReuire);
+            if(teamList.Contains(teamReuire))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        return false;
+
+    }
 
 }

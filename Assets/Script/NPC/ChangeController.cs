@@ -30,15 +30,9 @@ public class ChangeController : MonoBehaviour
         //用事件获取到对应的npc的object，这样后面就未必用other。
         String name = npcData.GetPlayerName(npcIndex);
         GameObject npc = GameObject.Find(name);
-        //Debug.Log(name);
 
         if (npc != null)
         {
-            //npcSprite = npc.GetComponent<SpriteRenderer>().sprite;
-            //playerSprite = player.GetComponent<SpriteRenderer>().sprite;
-            ////Debug.Log(playerSprite.name);
-            //previousNpc = getPreviousNpc(playerSprite.name);
-            //player.GetComponent<SpriteRenderer>().sprite = npcSprite;
 
             //npc下的子物体换到player下面
             npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
