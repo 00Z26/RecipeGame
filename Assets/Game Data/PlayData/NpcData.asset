@@ -16,11 +16,36 @@ MonoBehaviour:
   controllerIndex: 0
   playerName:
   - Mushroom
-  - Tomato
   - Potato
+  - Corn
+  - Egg
+  - Tomato
   - Lemon
+  - Clothes
+  - Bass
+  - Sandbag
   animPrefab:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 5220148289566870078, guid: 9afe88ade835227429d9c500c425e3f8, type: 3}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 5220148289566870078, guid: 9afe88ade835227429d9c500c425e3f8, type: 3}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 0}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 0}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 0}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 0}
+  - isNormal: 1
+    normal: {fileID: 0}
+    abnormal: {fileID: 0}
+    dark: {fileID: 0}

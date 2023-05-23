@@ -39,7 +39,7 @@ public class SumManager : MonoBehaviour
 
 
 
-
+        //dishIndex = GetNewChipIndex();
         //假设是0
         dishIndex = 0;
         //执行显示和隐藏
@@ -47,4 +47,93 @@ public class SumManager : MonoBehaviour
         this.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
 
     }
+
+    private int GetNewChipIndex()
+    {
+        //有蘑菇
+        if(rawMaterial.Contains(0))
+        {
+            if(rawMaterial.Count == 1)
+            {
+                return 0;
+            } else
+            {
+                return 1;
+            }
+        }
+        //有鸡蛋
+        if(rawMaterial.Contains(3))
+        {
+            //荷包蛋
+            if(rawMaterial.Count == 1)
+            {
+                return 4;
+            }
+            //蛋包饭
+            if(rawMaterial.Count == 2 && rawMaterial.Contains(4))
+            {
+                if(npcData.animPrefab[4].isNormal == false)
+                {
+                    return 2;
+                }
+            }
+            //番茄炒蛋
+            if (rawMaterial.Count == 3 && rawMaterial.Contains(6))
+            {
+                if (rawMaterial.Contains(4) && npcData.animPrefab[4].isNormal == true)
+                {
+                    return 3;
+                }
+            }
+            return 5;
+
+        }
+        //有玉米
+        if (rawMaterial.Contains(2))
+        {
+            //是光明玉米
+            if(npcData.animPrefab[2].isNormal)
+            {   //烤玉米
+                if(rawMaterial.Count == 1)
+                    return 6;
+                //沙拉
+                if(rawMaterial.Contains(1))
+                    return 7;
+            }
+            return 8;
+        }
+        //有柠檬
+        if(rawMaterial.Contains(5))
+        {
+            if (rawMaterial.Count == 1)
+                return 10;
+            if(rawMaterial.Count == 2 && rawMaterial.Contains(8))
+            {
+                return 9;
+            }
+            return 11;
+        }
+        //有土豆
+        if(rawMaterial.Contains(1))
+        {
+            if(rawMaterial.Count == 1)
+                return 12;
+            if (rawMaterial.Contains(7))
+            {
+                return 13;
+            }
+            return 8;
+        }
+        if(rawMaterial.Contains(4))
+        {
+            if(rawMaterial.Count == 2 && rawMaterial.Contains(6))
+            {
+                if(npcData.animPrefab[4].isNormal == true)
+                    return 14;
+            }
+            return 15;
+        }
+        return -1;
+    }
+
 }
