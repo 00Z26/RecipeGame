@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be15c671b2971944da5d321adf274aaf, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: 
-  dishName: 
-  dishPic: {fileID: 0}
+  dishName: "\u86CB\u5305\u996D"
+  dishPic: {fileID: 21300000, guid: bd34695d8f55dd144ae2f0d20c8ea276, type: 3}
   dishDescription: 
   isShow: 0
