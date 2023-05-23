@@ -25,12 +25,14 @@ public class PhysicsCheck : MonoBehaviour
     }
     void Update()
     {
-        Check(); 
+        Check();
         //if(isDialogue == true && !GameObject.Find("DialogueBackground"))
         //{
         //    isDialogue = false; 
-        //}
+        //}'
+        CheckDoorTimes();
     }
+
     private void OnEnable()
     {
         EventHandler.ExitDialogueState += OnResetInDialogue;
@@ -100,4 +102,20 @@ public class PhysicsCheck : MonoBehaviour
     {
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, checkRaduis);
     }
+    private void CheckDoorTimes()
+    {
+       if(thisLoopOpenDoorTimes == 4)
+        {
+            SwapScene[] swapObjs = GameObject.FindObjectsOfType<SwapScene>();
+            foreach(SwapScene obj in swapObjs)
+            {
+                if(obj.gameObject.name != "CookDoor")
+                {
+                    obj.enabled = false;
+                }
+            }
+        }
+    }
+
+
 }

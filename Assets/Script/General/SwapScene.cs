@@ -29,14 +29,17 @@ public class SwapScene : MonoBehaviour
             GameObject.Find("TransportManager").GetComponent<Transport>().Transition(from, to, playerToPos);
             
             
-            //进门增加总次数和本回合次数
+            //进门增加总次数和本回合场景切换次数
             Debug.Log(this.gameObject.name);
-            if (from == "Outside" && openDoorTimes.doors.Contains(this.gameObject.name) )
+            if (openDoorTimes.doors.Contains(this.gameObject.name))
             {
-                Debug.Log(this.gameObject.name);
-               openDoorTimes.SetDoorTimes(this.gameObject.name);
-               GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes++;
+                if (from == "Outside")
+                {
+                    Debug.Log(this.gameObject.name);
+                   openDoorTimes.SetDoorTimes(this.gameObject.name);
+                }
             }
+            GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes++;
             
         }
 
