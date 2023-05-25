@@ -8,12 +8,15 @@ public class Transport : MonoBehaviour
 {
     private bool isFade;
     private GameObject player;
+    public NpcData npcData;
+    public Canvas mainCanvas;
 
 
     private void Awake()
     {
         //开始时先加载menu场景
-        //SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        mainCanvas.enabled = false;
     }
 
 
@@ -35,7 +38,11 @@ public class Transport : MonoBehaviour
 
         //Debug.Log("press");
         player = GameObject.FindWithTag("Player");
+        SwitchUI(to);
+
         StartCoroutine(TransitionToScene(from, to));
+
+               
         player.transform.position = playerToPos;
     }
 
@@ -52,7 +59,8 @@ public class Transport : MonoBehaviour
 
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1); //获取新加载场景的序号
         SceneManager.SetActiveScene(newScene);
-        
+        //已跟随的npc不加载
+        LoadNpc();
         //触发事件去让相机修改边界值
         EventHandler.CallUpdateCameraScale(to);
 
@@ -76,4 +84,53 @@ public class Transport : MonoBehaviour
     //    fadeCanvasGroup.blocksRaycasts = false;
     //    isFade = false;
     //}
+
+    //切换场景时的UI显示控制
+    public void SwitchUI(string to)
+    {
+        if(to == "Menu" || to == "Cook" || to == "RecipeShow" )
+        {
+            mainCanvas.enabled = false;
+
+        } else
+        {
+            mainCanvas.enabled = true;
+        }
+    }
+
+    //切换场景时人物加载
+    public void LoadNpc()
+    {
+        //跟随再进，人物不在
+        List<int> teamNpcs = new List<int>();
+
+        foreach(var item in player.GetComponent<PlayerController>().teamMembers)
+        {
+            teamNpcs.Add(item);
+        }
+        teamNpcs.Add(npcData.controllerIndex);
+
+        Scene newScene = SceneManager.GetActiveScene();
+        GameObject[] npcs = newScene.GetRootGameObjects();
+
+
+        //GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
+        if(npcs.Length > 0)
+        {
+            foreach (GameObject npc in npcs)
+            {
+                
+                Debug.Log(npc.name);
+                if(npc.tag == "NPC")
+                {
+                    if (teamNpcs.Contains(npcData.GetPlayerIndex(npc.name)) && npc.transform.parent != player.transform )
+                    {
+                        Debug.Log(npc.name);
+                        //Debug.Log(npc.transform.parent.name);
+                        npc.SetActive(false);
+                    }
+                }
+            }
+        }
+    }
 }
