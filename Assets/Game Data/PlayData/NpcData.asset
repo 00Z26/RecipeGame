@@ -26,26 +26,38 @@ MonoBehaviour:
   - Sandbag
   animPrefab:
   - isNormal: 1
-    normal: {fileID: 0}
+    normal: {fileID: 1619232029763604099, guid: 14609f784fbb9e145a2f35f8337bf995, type: 3}
     abnormal: {fileID: 0}
-    dark: {fileID: 5220148289566870078, guid: 9afe88ade835227429d9c500c425e3f8, type: 3}
+    dark: {fileID: 764856576934168000, guid: 9afe88ade835227429d9c500c425e3f8, type: 3}
+  - isNormal: 1
+    normal: {fileID: 2520296888392951704, guid: e93d33705fc46bd4487fa3f57d48c6f1, type: 3}
+    abnormal: {fileID: 0}
+    dark: {fileID: 8693754723005545426, guid: 39b8fb1b989913e4a97c7e6ac03b6dd9, type: 3}
   - isNormal: 1
     normal: {fileID: 0}
     abnormal: {fileID: 0}
     dark: {fileID: 0}
   - isNormal: 1
-    normal: {fileID: 0}
+    normal: {fileID: 3391488690934149770, guid: 26aa4d244ce97b643886486e1fbd7d2c, type: 3}
+    abnormal: {fileID: 0}
+    dark: {fileID: 499686316039229572, guid: 1726314b71823c640a874e21aff2a6fc, type: 3}
+  - isNormal: 1
+    normal: {fileID: 5170723973898748213, guid: 64a0f67859100224fb8813a03e7b70f6, type: 3}
+    abnormal: {fileID: 7313107259169688228, guid: e26d996f3d1abf840a3b7a8743544536, type: 3}
+    dark: {fileID: 3928230901697619850, guid: 05053670fa698a04a9e7a795e156c513, type: 3}
+  - isNormal: 1
+    normal: {fileID: 6726072502328326871, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+    abnormal: {fileID: 0}
+    dark: {fileID: 1123584664296899059, guid: d952c32372839324c9affd28b286d21a, type: 3}
+  - isNormal: 1
+    normal: {fileID: 7912891379767886762, guid: 7a47d103ee6204a49a174de343edb7cb, type: 3}
     abnormal: {fileID: 0}
     dark: {fileID: 0}
   - isNormal: 1
-    normal: {fileID: 0}
+    normal: {fileID: 2686296469494997275, guid: 2f42b2f92f252a240980bac0fdb55222, type: 3}
     abnormal: {fileID: 0}
     dark: {fileID: 0}
   - isNormal: 1
-    normal: {fileID: 0}
-    abnormal: {fileID: 0}
-    dark: {fileID: 0}
-  - isNormal: 1
-    normal: {fileID: 0}
+    normal: {fileID: 5115845654138966154, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
     abnormal: {fileID: 0}
     dark: {fileID: 0}

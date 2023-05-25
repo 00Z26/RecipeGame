@@ -15,8 +15,8 @@ public class Transport : MonoBehaviour
     private void Awake()
     {
         //开始时先加载menu场景
-        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
-        mainCanvas.enabled = false;
+        //SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        //mainCanvas.enabled = false;
     }
 
 
@@ -120,12 +120,12 @@ public class Transport : MonoBehaviour
             foreach (GameObject npc in npcs)
             {
                 
-                Debug.Log(npc.name);
+                //Debug.Log(npc.name);
                 if(npc.tag == "NPC")
                 {
                     if (teamNpcs.Contains(npcData.GetPlayerIndex(npc.name)) && npc.transform.parent != player.transform )
                     {
-                        Debug.Log(npc.name);
+                        //Debug.Log(npc.name);
                         //Debug.Log(npc.transform.parent.name);
                         npc.SetActive(false);
                     }
