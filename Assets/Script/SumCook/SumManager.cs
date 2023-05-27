@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class SumManager : MonoBehaviour
 {
     private GameObject playerObj;
     public NpcData npcData;
+    public float duration;
 
 
     private List<int> rawMaterial;
@@ -43,10 +45,24 @@ public class SumManager : MonoBehaviour
         //假设是0
         dishIndex = 0;
         //执行显示和隐藏
+        StartCoroutine(WaitForSecondsRealtime(duration,dishIndex,this.gameObject));
         Debug.Log("调用弹出");
-        this.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
+        //this.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
 
     }
+    /// <summary>
+    /// 等待时间（不会受到Time.timeScale的影响）
+    /// </summary>
+    /// <param name="duration">等待时间</param>
+    /// <param name="action">等待后执行的函数</param>
+    /// <returns></returns>
+    public static IEnumerator WaitForSecondsRealtime(float duration,int dishIndex, GameObject obj)
+    {
+        yield return new WaitForSecondsRealtime(duration);
+        obj.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
+
+    }
+
 
     private int GetNewChipIndex()
     {

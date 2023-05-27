@@ -18,7 +18,7 @@ public class HightLightAnim : MonoBehaviour
 
     //private int recIndex;
 
-    IEnumerator HideHighlight(GameObject gameObj, int index)
+   IEnumerator HideHighlight(GameObject gameObj, int index)
     {
         float timer = 0;
         while (timer <= 1)
