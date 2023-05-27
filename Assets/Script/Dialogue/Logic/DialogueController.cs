@@ -109,7 +109,7 @@ public class DialogueController : MonoBehaviour
             textContent[0] = currentDialogue.chatPartnerName;
             textContent[1] = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
-            //speakerImage = currentDialogue.pic;
+            speakerImage = GetDialogueImage();
         } 
         //不是0的时候，直接按照index找下一句
         else if(nextIndex != -1)
@@ -118,7 +118,7 @@ public class DialogueController : MonoBehaviour
             textContent[0] = currentDialogue.chatPartnerName;
             textContent[1] = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
-            //speakerImage = currentDialogue.pic;GetDialogueImage;
+            speakerImage = GetDialogueImage();
         }
         else if(nextIndex == -1)
         {
@@ -229,9 +229,14 @@ public class DialogueController : MonoBehaviour
         {
             temp = currentDialogue.pic;
         }
+        //Debug.Log(temp);
         //相当于放在根目录下面
-        return Resources.Load(temp) as Sprite;//获取对应路径下资源
-
+        //Sprite img = Resources.Load("pic/" + temp +"/"+temp) as Sprite;
+        Texture2D texture2D = Resources.Load("pic/" + temp) as Texture2D;
+        Sprite img = Sprite.Create(texture2D, new Rect(0, 0, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f));
+        Debug.Log(texture2D.name);
+        return img;//获取对应路径下资源
+        //Resources.Load<Sprite>("绝对路径");
     }
 
     private void ExcuAnimObj()

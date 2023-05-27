@@ -1422,8 +1422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de33b608d1b395f40abcc2bbd4d992ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YMoveDis: -2.9
-  dialoges: {fileID: 11400000, guid: 17137b83e6a1fa545a2f09aef64f324e, type: 2}
+  YMoveDis: -2.4
+  dialoges: {fileID: 11400000, guid: 1534cceed69b6c74cb78e0039989e0d1, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de33b608d1b395f40abcc2bbd4d992ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YMoveDis: -2.9
+  YMoveDis: -2
   dialoges: {fileID: 11400000, guid: e2047db6c788f5549a1bef56cb219fe3, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
