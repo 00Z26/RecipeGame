@@ -41,9 +41,9 @@ public class SumManager : MonoBehaviour
 
 
 
-        //dishIndex = GetNewChipIndex();
+        dishIndex = GetNewChipIndex();
         //假设是0
-        dishIndex = 0;
+        //dishIndex = 0;
         //执行显示和隐藏
         StartCoroutine(WaitForSecondsRealtime(duration,dishIndex,this.gameObject));
         Debug.Log("调用弹出");

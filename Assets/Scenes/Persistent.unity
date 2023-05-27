@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: "\u624D\u602A\u5566\uFF01\u4F60\u4EE5\u4E3A\u4F60\u4F1A\u5F71\u54CD\u5230\u6211\u5417\uFF1F\\n\u8FD9\u662F\u6C38\u8FDC\u4E0D\u53EF\u80FD\u7684\uFF01\u5728\u8FD9\u4E2A\u4E16\u754C\u91CC\uFF0C\u53EA\u6709\u6211\u5F71\u54CD\u4F60\u624D\u662F\u88AB\u5141\u8BB8\u7684\uFF01\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a112dc5f13bd8fd4ba32e59a5fdcf4c1, type: 2}
-  m_sharedMaterial: {fileID: -1883812765935273223, guid: a112dc5f13bd8fd4ba32e59a5fdcf4c1, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 2031e410b5d740a4983d6d7482f1d6d4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &135749913
@@ -1184,6 +1184,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1826777873}
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &812245922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1499,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1826777873}
         m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
         m_MethodName: SetButton2Val
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1826777873}
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: Clear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2313,6 +2337,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1826777873}
+        m_TargetAssemblyTypeName: ButtonClick, Assembly-CSharp
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1649175828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,6 +2712,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonReply: 0
+  button0: {fileID: 727792772}
+  button1: {fileID: 1616757362}
+  button2: {fileID: 1119527183}
 --- !u!4 &1826777874
 Transform:
   m_ObjectHideFlags: 0

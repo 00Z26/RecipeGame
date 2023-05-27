@@ -57,7 +57,7 @@ public class DialogueUI : MonoBehaviour
         for (int i = 0;i < choices.Count;i++)
         {
             
-            if(choices[i] != "")
+            if(choices[i] != "" && choices[i] != null)
             {
                 
                 GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
@@ -65,9 +65,13 @@ public class DialogueUI : MonoBehaviour
                 choice.GetComponentInChildren<TMP_Text>().text = choices[i];
                 //Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
                 choice.SetActive(true);
+            }else
+            {
+                GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
+                choice.SetActive(false);
             }
         }
-        //choices.Clear();
+        choices.Clear();
     }
 
 }

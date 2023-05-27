@@ -36,10 +36,12 @@ public class ChangeController : MonoBehaviour
 
             //npc下的子物体换到player下面
             npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
+            
             //关闭触发
             npc.SetActive(false);
             //把当前player的主角删除
             Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+            player.transform.Find(name).transform.localPosition = new Vector3(-5.53999996f, -3.1400001f, 0); //柠檬夺舍后的位置
             npcData.controllerIndex = npcIndex;
 
             previousNpc?.SetActive(true);

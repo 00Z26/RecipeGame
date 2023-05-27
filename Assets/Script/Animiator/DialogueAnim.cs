@@ -29,9 +29,11 @@ public class DialogueAnim : MonoBehaviour
         for (int i = 0; i < objList.Count; i++)
         {
             GameObject gameObject = GameObject.Find(objList[i]);
-            //Debug.Log(gameObject.name);
+            Debug.Log(gameObject.name);
             Animator animator = gameObject.GetComponentInChildren<Animator>();
-            animator?.SetBool(allList[i], true);
+            animator?.Play(allList[i]);
+            //animator?.SetBool(allList[i], true);
+            //animator?.SetBool(allList[i], false);
 
             //É³´ü»÷·ÉºóÏûÊ§
             if (allList[i] == "Sandbag_HangFly")

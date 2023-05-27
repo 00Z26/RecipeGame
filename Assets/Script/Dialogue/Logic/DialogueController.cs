@@ -23,8 +23,9 @@ public class DialogueController : MonoBehaviour
 
     [SerializeField]
     private List<int> choiceNextIndex;
-
+    [SerializeField]
     private List<string> choices;
+
     private List<int> choiceOperation;
     private int buttonVal;
     private DataTools dataTools;
@@ -48,16 +49,27 @@ public class DialogueController : MonoBehaviour
     {
         
         EventHandler.SendButtonValEvent += OnSendButtonValEvent;
+        EventHandler.ExitDialogueState += OnEmptyList;
     }
     private void OnDisable()
     {
         
         EventHandler.SendButtonValEvent -= OnSendButtonValEvent;
+        EventHandler.ExitDialogueState -= OnEmptyList;
+    }
+
+    private void OnEmptyList(bool obj)
+    {
+        //对话退出的时候清空残留数据
+        choices = new List<string>();
+        choiceNextIndex = new List<int>();
+        choiceOperation = new List<int>();
     }
 
     private void OnSendButtonValEvent(int val)
     {
         buttonVal = val;
+        Debug.Log(val);
         ButtonOperation();
     }
 
@@ -69,11 +81,12 @@ public class DialogueController : MonoBehaviour
             //执行展示下一句的操作
             
             nextIndex = choiceNextIndex[buttonVal];
+            Debug.Log(nextIndex);
             this.ShowDialogue(false);
+            //choiceNextIndex = new List<int>();
             Debug.Log("结束选项下一句对话事件");
 
         }
-
         if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)
         {
             //nextIndex = -1;
@@ -81,8 +94,7 @@ public class DialogueController : MonoBehaviour
             //触发夺舍
             EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
         }
-
-        if(choices.Count != 0 && choiceNextIndex[buttonVal] == -3)
+        if(choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -3)
         {
             ////nextIndex = -1;
             this.ShowDialogue(false);
@@ -115,10 +127,14 @@ public class DialogueController : MonoBehaviour
         else if(nextIndex != -1)
         {   
             currentDialogue = getDialoguesContent(isAuto);
-            textContent[0] = currentDialogue.chatPartnerName;
-            textContent[1] = currentDialogue.content;
-            nextIndex = currentDialogue.nextIndex;
-            speakerImage = GetDialogueImage();
+            Debug.Log(this.gameObject.name);
+            if(currentDialogue != default(DialogueStruct))
+            {
+                textContent[0] = currentDialogue.chatPartnerName;
+                textContent[1] = currentDialogue.content;
+                nextIndex = currentDialogue.nextIndex;
+                speakerImage = GetDialogueImage();
+            }
         }
         else if(nextIndex == -1)
         {
@@ -152,6 +168,7 @@ public class DialogueController : MonoBehaviour
                 dialogueState.hasAutoDialogue = true;
              
             }
+            //choiceNextIndex = new List<int>();
             nextIndex = dialogueState.resetDialogueIndex(nextIndex); //将index复原为0，由于多状态转换不能在本次获得下次起始
         }
         
@@ -171,6 +188,7 @@ public class DialogueController : MonoBehaviour
         {
             //Debug.Log(nextIndex);
             return dialoges.dialogueList[GetDialogueListIndex(nextIndex)] ;
+
             
         }
     }

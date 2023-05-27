@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
     {
         //npc×´Ì¬»Ö¸´£¬Ñ­»·´ÎÊý»Ö¸´
         npcData.loop = 1;
+        npcData.controllerIndex = 0;
         foreach( NpcStruct anim in npcData.animPrefab)
         {
             anim.isNormal = true;
@@ -58,6 +59,7 @@ public class GameController : MonoBehaviour
     public void ContinueNextLoop(string str1,string str2, Vector3 vec3)
     {
         npcData.loop++;
+        npcData.controllerIndex = 0;
         for (int i = 0; i < openDoorTimes.openTimes.Count; i++)
         {
             openDoorTimes.thisLoopDoorTimes[i] = 0;

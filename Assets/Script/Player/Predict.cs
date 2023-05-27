@@ -133,6 +133,7 @@ public class Predict : MonoBehaviour
             {
                 if (recipeList.recipeList[preChips[i]].isShow)
                 {
+                    
                     preDishes[i].sprite = recipeList.recipeList[preChips[i]].dishPic;
                     
                 }

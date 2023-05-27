@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
 {
     public int buttonReply;
+    public TMP_Text button0;
+    public TMP_Text button1;
+    public TMP_Text button2;
+
     public void SetButton0Val()
     {
         //Debug.Log("click");
@@ -22,7 +28,15 @@ public class ButtonClick : MonoBehaviour
         buttonReply = 2;
         EventHandler.CallSendButtionValEvent(buttonReply);
     }
-
+    public void Clear()
+    {
+        button0.text = null;
+        button1.text = null;
+        button2.text = null;
+        button0.gameObject.SetActive(false);
+        button1.gameObject.SetActive(false);
+        button2.gameObject.SetActive(false);
+    }
 
 
     //三个功能：下一句，跟随，夺舍

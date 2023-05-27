@@ -27,7 +27,7 @@ public class NpcFollow : MonoBehaviour
             //ÃÌº”npc ±”““∆Œª÷√
             if(player.transform.localScale.x < 0)
             {
-                Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum + 3), this.transform.position.y);
+                Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum + 5), this.transform.position.y);
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
             }
             else if(player.transform.localScale.x> 0)
