@@ -9,7 +9,7 @@ public class RecipeManager : MonoBehaviour
     
     private int dishIndex;
     private Transform[] dishesImage;
-    
+    private RecipeList recipeList;
 
     public NpcData npcData;
     

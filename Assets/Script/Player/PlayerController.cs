@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     private PhysicsCheck physicsCheck;
     //获取到方向键传入的二维向量
     public Vector2 inputDirection;
-    
+    public bool isDialogueUI = false;
     [Header("基本参数")]
     public float speed;
     public float swimSpeed;
@@ -40,13 +40,26 @@ public class PlayerController : MonoBehaviour
     {
         inputControl.Enable();
         EventHandler.TriggerAutoDialogue += onTriggerAutoDialogue;
+        EventHandler.UpdateDialogueState += SetTrueDialogueBool;
+        EventHandler.ExitDialogueState += SetFalseDialogueBool;
     }
     private void OnDisable()
     {
         inputControl?.Disable();
         EventHandler.TriggerAutoDialogue -= onTriggerAutoDialogue;
+        EventHandler.UpdateDialogueState -= SetTrueDialogueBool;
+        EventHandler.ExitDialogueState -= SetFalseDialogueBool;
     }
 
+    private void SetTrueDialogueBool(bool arg1, float arg2)
+    {
+        isDialogueUI = true;
+    }
+
+    private void SetFalseDialogueBool(bool obj)
+    {
+        isDialogueUI = false;
+    }
 
     private void Update()
     {
@@ -64,6 +77,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if(!isDialogueUI)
             Move();
     }
     

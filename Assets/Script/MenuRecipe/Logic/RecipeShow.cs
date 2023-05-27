@@ -8,7 +8,7 @@ public class RecipeShow : MonoBehaviour
     public RecipeData dishData;
     public Image image;
     public Sprite unknownPic;
-    public Sprite unknownBg;
+    
 
     public void ShowDish()
     {
