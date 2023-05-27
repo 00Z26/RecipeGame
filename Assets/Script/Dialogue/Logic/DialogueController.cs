@@ -13,7 +13,7 @@ public class DialogueController : MonoBehaviour
     public DialogueData autoDialoges;
     public int nextIndex;
     public DialogueStruct currentDialogue;
-    private string textContent;
+    private string[] textContent = new string[2];
 
 
     
@@ -106,7 +106,8 @@ public class DialogueController : MonoBehaviour
             if (isAuto == false)
                 Debug.Log("增加了次数");
                 this.GetComponent<DialogueState>().conversations++;
-            textContent = currentDialogue.chatPartnerName + ":\n" + currentDialogue.content;
+            textContent[0] = currentDialogue.chatPartnerName;
+            textContent[1] = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
             //speakerImage = currentDialogue.pic;
         } 
@@ -114,7 +115,8 @@ public class DialogueController : MonoBehaviour
         else if(nextIndex != -1)
         {   
             currentDialogue = getDialoguesContent(isAuto);
-            textContent = currentDialogue.chatPartnerName + ":\n" + currentDialogue.content;
+            textContent[0] = currentDialogue.chatPartnerName;
+            textContent[1] = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
             //speakerImage = currentDialogue.pic;GetDialogueImage;
         }

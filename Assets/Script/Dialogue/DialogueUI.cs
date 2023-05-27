@@ -8,6 +8,7 @@ public class DialogueUI : MonoBehaviour
 {
     public GameObject dialogueImage;
     public TMP_Text textBox;
+    public TMP_Text nameText;
     public Image headImg;
     public GameObject dialogueChoices;
     public bool isDialogueOn;
@@ -26,7 +27,7 @@ public class DialogueUI : MonoBehaviour
         EventHandler.UpdateChoicesEvent -= onUpdateChoicesEvent;
     }
 
-    private void onShowDialogueEvent(string dialogue, float YMoveDis,Sprite speakerImg,GameObject autoObj)
+    private void onShowDialogueEvent(string[] dialogue, float YMoveDis,Sprite speakerImg,GameObject autoObj)
     {
         if (dialogue != null)
         {
@@ -46,8 +47,8 @@ public class DialogueUI : MonoBehaviour
             //触发相机归位事件
             EventHandler.CallExitDialogueState(isDialogueOn);
         }
-
-        textBox.text = dialogue?.Replace("\\n", "\n");
+        nameText.text = dialogue?[0];
+        textBox.text = dialogue?[1].Replace("\\n", "\n");
     }
 
     private void onUpdateChoicesEvent(List<string> choices)

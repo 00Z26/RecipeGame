@@ -10,8 +10,8 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         updateCameraScale?.Invoke(sceneName);
     }
 
-    public static event Action<string, float,Sprite,GameObject> ShowDialogueEvent;//从controller发出，展示UI事件
-    public static void CallShowDialogueEvent(string data, float YMoveDis, Sprite pic, GameObject gameObject)
+    public static event Action<string[], float,Sprite,GameObject> ShowDialogueEvent;//从controller发出，展示UI事件
+    public static void CallShowDialogueEvent(string[] data, float YMoveDis, Sprite pic, GameObject gameObject)
     {
         ShowDialogueEvent?.Invoke(data, YMoveDis,pic, gameObject);
     }
