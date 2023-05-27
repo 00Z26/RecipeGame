@@ -91,12 +91,15 @@ public class DialogueState : MonoBehaviour
         //Debug.Log(dialogues.name);
         Scene scene = SceneManager.GetActiveScene();
         openDoorTimes = openDoorData.GetDoorTimes(scene.name.Replace("Room","Door"));
-        Debug.Log(openDoorTimes);
+        //Debug.Log(dialogues.dialogueList.Count);
         for(int i = 0; i < dialogues.dialogueList.Count; i++)
         {
             //Debug.Log(i);
             //Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
-            
+            //Debug.Log(i);
+            //Debug.Log(getRightTriggerName(i));
+            //Debug.Log(GetCorrectTeam(i));
+            //Debug.Log(GetCorrectConTimes(i));
             if (dialogues.dialogueList[i].index == 0
                 && getRightTriggerName(i)
                 && GetCorrectTeam(i)

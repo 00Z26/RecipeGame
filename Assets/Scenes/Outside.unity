@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   from: Outside
-  to: CornDoor
+  to: CornRoom
   playerToPos: {x: -7.87, y: -4.75, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &288035931

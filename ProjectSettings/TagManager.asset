@@ -23,6 +23,17 @@ TagManager:
   - Lemon
   - TomatoRoom
   - Door
+  - Corn
+  - Corn_Bright
+  - Egg
+  - Egg_Dark
+  - Tomato
+  - Tomato_Dark
+  - Potato
+  - Potato_Dark
+  - Lemon_Dark
+  - eyes
+  - Bone
   layers:
   - Default
   - TransparentFX

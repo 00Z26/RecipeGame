@@ -8,6 +8,7 @@ public class ChangeAnim : MonoBehaviour
     public GameObject body;
 
     public DataTools dataTools;
+    public NpcData npcData;
 
     private void OnEnable()
     {
@@ -22,27 +23,70 @@ public class ChangeAnim : MonoBehaviour
     {
         dataTools = new DataTools();
         GameObject player = GameObject.FindWithTag("Player");
-        
-        //Destroy(player.transform.GetChild(0).gameObject);
+        //List<int> list = new List<int>();
+        //foreach(int num in player.GetComponent<PlayerController>().teamMembers)
+        //{
+        //    list.Add(num);
+        //}
+        //list.Add(npcData.controllerIndex);
+        Transform[] objList = player.transform.GetComponentsInChildren<Transform>(true);
+        foreach(Transform obj in objList)
+        {
+            if (isLightOff)
+            {
+                if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone" && obj.gameObject.GetComponent<SpriteRenderer>())
+                {
+                    obj.gameObject.SetActive(false);
+                }
+            } else
+            {
+                if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone"&& obj.gameObject.GetComponent<SpriteRenderer>())
+                {
+                    obj.gameObject.SetActive(true);
+                }
+            }
 
-        if (isLightOff)
-        {
-            Destroy(dataTools.GetChildWithTag(player, "Mushroom"));
-            GameObject eyeObj = Instantiate(eyes, player.transform);
-            Debug.Log(eyeObj.name);
-            eyeObj.transform.localPosition = Vector3.zero;
-            eyeObj.transform.localScale = Vector3.one;
         }
-        else
-        {
-            Destroy(dataTools.GetChildWithTag(player, "Mushroom_Dark"));
-            GameObject bodyObj = Instantiate(body, player.transform);
-            //把NPC表控制改为mushroom对应的index
-            bodyObj.transform.localPosition = new Vector3(0, -4.4f,0);
-            bodyObj.transform.localScale = new Vector3(1.236f,1.246f,0);
-        }
-        
-        
+
+
+        //Destroy(player.transform.GetChild(0).gameObject);
+        //foreach(int num in list)
+        //{
+        //    string name = npcData.GetPlayerName(num);
+        //    if (isLightOff)
+        //    {
+        //        Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+        //       GameObject obj = Instantiate(npcData.animPrefab[num].dark, player.transform);
+        //        obj.transform.localPosition = Vector3.zero;
+        //        obj.transform.localScale = Vector3.one;
+
+        //    } else
+        //    {
+        //        Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)+"_Dark"));
+        //        GameObject obj = Instantiate(npcData.animPrefab[num].normal, player.transform);
+        //        obj.transform.localPosition = Vector3.zero;
+        //        obj.transform.localScale = Vector3.one;
+        //    }
+        //}
+
+        //if (isLightOff)
+        //{
+        //    Destroy(dataTools.GetChildWithTag(player, "Mushroom"));
+        //    GameObject eyeObj = Instantiate(eyes, player.transform);
+        //    Debug.Log(eyeObj.name);
+        //    eyeObj.transform.localPosition = Vector3.zero;
+        //    eyeObj.transform.localScale = Vector3.one;
+        //}
+        //else
+        //{
+        //    Destroy(dataTools.GetChildWithTag(player, "Mushroom_Dark"));
+        //    GameObject bodyObj = Instantiate(body, player.transform);
+        //    //把NPC表控制改为mushroom对应的index
+        //    bodyObj.transform.localPosition = new Vector3(0, -4.4f,0);
+        //    bodyObj.transform.localScale = new Vector3(1.236f,1.246f,0);
+        //}
+
+
 
     }
 
