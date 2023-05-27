@@ -59,12 +59,12 @@ public class SwapScene : MonoBehaviour
 
     private void switchLight()
     {
-        if(from == "PotatoRoom" )
+        if(from == "CornRoom" )
         {
 
             EventHandler.CallSwitchAnimEvent(false);
         } 
-        if(to == "PotatoRoom")
+        if(to == "CornRoom")
         {
             EventHandler.CallSwitchAnimEvent(true);
         }

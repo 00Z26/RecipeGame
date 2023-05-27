@@ -158,10 +158,12 @@ public class ExcelImporter : AssetPostprocessor
 			try
 			{
 				object fieldValue = CellToFieldObject(cell, entityField);
+				//Debug.Log(fieldValue);
 				entityField.SetValue(entity, fieldValue);
 			}
 			catch
 			{
+				
 				throw new Exception(string.Format("Invalid excel cell type at row {0}, column {1}, {2} sheet.", row.RowNum, cell.ColumnIndex, sheetName));
 			}
 		}

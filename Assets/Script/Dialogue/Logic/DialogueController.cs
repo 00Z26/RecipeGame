@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 using System;
+using System.Linq;
 
 public class DialogueController : MonoBehaviour
 {
@@ -234,11 +235,28 @@ public class DialogueController : MonoBehaviour
     private void ExcuAnimObj()
     {
         
-        if(currentDialogue.animiation != null)
+        if(currentDialogue.animiation != String.Empty)
         {
-            string[] res = currentDialogue.animiation.Split(" ");
-            //Debug.Log(res[0]);
-            EventHandler.CallExcuDialogueAnimEvent(res);          
+            string[] animArray = currentDialogue.animiation.Split(",");
+            //
+            List<string> objList = new List<string>();
+           List<string> animNameList = new List<string>();
+
+            foreach (string str in animArray)
+            {
+                Debug.Log(str);
+                string[] temp = str.Split("_");
+                if(temp[0] == "%s")
+                {
+                    temp[0] = dialogueState.npcData.GetPlayerName(dialogueState.npcData.controllerIndex);
+                }
+               
+                objList.Add(temp[0]);
+                animNameList.Add(temp[1]);
+            }
+
+            //对单一动画变量的切割
+            EventHandler.CallExcuDialogueAnimEvent(objList,animNameList,animArray.ToList<string>());
         }
         
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueState : MonoBehaviour
 {   //挂载在每个可对话蔬菜上
@@ -88,7 +89,8 @@ public class DialogueState : MonoBehaviour
     public DialogueStruct GetNextDialogueStart()
     {
         //Debug.Log(dialogues.name);
-        openDoorTimes = openDoorData.GetDoorTimes(this.gameObject.name + "Door");
+        Scene scene = SceneManager.GetActiveScene();
+        openDoorTimes = openDoorData.GetDoorTimes(scene.name.Replace("Room","Door"));
         Debug.Log(openDoorTimes);
         for(int i = 0; i < dialogues.dialogueList.Count; i++)
         {
@@ -99,8 +101,8 @@ public class DialogueState : MonoBehaviour
                 && getRightTriggerName(i)
                 && GetCorrectTeam(i)
                 && GetCorrectConTimes(i)
-                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes
-                && npcData.loop == dialogues.dialogueList[i].loop)
+                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes)
+                //&& npcData.loop == dialogues.dialogueList[i].loop)
             {
                 return dialogues.dialogueList[i];
             }
