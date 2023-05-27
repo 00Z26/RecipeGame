@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 141399464}
   m_Layer: 0
   m_Name: PotatoDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,8 +683,8 @@ GameObject:
   - component: {fileID: 288035930}
   - component: {fileID: 288035929}
   m_Layer: 0
-  m_Name: 'CornDoor '
-  m_TagString: Untagged
+  m_Name: CornDoor
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 725076617}
   m_Layer: 0
   m_Name: EggDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2043,7 +2043,7 @@ GameObject:
   - component: {fileID: 1350351487}
   m_Layer: 0
   m_Name: TomatoDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2189,7 +2189,7 @@ GameObject:
   - component: {fileID: 1405381674}
   - component: {fileID: 1405381673}
   m_Layer: 0
-  m_Name: CookDoor
+  m_Name: Cook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3041,7 +3041,7 @@ GameObject:
   - component: {fileID: 2132423565}
   m_Layer: 0
   m_Name: LemonDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

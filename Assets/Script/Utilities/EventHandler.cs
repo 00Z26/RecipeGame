@@ -95,10 +95,10 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         ExcuDialogueAnimEvent?.Invoke(obj,anim,all); 
     }
 
-    public static event Action TriggerContinue; //按下继续执行gameManager里的数据更新
-    public static void CallTriggerContinue()
+    public static event Action<string,string,Vector3> TriggerContinue; //按下继续执行gameManager里的数据更新
+    public static void CallTriggerContinue(string from, string to, Vector3 playerPos)
     {
-        TriggerContinue?.Invoke();
+        TriggerContinue?.Invoke(from,to,playerPos);
     }
 
 

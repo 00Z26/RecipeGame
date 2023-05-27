@@ -109,9 +109,10 @@ public class PhysicsCheck : MonoBehaviour
             SwapScene[] swapObjs = GameObject.FindObjectsOfType<SwapScene>();
             foreach(SwapScene obj in swapObjs)
             {
-                if(obj.gameObject.name != "CookDoor")
+                if(obj.gameObject.name != "Cook")
                 {
                     obj.enabled = false;
+                    obj.gameObject.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
                 }
             }
         }

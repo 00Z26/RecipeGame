@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
     //继续游戏的选项操作
     //如果按照正常流程，继续游戏需要对npc进行复位，loop++，
     //所以，切换场景+增加loop,其他数据保持不变
-    public void ContinueNextLoop()
+    public void ContinueNextLoop(string str1,string str2, Vector3 vec3)
     {
         npcData.loop++;
     }

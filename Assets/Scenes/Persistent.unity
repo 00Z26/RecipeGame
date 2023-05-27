@@ -1801,6 +1801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
+  openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
   mainCanvas: {fileID: 499850845}
 --- !u!4 &1431531270
 Transform:

@@ -42,9 +42,9 @@ public class DialogueAnim : MonoBehaviour
 
     }
 
-    private void LemonAnim(GameObject lemon, string animName)
-    {
-        Animator animator = lemon.GetComponentInChildren<Animator>();
-        animator.SetBool(animName, true);
-    }
+    //private void LemonAnim(GameObject lemon, string animName)
+    //{
+    //    Animator animator = lemon.GetComponentInChildren<Animator>();
+    //    animator.SetBool(animName, true);
+    //}
 }

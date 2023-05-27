@@ -42,6 +42,6 @@ public class NewGameStart : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");
         player.transform.position = new Vector3(5.09000015f, -4.17999983f, 0);
 
-        EventHandler.CallTriggerContinue();
+        EventHandler.CallTriggerContinue(from, to, playerPos);
     }
 }

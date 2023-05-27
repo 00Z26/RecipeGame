@@ -9,8 +9,10 @@ public class Transport : MonoBehaviour
     private bool isFade;
     private GameObject player;
     public NpcData npcData;
+    public OpenDoorTimes openDoorTimes;
     public Canvas mainCanvas;
 
+    public int[] thisLoopDoorTimesArr = { 0, 0, 0, 0, 0 };
 
     private void Awake()
     {
@@ -26,12 +28,14 @@ public class Transport : MonoBehaviour
         EventHandler.TriggerSwapNewGameEvent += Transition;
         EventHandler.TriggerShowRecipeEvent += Transition;
         EventHandler.TriggerSumToMenuEvent += Transition;
+        EventHandler.TriggerContinue += Transition;
     }
     private void OnDisable()
     {
         EventHandler.TriggerSwapNewGameEvent -= Transition;
         EventHandler.TriggerShowRecipeEvent -= Transition;
         EventHandler.TriggerSumToMenuEvent -= Transition;
+        EventHandler.TriggerContinue -= Transition;
     }
     public void Transition(string from, string to, Vector3 playerToPos)
     {
@@ -61,6 +65,8 @@ public class Transport : MonoBehaviour
         SceneManager.SetActiveScene(newScene);
         //已跟随的npc不加载
         LoadNpc();
+        //已经进过的门修改颜色
+        DoorSwap(to);
         //触发事件去让相机修改边界值
         EventHandler.CallUpdateCameraScale(to);
 
@@ -133,4 +139,45 @@ public class Transport : MonoBehaviour
             }
         }
     }
+
+
+    public void DoorSwap(string to)
+    {
+        if (to != "Persisent" && to != "Outside" && to != "Cook" && to != "RecipeShow" && to != "Menu")
+        {
+            string doorName = to.Replace("Room", "Door");
+            Debug.Log(openDoorTimes.GetDoorIndex(doorName));
+            thisLoopDoorTimesArr[openDoorTimes.GetDoorIndex(doorName)] = 1;
+        }
+
+        
+        GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
+       
+        foreach(int i in thisLoopDoorTimesArr)
+        {
+            if(thisLoopDoorTimesArr[i] == 1)
+            {
+                GameObject tarDoor = GameObject.Find(openDoorTimes.GetDoorName(i));
+                foreach(GameObject door in doors)
+                {
+                    if(door.name == tarDoor.name)
+                    {
+                        door.GetComponent<BoxCollider2D>().enabled = false;
+                        door.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
+                    }
+                }
+            }
+        }
+        //foreach (GameObject door in doors)
+        //{   
+
+        //    if(openDoorTimes.GetDoorTimes(door.name) >= npcData.loop)
+        //    {
+        //        Debug.Log(door.name);
+        //        door.GetComponent<BoxCollider2D>().enabled = false;
+        //        door.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
+        //    }
+        //}
+    }
+
 }
