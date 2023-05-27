@@ -12,7 +12,6 @@ public class Transport : MonoBehaviour
     public OpenDoorTimes openDoorTimes;
     public Canvas mainCanvas;
 
-    public int[] thisLoopDoorTimesArr = { 0, 0, 0, 0, 0 };
 
     private void Awake()
     {
@@ -146,38 +145,22 @@ public class Transport : MonoBehaviour
         if (to != "Persisent" && to != "Outside" && to != "Cook" && to != "RecipeShow" && to != "Menu")
         {
             string doorName = to.Replace("Room", "Door");
-            Debug.Log(openDoorTimes.GetDoorIndex(doorName));
-            thisLoopDoorTimesArr[openDoorTimes.GetDoorIndex(doorName)] = 1;
+            openDoorTimes.SetThisLoopTimes(doorName);
         }
 
         
         GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
-       
-        foreach(int i in thisLoopDoorTimesArr)
+
+        foreach (GameObject door in doors)
         {
-            if(thisLoopDoorTimesArr[i] == 1)
+
+            if (openDoorTimes.GetThisLoopTimes(door.name) >= 1)
             {
-                GameObject tarDoor = GameObject.Find(openDoorTimes.GetDoorName(i));
-                foreach(GameObject door in doors)
-                {
-                    if(door.name == tarDoor.name)
-                    {
-                        door.GetComponent<BoxCollider2D>().enabled = false;
-                        door.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
-                    }
-                }
+                Debug.Log(door.name);
+                door.GetComponent<BoxCollider2D>().enabled = false;
+                door.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
             }
         }
-        //foreach (GameObject door in doors)
-        //{   
-
-        //    if(openDoorTimes.GetDoorTimes(door.name) >= npcData.loop)
-        //    {
-        //        Debug.Log(door.name);
-        //        door.GetComponent<BoxCollider2D>().enabled = false;
-        //        door.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
-        //    }
-        //}
     }
 
 }

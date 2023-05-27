@@ -36,12 +36,15 @@ public class GameController : MonoBehaviour
         for( int i = 0;i< openDoorTimes.openTimes.Count;i++)
         {
             openDoorTimes.openTimes[i] = 0;
+            openDoorTimes.thisLoopDoorTimes[i] = 0;
         }
         //食谱显示复原
         foreach(RecipeData dish in recipeList.recipeList)
         {
             dish.isShow = false;
         }
+        GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes = 0;
+
 
     }
     //保存每轮游戏开始时的数据，用来防止中途退出
@@ -55,6 +58,11 @@ public class GameController : MonoBehaviour
     public void ContinueNextLoop(string str1,string str2, Vector3 vec3)
     {
         npcData.loop++;
+        for (int i = 0; i < openDoorTimes.openTimes.Count; i++)
+        {
+            openDoorTimes.thisLoopDoorTimes[i] = 0;
+        }
+        GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes = 0;
     }
 
 

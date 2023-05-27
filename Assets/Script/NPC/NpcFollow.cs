@@ -25,8 +25,18 @@ public class NpcFollow : MonoBehaviour
             //判断自己位置
             float distance = (transform.position - playerTransform.position).sqrMagnitude;
             //添加npc时右移位置
-            Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum + 1),playerTransform.position.y);
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition,followSpeed * Time.deltaTime);
+            if(player.transform.localScale.x < 0)
+            {
+                Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum + 3), this.transform.position.y);
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
+            }
+            else if(player.transform.localScale.x> 0)
+            {
+                Vector2 targetPosition = new Vector2(playerTransform.position.x - (teamNum + 3), this.transform.position.y);
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
+            }
+            
+            
         }
     }
 

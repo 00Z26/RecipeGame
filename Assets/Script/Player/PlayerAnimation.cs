@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
-    private Animator animator;
+    private Animator[] animator;
     private Rigidbody2D rb;
 
     private void Awake()
@@ -18,7 +18,7 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         //之后要改为对所有子物体获取组件
-        animator = this.GetComponentInChildren<Animator>();
+        animator = this.GetComponentsInChildren<Animator>();
         if (animator != null)
         {
             SetAnimation();
@@ -28,6 +28,11 @@ public class PlayerAnimation : MonoBehaviour
     public void SetAnimation()
     {
         //Debug.Log(rb.velocity.x);
-        animator.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+        for (int i = 0; i < animator.Length; i++)
+        {
+            animator[i].SetBool("isFollow", true);
+            animator[i].SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
+        }
+        
     }
 }
