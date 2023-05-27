@@ -94,18 +94,13 @@ public class DialogueState : MonoBehaviour
         //Debug.Log(dialogues.dialogueList.Count);
         for(int i = 0; i < dialogues.dialogueList.Count; i++)
         {
-            //Debug.Log(i);
-            //Debug.Log(conversations == dialogues.dialogueList[i].Conversations);
-            //Debug.Log(i);
-            //Debug.Log(getRightTriggerName(i));
-            //Debug.Log(GetCorrectTeam(i));
-            //Debug.Log(GetCorrectConTimes(i));
             if (dialogues.dialogueList[i].index == 0
                 && getRightTriggerName(i)
                 && GetCorrectTeam(i)
                 && GetCorrectConTimes(i)
-                && openDoorTimes == dialogues.dialogueList[i].openDoorTimes)
+                && GetCorrectOpenDoorTimes(i))
                 //&& npcData.loop == dialogues.dialogueList[i].loop)
+                //&& openDoorTimes == dialogues.dialogueList[i].openDoorTimes)
             {
                 return dialogues.dialogueList[i];
             }
@@ -115,6 +110,26 @@ public class DialogueState : MonoBehaviour
         
     }
 
+    private bool GetCorrectOpenDoorTimes(int i)
+    {
+        if (dialogues.dialogueList[i].openDoorTimes.Contains(">"))
+        {
+            string prefix = ">";
+            string temp = dialogues.dialogueList[i].openDoorTimes.Replace(prefix, "");
+            if (openDoorTimes >= int.Parse(temp))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        } else if(openDoorTimes == int.Parse(dialogues.dialogueList[i].openDoorTimes))
+        {
+            return true;
+        }
+        return false;
+    }
     private bool getRightTriggerName(int i)
     {
         

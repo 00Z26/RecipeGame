@@ -925,3 +925,63 @@ MonoBehaviour:
     openDoorTimes: 6
     loop: 0
     Conversations: 1
+  - index: 0
+    nextIndex: 0
+    chatPartnerName: "\u6211"
+    content: "\u54C8\u55BD\uFF01"
+    choices: "\u4E00\u62F3\u63CD\u98DE\uFF01+2110;\u201C\u77E5\u9053\u4F60\u4E0D\u60F3\u5F53\u6C99\u888B\uFF0C\u8DDF\u6211\u8D70\u5427\uFF01\u201D+2112"
+    animiation: 
+    pic: '%s_EvilSmile'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>7'
+    loop: 0
+    Conversations: 1
+  - index: 2110
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u547C\u3002\\n\u795E\u6E05\u6C14\u723D\uFF01"
+    choices: 
+    animiation: Sandbag_HangFly
+    pic: '%s_EvilYeah'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>7'
+    loop: 0
+    Conversations: 1
+  - index: 2112
+    nextIndex: 2113
+    chatPartnerName: "\u4E0D\u5F53\u6C99\u888B\u4E86"
+    content: "\u4F60\u8FD9\u5BB6\u4F19\uFF0C\u8FD8\u633A\u654F\u9510\u7684\u561B\u3002\\n\u6240\u4EE5\uFF0C\u8DDF\u4F60\u8D70\u662F\u8981\u53BB\u5E72\u561B\uFF1F"
+    choices: 
+    animiation: 
+    pic: Sandbag_0
+    triggerName: 
+    teamMembers: 
+    openDoorTimes: 
+    loop: 0
+    Conversations: 
+  - index: 2113
+    nextIndex: 2114
+    chatPartnerName: "\u6211"
+    content: "\u662F\u8DDF\u6211\u4E00\u8D77\u53BB\u6B7B\u54E6\uFF01"
+    choices: "\u201C\u53BB\u6B7B\uFF0C\u7136\u540E\u6210\u4E3A\u4E00\u9053\u83DC\u3002\u201D+-3+8"
+    animiation: Sandbag_HangLand
+    pic: '%s_EvilSmile'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>7'
+    loop: 0
+    Conversations: 1
+  - index: 2114
+    nextIndex: -1
+    chatPartnerName: "\u4E0D\u5F53\u6C99\u888B\u4E86"
+    content: "\u54E6\uFF01\u542C\u8D77\u6765\u4E0D\u9519\u3002"
+    choices: 
+    animiation: 
+    pic: Sandbag_0
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>7'
+    loop: 0
+    Conversations: 1

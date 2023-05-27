@@ -1610,7 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2.4
-  dialoges: {fileID: 11400000, guid: 1534cceed69b6c74cb78e0039989e0d1, type: 2}
+  dialoges: {fileID: 11400000, guid: 25a2ac963350acc4bb9a4326d34bf8e6, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2
-  dialoges: {fileID: 11400000, guid: b84e4853eafbe7e408d61d2947779227, type: 2}
+  dialoges: {fileID: 11400000, guid: c8dbb48c15eceee4dbc5fc8c42bf181e, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:

@@ -1002,7 +1002,7 @@ MonoBehaviour:
     chatPartnerName: "\u6211"
     content: "\u5982\u4F55\uFF1F"
     choices: 
-    animiation: 
+    animiation: Lemon_HangLand
     pic: '%s_EvilYeah'
     triggerName: Mushroom,Potato,Egg,Tomato
     teamMembers: 
@@ -1259,5 +1259,89 @@ MonoBehaviour:
     triggerName: Mushroom,Potato,Egg,Tomato
     teamMembers: 
     openDoorTimes: 3
+    loop: 0
+    Conversations: 1
+  - index: 0
+    nextIndex: 3258
+    chatPartnerName: "\u6211"
+    content: "\u524D\u7565\uFF0C\u540E\u7565\uFF0C\u7ED9\u4F60\u4E24\u4E2A\u9009\u62E9\uFF01"
+    choices: "\u201C\u88AB\u6211\u8BA8\u538C\uFF0C\u6216\u8005\u8DDF\u6211\u8D70\u3002\u201D+3250;\u201C\u88AB\u6211\u8BA8\u538C\uFF0C\u6216\u8005\u628A\u8EAB\u4F53\u501F\u6211\u7528\u3002\u201D+-2+5"
+    animiation: 
+    pic: '%s_EvilDisagree'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3250
+    nextIndex: 3251
+    chatPartnerName: "\u67E0\u6AAC"
+    content: "\u545C\u2026\u8FD9\u53EF\u662F\u6211\u7B2C\u4E00\u6B21\\n\u88AB\u8FD9\u4E48\u76F4\u767D\u5730\u5A01\u80C1\u5462\uFF01"
+    choices: 
+    animiation: Lemon_HangLand
+    pic: Lemon_Cry
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3251
+    nextIndex: 3252
+    chatPartnerName: "\u67E0\u6AAC"
+    content: "\u4E0D\u8FC7\u2026\u4E0D\u8981\u8BA8\u538C\u6211\uFF01\u867D\u7136\u4F60\u5A01\u80C1\u4E86\u6211\uFF0C\u800C\u4E14\u6211\u90FD\u4E0D\u77E5\u9053\u4F60\u662F\u8C01\u2026\\n\u4F46\u662F\u4E0D\u8981\u8BA8\u538C\u6211\uFF01\u88AB\u8BA8\u538C\u7684\u8BDD\uFF0C\u6211\u4F1A\u5FCD\u4E0D\u4F4F\u54C7\u54C7\u5927\u54ED\u7684\uFF01"
+    choices: 
+    animiation: 
+    pic: Lemon_VCry
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3252
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u53EF\u4F60\u4E00\u76F4\u90FD\u5728\u54C7\u54C7\u5927\u54ED\u8036\u3002"
+    choices: "\u201C\u4E0D\u4F1A\u8BA8\u538C\u4F60\u7684\u5566\u3002\u8D70\u4E86\uFF01\u201D+-3+5"
+    animiation: 
+    pic: '%s_EvilScold'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3258
+    nextIndex: 3259
+    chatPartnerName: "\u67E0\u6AAC"
+    content: "\uFF08\uFF1F\uFF1F\uFF1F\uFF01\uFF01\uFF01\uFFE5&%*\uFF09"
+    choices: 
+    animiation: 
+    pic: Lemon_Dark
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3259
+    nextIndex: 3260
+    chatPartnerName: "\u67E0\u6AAC"
+    content: "\uFF08\uFF1F\uFF01\uFF1F\uFF01\uFF1F\uFF01\uFFE5&%\u3002+$^\u90FD\u6CA1\u6709\u7ED9\u6211\u9009\u62E9\u7684\u65F6\u95F4\u5566QAQ\uFF09"
+    choices: 
+    animiation: 
+    pic: Lemon_Dark
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
+    loop: 0
+    Conversations: 1
+  - index: 3260
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u5927\u5BB6\u7684\u65F6\u95F4\u90FD\u592A\u5B9D\u8D35\u4E86\u3002\\n\u7406\u89E3\u4E00\u4E0B\u5566\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilDisagree'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>4'
     loop: 0
     Conversations: 1
