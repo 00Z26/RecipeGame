@@ -19,12 +19,26 @@ public class FollowController : MonoBehaviour
     {
         Debug.Log("controller执行跟随");
         string name = npcData.GetPlayerName(npcIndex);
-        GameObject npcObj = GameObject.Find(name);
+        Debug.Log(name);
+        GameObject npcObj = null;
+        GameObject[] npcObjs = GameObject.FindGameObjectsWithTag("NPC");// Find(name);
+        foreach(GameObject obj in npcObjs)
+        {
+            if(obj.name == name)
+            {
+                npcObj = obj;
+                break;
+            }           
+        }
+        Debug.Log(npcObj.tag);
         GameObject player = GameObject.FindWithTag("Player");
         //小队人员记录
         player.GetComponent<PlayerController>().teamMembers.Add(npcIndex);
+        
         //激活对应npc的刚体和跟随脚本
+
         npcObj.GetComponent<CapsuleCollider2D>().enabled = false;
+        
         npcObj.GetComponent<NpcFollow>().enabled = true;
         if (npcObj.GetComponent<BoxCollider2D>())
             npcObj.GetComponent<BoxCollider2D>().enabled = false;

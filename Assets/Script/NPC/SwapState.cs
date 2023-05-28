@@ -38,9 +38,9 @@ public class SwapState : MonoBehaviour
                 Debug.Log("ÊµÀý»¯²»Õý³£×´Ì¬");
                 GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
 
-                    obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0);
-                    obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);
-               
+                    obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0); //ÓñÃ×ÇÐ»»×´Ì¬
+                    obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);//ÓñÃ×ÇÐ»»×´Ì¬
+
             }
         }
         else

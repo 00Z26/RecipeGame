@@ -134,13 +134,11 @@ public class DialogueController : MonoBehaviour
         {   
             currentDialogue = getDialoguesContent(isAuto);
             Debug.Log(this.gameObject.name);
-            if(currentDialogue != default(DialogueStruct))
-            {
-                textContent[0] = currentDialogue.chatPartnerName;
-                textContent[1] = currentDialogue.content;
-                nextIndex = currentDialogue.nextIndex;
-                speakerImage = GetDialogueImage();
-            }
+            textContent[0] = currentDialogue.chatPartnerName;
+            textContent[1] = currentDialogue.content;
+            nextIndex = currentDialogue.nextIndex;
+            speakerImage = GetDialogueImage();
+
         }
         else if(nextIndex == -1)
         {

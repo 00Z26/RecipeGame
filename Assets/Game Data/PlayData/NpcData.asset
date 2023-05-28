@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NpcData
   m_EditorClassIdentifier: 
   loop: 1
-  controllerIndex: 0
+  controllerIndex: 1
   playerName:
   - Mushroom
   - Potato
@@ -33,7 +33,7 @@ MonoBehaviour:
     normal: {fileID: 2520296888392951704, guid: e93d33705fc46bd4487fa3f57d48c6f1, type: 3}
     abnormal: {fileID: 0}
     dark: {fileID: 8693754723005545426, guid: 39b8fb1b989913e4a97c7e6ac03b6dd9, type: 3}
-  - isNormal: 1
+  - isNormal: 0
     normal: {fileID: 6535441679604985314, guid: dcd5564de49b2cf4f962719279dc61f3, type: 3}
     abnormal: {fileID: 5795943844972030056, guid: 75b4f1313d9f7cc4da1a91ce75d6d603, type: 3}
     dark: {fileID: 6535441679604985314, guid: dcd5564de49b2cf4f962719279dc61f3, type: 3}

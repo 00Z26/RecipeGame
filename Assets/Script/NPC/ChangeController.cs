@@ -29,8 +29,17 @@ public class ChangeController : MonoBehaviour
         dataTools = new DataTools();
         //用事件获取到对应的npc的object，这样后面就未必用other。
         String name = npcData.GetPlayerName(npcIndex);
-        GameObject npc = GameObject.Find(name);
-
+        //GameObject npc = GameObject.Find(name);
+        GameObject npc = null;
+        GameObject[] npcObjs = GameObject.FindGameObjectsWithTag("NPC");// Find(name);
+        foreach (GameObject obj in npcObjs)
+        {
+            if (obj.name == name)
+            {
+                npc = obj;
+                break;
+            }
+        }
         if (npc != null)
         {
 
@@ -41,7 +50,14 @@ public class ChangeController : MonoBehaviour
             npc.SetActive(false);
             //把当前player的主角删除
             Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
-            player.transform.Find(name).transform.localPosition = new Vector3(-5.53999996f, -3.1400001f, 0); //柠檬夺舍后的位置
+            if(npc.name == "Lemon")
+            {
+                player.transform.Find(name).transform.localPosition = new Vector3(-5.53999996f, -3.1400001f, 0); //柠檬夺舍后的位置
+            }
+            if(npc.name == "Potato")
+            {
+                player.transform.Find(name).transform.localPosition = new Vector3(0, -8.94999981f, 0);
+            }
             npcData.controllerIndex = npcIndex;
 
             previousNpc?.SetActive(true);
