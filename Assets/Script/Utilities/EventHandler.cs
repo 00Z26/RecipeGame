@@ -101,6 +101,14 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerContinue?.Invoke(from,to,playerPos);
     }
 
+    public static event Action<int> DialogueSwapStateEvent;
+    public static void CallDialogueSwapStateEvent(int index)
+    {
+        DialogueSwapStateEvent?.Invoke(index);
+    }
+
+
+
 
 
 

@@ -102,6 +102,11 @@ public class DialogueController : MonoBehaviour
             //触发对应npc跟随
             EventHandler.CallTriggerFollowEvent(choiceOperation[buttonVal]);
         }
+        if(choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -4)
+        {
+            this.ShowDialogue(false);
+            EventHandler.CallDialogueSwapStateEvent(choiceOperation[buttonVal]);
+        }
     }
 
 
@@ -266,10 +271,10 @@ public class DialogueController : MonoBehaviour
             //
             List<string> objList = new List<string>();
            List<string> animNameList = new List<string>();
-
+            //List<string> aniList = new List<string>();
             foreach (string str in animArray)
             {
-                Debug.Log(str);
+                //Debug.Log(str);
                 string[] temp = str.Split("_");
                 if(temp[0] == "%s")
                 {
@@ -279,9 +284,17 @@ public class DialogueController : MonoBehaviour
                 objList.Add(temp[0]);
                 animNameList.Add(temp[1]);
             }
+            for(int i = 0; i < objList.Count; i++)
+            {
+              if(animArray[i].Contains("%s"))
+                {
+                    animArray[i] = animArray[i].Replace("%s", objList[i]);
+                    //Debug.Log(animArray[i]);
+                } 
+            }
 
             //对单一动画变量的切割
-            EventHandler.CallExcuDialogueAnimEvent(objList,animNameList,animArray.ToList<string>());
+            EventHandler.CallExcuDialogueAnimEvent(objList,animNameList,animArray.ToList<string>()); //animArray.ToList<string>()
         }
         
     }

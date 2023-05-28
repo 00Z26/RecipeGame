@@ -1225,7 +1225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812245922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.45, y: -3.82, z: 0}
+  m_LocalPosition: {x: 2.81, y: 7.15, z: 0}
   m_LocalScale: {x: 0.2426423, y: 0.24070245, z: 0.1867}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1396,7 +1396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088100191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.7, y: -1.28, z: 0}
+  m_LocalPosition: {x: 0.19, y: -1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2056,6 +2056,7 @@ GameObject:
   - component: {fileID: 1592016813}
   - component: {fileID: 1592016814}
   - component: {fileID: 1592016815}
+  - component: {fileID: 1592016816}
   m_Layer: 0
   m_Name: NpcManager
   m_TagString: Untagged
@@ -2133,6 +2134,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c89e5f9291829447aaed388f54c0574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1592016816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592016810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352bf3b5e948b1e40ae99fbffbc22490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
+  player: {fileID: 812245922}
 --- !u!1 &1616757360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,6 +2915,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1619232029763604098, guid: 14609f784fbb9e145a2f35f8337bf995, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 67335b761a186974db15f7e496ba0e2c, type: 2}
     - target: {fileID: 1619232029763604099, guid: 14609f784fbb9e145a2f35f8337bf995, type: 3}
       propertyPath: m_Name
       value: Mushroom

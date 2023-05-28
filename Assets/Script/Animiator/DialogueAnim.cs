@@ -29,8 +29,10 @@ public class DialogueAnim : MonoBehaviour
         for (int i = 0; i < objList.Count; i++)
         {
             GameObject gameObject = GameObject.Find(objList[i]);
-            Debug.Log(gameObject.name);
+            Debug.Log(allList[i]);
             Animator animator = gameObject.GetComponentInChildren<Animator>();
+
+            
             animator?.Play(allList[i]);
             //animator?.SetBool(allList[i], true);
             //animator?.SetBool(allList[i], false);
