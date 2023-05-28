@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 206642883}
   - component: {fileID: 206642882}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Auto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,11 +623,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDialogueOnState: 0
   hasAutoDialogue: 0
-  openDoorData: {fileID: 0}
+  openDoorData: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
   conversations: 0
   npcName: 
   playerObject: {fileID: 0}
-  npcData: {fileID: 0}
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!114 &206642883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,8 +640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de33b608d1b395f40abcc2bbd4d992ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  YMoveDis: 0
-  dialoges: {fileID: 0}
+  YMoveDis: -2
+  dialoges: {fileID: 11400000, guid: c5a9984847b056e46860cc4a360ed1c0, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
@@ -654,9 +654,9 @@ MonoBehaviour:
     pic: 
     triggerName: 
     teamMembers: 
-    openDoorTimes: 
+    openDoorTimes: 0
     loop: 0
-    Conversations: 
+    Conversations: 0
   choiceNextIndex: 
   choices: []
 --- !u!4 &206642884

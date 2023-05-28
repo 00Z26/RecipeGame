@@ -185,7 +185,11 @@ public class DialogueState : MonoBehaviour
         int teamReuire = int.Parse(dialogues.dialogueList[i].teamMembers);
         Debug.Log(teamReuire);
         //当前队伍内容
-        List<int> teamList = GameObject.FindWithTag("Player").GetComponent<PlayerController>().teamMembers;
+        List<int> teamList = new List<int>(); 
+        foreach(int  item in GameObject.FindWithTag("Player").GetComponent<PlayerController>().teamMembers)
+        {
+            teamList.Add(item);
+         }
         teamList.Add(npcData.controllerIndex);
         if(teamReuire >= 0)
         {
@@ -211,6 +215,18 @@ public class DialogueState : MonoBehaviour
         }
         return false;
 
+    }
+
+    public DialogueStruct GetAutoBegin()
+    {
+        foreach(DialogueStruct item in  dialogues.dialogueList)
+        {
+            if(item.loop == npcData.loop && item.index == 0)
+            {
+                return item;
+            }
+        }
+        return null;
     }
 
 }

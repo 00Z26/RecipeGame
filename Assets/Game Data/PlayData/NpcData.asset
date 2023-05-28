@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NpcData
   m_EditorClassIdentifier: 
   loop: 1
-  controllerIndex: 1
+  controllerIndex: 0
   playerName:
   - Mushroom
   - Potato

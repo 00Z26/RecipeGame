@@ -117,13 +117,16 @@ public class DialogueController : MonoBehaviour
     {   //获取该显示的那句话 or 两个选项
         //加载数据库和第一句的判断
         if(nextIndex == 0)
-        {
-            currentDialogue =  dialogueState.GetNextDialogueStart();
+        {   if (!isAuto)
+                currentDialogue =  dialogueState.GetNextDialogueStart();
+            if (isAuto)
+                currentDialogue = dialogueState.GetAutoBegin();
             if(currentDialogue == null)
                 throw new Exception("未找到对应第一句");
             if (isAuto == false)
                 Debug.Log("增加了次数");
                 this.GetComponent<DialogueState>().conversations++;
+            Debug.Log(this.gameObject.name);
             textContent[0] = currentDialogue.chatPartnerName;
             textContent[1] = currentDialogue.content;
             nextIndex = currentDialogue.nextIndex;
@@ -187,7 +190,7 @@ public class DialogueController : MonoBehaviour
     {
         if (isAuto)
         {
-            return autoDialoges.dialogueList[nextIndex];
+            return autoDialoges.dialogueList[GetDialogueListIndex(nextIndex)];
         } else
         {
             //Debug.Log(nextIndex);

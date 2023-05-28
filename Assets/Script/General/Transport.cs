@@ -28,6 +28,7 @@ public class Transport : MonoBehaviour
         EventHandler.TriggerShowRecipeEvent += Transition;
         EventHandler.TriggerSumToMenuEvent += Transition;
         EventHandler.TriggerContinue += Transition;
+        EventHandler.RecipeExitEvent += Transition;
     }
     private void OnDisable()
     {
@@ -35,6 +36,7 @@ public class Transport : MonoBehaviour
         EventHandler.TriggerShowRecipeEvent -= Transition;
         EventHandler.TriggerSumToMenuEvent -= Transition;
         EventHandler.TriggerContinue -= Transition;
+        EventHandler.RecipeExitEvent -= Transition;
     }
     public void Transition(string from, string to, Vector3 playerToPos)
     {

@@ -101,11 +101,20 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         TriggerContinue?.Invoke(from,to,playerPos);
     }
 
-    public static event Action<int> DialogueSwapStateEvent;
+    public static event Action<int> DialogueSwapStateEvent; //切换NPC状态
     public static void CallDialogueSwapStateEvent(int index)
     {
         DialogueSwapStateEvent?.Invoke(index);
     }
+
+    public static event Action<string, string, Vector3> RecipeExitEvent; //菜谱返回主菜单
+    public static void CallRecipeExitEvent(string from, string to, Vector3 playerPos)
+    {
+        RecipeExitEvent?.Invoke(from,to, playerPos);
+    }
+
+
+
 
 
 

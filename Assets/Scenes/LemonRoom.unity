@@ -1873,7 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2
-  dialoges: {fileID: 11400000, guid: c8dbb48c15eceee4dbc5fc8c42bf181e, type: 2}
+  dialoges: {fileID: 11400000, guid: c5a9984847b056e46860cc4a360ed1c0, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:

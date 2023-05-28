@@ -7,6 +7,7 @@ public class RecipeShow : MonoBehaviour
 {
     public RecipeData dishData;
     public Image image;
+    public Image bigImage;
     public Sprite unknownPic;
     
 
@@ -19,6 +20,7 @@ public class RecipeShow : MonoBehaviour
             this.enabled = dishData.isShow;
             this.gameObject.SetActive(dishData.isShow);
             image.sprite = dishData.dishPic;
+            bigImage.sprite = dishData.dishPic;
             
         }else
         {
@@ -32,7 +34,15 @@ public class RecipeShow : MonoBehaviour
 
     public void showTextEvent()
     {
-        EventHandler.CallTriggerShowRecipeTextEvent(dishData.dishName + ":\n" + dishData.dishDescription);
+        if (dishData.isShow)
+        {
+            EventHandler.CallTriggerShowRecipeTextEvent(dishData.dishName + ":\n" + dishData.dishDescription);
+        }
+        else
+        {
+            EventHandler.CallTriggerShowRecipeTextEvent(null);
+        }
+        bigImage.sprite = dishData.isShow ? dishData.dishPic : unknownPic ;
     }
 
 }

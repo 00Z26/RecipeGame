@@ -17,6 +17,8 @@ public class TextShow : MonoBehaviour
 
     private void onShowText(string obj)
     {
+        Debug.Log("111");
+        textBox.gameObject.SetActive(true);
         textBox.text = obj;
     }
 }

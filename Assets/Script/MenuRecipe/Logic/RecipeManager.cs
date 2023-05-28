@@ -29,4 +29,12 @@ public class RecipeManager : MonoBehaviour
         }
     }
 
+    public void RecipeExit()
+    {
+        string from = "RecipeShow";
+        string to = "Menu";
+
+        EventHandler.CallRecipeExitEvent(from, to, new Vector3(-1000f,0,0));
+    }
+
 }
