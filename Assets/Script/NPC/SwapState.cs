@@ -19,23 +19,37 @@ public class SwapState : MonoBehaviour
 
     private void OnSwapState(int index)
     {
-        if(npcData.animPrefab[index].isNormal)
+        //if (npcData.animPrefab[index].isNormal)
+        //{
+        //    npcData.animPrefab[index].isNormal = false;
+        //}
+
+        if (npcData.animPrefab[index].isNormal)
         {
             npcData.animPrefab[index].isNormal = false;
             Transform temp = player.transform.Find(npcData.GetPlayerName(index));
-            if(temp != null)
+            Debug.Log("实例化不正常状态1");
+            Debug.Log(temp.gameObject.name);
+            if (temp != null)
             {
-                Transform temp2 = temp.Find(npcData.GetPlayerName(index));
-                Destroy(temp2);
-                GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, temp2);
+                Animator temp2 = temp.GetComponentInChildren<Animator>();
+                Vector3 scale = temp.gameObject.transform.localScale;
+                Destroy(temp.gameObject);
+                Debug.Log("实例化不正常状态");
+                GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
+
+                    obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0);
+                    obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);
+               
             }
-        } else
+        }
+        else
         {
             npcData.animPrefab[index].isNormal = true;
             Transform temp = player.transform.Find(npcData.GetPlayerName(index));
             if (temp != null)
             {
-                Transform temp2 = temp.Find(npcData.GetPlayerName(index)+"_Crazy");
+                Transform temp2 = temp.Find(npcData.GetPlayerName(index) + "_Crazy");
                 Destroy(temp2);
                 GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, temp2);
             }

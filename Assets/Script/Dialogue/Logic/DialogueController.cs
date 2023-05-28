@@ -104,6 +104,7 @@ public class DialogueController : MonoBehaviour
         }
         if(choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -4)
         {
+            Debug.Log("Ñ¡ÏîÖ´ÐÐÇÐ»»×´Ì¬");
             this.ShowDialogue(false);
             EventHandler.CallDialogueSwapStateEvent(choiceOperation[buttonVal]);
         }

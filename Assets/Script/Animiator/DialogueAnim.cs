@@ -6,6 +6,7 @@ using UnityEngine;
 public class DialogueAnim : MonoBehaviour
 {
     private bool isExcu = true;
+    public NpcData npcData;
     private void OnEnable()
     {
         EventHandler.ExcuDialogueAnimEvent += OnDialogueAnim;
@@ -31,7 +32,10 @@ public class DialogueAnim : MonoBehaviour
             GameObject gameObject = GameObject.Find(objList[i]);
             Debug.Log(allList[i]);
             Animator animator = gameObject.GetComponentInChildren<Animator>();
-
+            //if(!npcData.animPrefab[npcData.GetPlayerIndex(objList[i])].isNormal)
+            //{
+            //    animator?.SetBool("isNormal", false);
+            //}
             
             animator?.Play(allList[i]);
             //animator?.SetBool(allList[i], true);
