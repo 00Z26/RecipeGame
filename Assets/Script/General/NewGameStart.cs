@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewGameStart : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class NewGameStart : MonoBehaviour
     {
         //time.enabled = false;
         //predict.enabled = false;
+        //SceneManager.LoadScene(0);
     }
     public void TriggerSwapStart()
     {
@@ -22,7 +24,7 @@ public class NewGameStart : MonoBehaviour
         to = "Outside";
 
         GameObject player = GameObject.FindWithTag("Player");  
-        player.transform.position = new Vector3(5.09000015f, -4.17999983f, 0);
+        player.transform.position = new Vector3(4.78999996f, 1.46000004f, 0);
         
         EventHandler.CallTriggerSwapNewGameEvent(from, to, playerPos);
     }
@@ -43,5 +45,11 @@ public class NewGameStart : MonoBehaviour
         player.transform.position = new Vector3(5.09000015f, -4.17999983f, 0);
 
         EventHandler.CallTriggerContinue(from, to, playerPos);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+
     }
 }

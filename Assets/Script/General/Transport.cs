@@ -16,8 +16,8 @@ public class Transport : MonoBehaviour
     private void Awake()
     {
         //开始时先加载menu场景
-        //SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
-        //mainCanvas.enabled = false;
+        SceneManager.LoadScene("Menu", LoadSceneMode.Additive);
+        mainCanvas.enabled = false;
     }
 
 
@@ -67,7 +67,7 @@ public class Transport : MonoBehaviour
         //已跟随的npc不加载
         LoadNpc();
         //已经进过的门修改颜色
-        DoorSwap(to);
+        DoorSwap(to,from);
         //触发事件去让相机修改边界值
         EventHandler.CallUpdateCameraScale(to);
 
@@ -142,14 +142,17 @@ public class Transport : MonoBehaviour
     }
 
 
-    public void DoorSwap(string to)
+    public void DoorSwap(string to,string from=null)
     {
         if (to != "Persisent" && to != "Outside" && to != "Cook" && to != "RecipeShow" && to != "Menu")
         {
             string doorName = to.Replace("Room", "Door");
             openDoorTimes.SetThisLoopTimes(doorName);
         }
-
+        if(to == "Outside" && from != "Menu")
+        {
+            Destroy(GameObject.FindGameObjectWithTag("AutoDialogue"));
+        }
         
         GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
 

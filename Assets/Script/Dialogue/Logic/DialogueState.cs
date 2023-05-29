@@ -20,6 +20,7 @@ public class DialogueState : MonoBehaviour
 
    
     private DialogueData dialogues;
+    private DialogueData autoDialogues;
     public NpcData npcData;
 
     private DataTools dataTools;
@@ -33,6 +34,7 @@ public class DialogueState : MonoBehaviour
     {
         //获取当前的剧本
         dialogues = this.GetComponent<DialogueController>().dialoges;
+        autoDialogues = this.GetComponent<DialogueController>().autoDialoges;
         dataTools = new DataTools();
     }
 
@@ -219,10 +221,12 @@ public class DialogueState : MonoBehaviour
 
     public DialogueStruct GetAutoBegin()
     {
-        foreach(DialogueStruct item in  dialogues.dialogueList)
+        foreach(DialogueStruct item in  autoDialogues.dialogueList)
         {
-            if(item.loop == npcData.loop && item.index == 0)
+            Debug.Log(item.loop);
+            if (item.loop == npcData.loop && item.index == 0)
             {
+                
                 return item;
             }
         }

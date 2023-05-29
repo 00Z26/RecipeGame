@@ -641,8 +641,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2
-  dialoges: {fileID: 11400000, guid: c5a9984847b056e46860cc4a360ed1c0, type: 2}
-  autoDialoges: {fileID: 0}
+  dialoges: {fileID: 11400000, guid: b024975c83f0307408a513ff162764fa, type: 2}
+  autoDialoges: {fileID: 11400000, guid: b024975c83f0307408a513ff162764fa, type: 2}
   nextIndex: 0
   currentDialogue:
     index: 0
@@ -673,7 +673,7 @@ Transform:
   m_Children:
   - {fileID: 17854569}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286761415
 GameObject:
@@ -978,7 +978,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &317495127
 GameObject:
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStairs: 0
-  portalPos: {x: -13.79, y: 6.45, z: 0}
+  portalPos: {x: 9.44, y: 6.45, z: 0}
 --- !u!212 &1139231466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2748,7 +2748,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.697}
 --- !u!212 &1405381676
 SpriteRenderer:
@@ -3393,7 +3393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStairs: 0
-  portalPos: {x: -13.42, y: 6.17, z: 0}
+  portalPos: {x: -14.21, y: 6.17, z: 0}
 --- !u!61 &1992238586
 BoxCollider2D:
   m_ObjectHideFlags: 0

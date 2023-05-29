@@ -35,6 +35,7 @@ TagManager:
   - eyes
   - Bone
   - Bass
+  - Clothes
   layers:
   - Default
   - TransparentFX

@@ -746,12 +746,24 @@ MonoBehaviour:
     loop: 0
     Conversations: 1
   - index: 2085
-    nextIndex: -1
+    nextIndex: 2086
     chatPartnerName: "\u6211"
     content: "\u968F\u4FBF\u4F60\u600E\u4E48\u8BF4\u5566\uFF01"
     choices: "\u201C\u8DDF\u6211\u8D70\uFF01\u201D+-3+8"
     animiation: 
     pic: '%s_EvilSmile'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: 5
+    loop: 0
+    Conversations: 1
+  - index: 2086
+    nextIndex: -1
+    chatPartnerName: "\u6C99\u888B"
+    content: "\u5207\u3002"
+    choices: 
+    animiation: 
+    pic: Sandbag_0
     triggerName: Mushroom,Potato,Egg,Tomato
     teamMembers: 
     openDoorTimes: 5
@@ -914,12 +926,24 @@ MonoBehaviour:
     loop: 0
     Conversations: 1
   - index: 2106
-    nextIndex: -1
+    nextIndex: 2107
     chatPartnerName: "\u6211"
     content: "\u867D\u7136\u6211\u5E76\u4E0D\u89C9\u5F97\uFF0C\\n\u5F53\u83DC\u8981\u6BD4\u5F53\u6C99\u888B\u597D\u3002"
     choices: "\u201C\u4F46\u4E0D\u91CD\u8981\uFF01\u91CD\u8981\u7684\u662F\u4F60\u559C\u6B22\u3002\u201D+-3+8"
     animiation: 
     pic: '%s_EvilSmile'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: 6
+    loop: 0
+    Conversations: 1
+  - index: 2107
+    nextIndex: -1
+    chatPartnerName: "\u6C99\u888B"
+    content: "\u563F\uFF0C\u8FD9\u53E5\u8BDD\u6211\u540C\u610F\u3002"
+    choices: 
+    animiation: 
+    pic: Sandbag_0
     triggerName: Mushroom,Potato,Egg,Tomato
     teamMembers: 
     openDoorTimes: 6

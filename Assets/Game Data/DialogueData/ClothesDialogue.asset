@@ -1,0 +1,411 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d216e8246d6eea459adffcc2173db9d, type: 3}
+  m_Name: ClothesDialogue
+  m_EditorClassIdentifier: 
+  dialogueList:
+  - index: 0
+    nextIndex: 7501
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\uFF08\u6211\u662F\u4E0D\u4F1A\u9760\u8FD1\u5B83\u7684\u3002\uFF09"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Egg
+    teamMembers: 
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7501
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u5514\u5514\u2026\u597D\u5427\uFF01\u4F60\u8BF4\u4E86\u7B97\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilErr'
+    triggerName: Egg
+    teamMembers: 
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 0
+    nextIndex: 7505
+    chatPartnerName: "\u756A\u8304"
+    content: "\uFF08\u8FD9\u662F\u201C\u751F\u547D\u7684\u6B22\u6B23\u201D\u3002\uFF09"
+    choices: 
+    animiation: 
+    pic: Tomato_Dark
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7505
+    nextIndex: 7506
+    chatPartnerName: "\u6211"
+    content: "\u6211\u662F\u641E\u4E0D\u61C2\u5566\uFF0C\u7ED9\u8863\u670D\u53D6\u540D\u5B57\u6709\u4EC0\u4E48\u5FC5\u8981\u5417\uFF1F\\n\u5B83\u53C8\u4E0D\u4F1A\u542C\u5230\u4F60\u7684\u547C\u5524\uFF0C\u5C31\u8DD1\u6B65\u8FC7\u6765\u8DDF\u7740\u4F60\u8D70\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilErr'
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7506
+    nextIndex: 0
+    chatPartnerName: "\u756A\u8304"
+    content: "\uFF08\u8C01\u8BF4\u4E0D\u4F1A\u5462\uFF1F\u4F60\u53EF\u4EE5\u5C1D\u8BD5\u4E00\u4E0B\u3002\uFF09"
+    choices: "\u201C\u5443\uFF0C\u90A3\u2026\u751F\u547D\u7684\u6B22\u6B23\uFF1F\u201D+7510;\u201C\u4E0D\u8981\uFF0C\u60F3\u8C61\u90A3\u4E2A\u753B\u9762\uFF0C\u611F\u89C9\u4F1A\u5F88\u6076\u5FC3\u3002\u201D+7515"
+    animiation: 
+    pic: Tomato_Dark
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7510
+    nextIndex: 7511
+    chatPartnerName: "\u751F\u547D\u7684\u6B22\u6B23"
+    content: "\u2026\u2026"
+    choices: 
+    animiation: Clothes_HangLand
+    pic: Clothes_0
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7511
+    nextIndex: 7512
+    chatPartnerName: "\u6211"
+    content: "\u597D\u5427\uFF0C\u4E16\u754C\u771F\u5947\u5999\u3002"
+    choices: "\u201C\u4F60\u60F3\u548C\u6211\u4E00\u8D77\u8D70\u5417\uFF1F\u201D+-3+6"
+    animiation: 
+    pic: '%s_EvilDown'
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7512
+    nextIndex: 7513
+    chatPartnerName: "\u751F\u547D\u7684\u6B22\u6B23"
+    content: "\u2026\u2026"
+    choices: 
+    animiation: 
+    pic: Clothes_0
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7513
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u8D70\u5427\uFF0C\u53C8\u591A\u4E86\u4E00\u4E2A\u795E\u5947\u7684\u4F19\u4F34\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilSmile'
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7515
+    nextIndex: -1
+    chatPartnerName: "\u756A\u8304"
+    content: "\uFF08\u968F\u4F60\u3002\uFF09"
+    choices: 
+    animiation: 
+    pic: Tomato_Dark
+    triggerName: Tomato
+    teamMembers: -3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 0
+    nextIndex: 7520
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u5982\u679C\u53EF\u4EE5\u7684\u8BDD\uFF0C\\n\u6211\u4E00\u8F88\u5B50\u90FD\u4E0D\u60F3\u9760\u8FD1\u5B83\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7520
+    nextIndex: 0
+    chatPartnerName: "\u6211"
+    content: "\u6211\u8BB0\u5F97\u2026\u5B83\u53EB\u4EC0\u4E48\u6765\u7740\uFF1F"
+    choices: "\u201C\u751F\u547D\u7684\u6B22\u6B23\uFF1F\u201D+7525;\u201C\u751F\u6D3B\u7684\u6B22\u5FEB\uFF1F\u201D+7550;\u201C\u751F\u5B58\u7684\u6B22\u6B4C\uFF1F\u201D+7550"
+    animiation: 
+    pic: '%s_EvilThink'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7525
+    nextIndex: 7526
+    chatPartnerName: "\u6211"
+    content: "\u54C7\u54E6\uFF0C\u52A8\u4E86\u8036\u3002"
+    choices: 
+    animiation: Clothes_HangLand
+    pic: '%s_EvilSmile'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7526
+    nextIndex: 7527
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u2026\u5B83\u4EE5\u4E3A\u4F60\u5728\u547C\u5524\u5B83\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7527
+    nextIndex: 7528
+    chatPartnerName: "\u6211"
+    content: "\u54C7\u54E6\uFF0C\u771F\u6709\u610F\u601D\u3002"
+    choices: "\u201C\u4F60\u60F3\u4E00\u8D77\u8D70\u5417\uFF1F\u6211\u7684\u53BB\u6B7B\u5927\u961F\u5305\u7F57\u4E07\u8C61\uFF01\u201D+-3+6"
+    animiation: 
+    pic: '%s_EvilSmile'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7528
+    nextIndex: 7529
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u5982\u679C\u6211\u73B0\u5728\u624D\u8DF3\u51FA\u6765\u53CD\u5BF9\uFF0C\\n\u4F1A\u4E0D\u4F1A\u6709\u70B9\u715E\u98CE\u666F\uFF1F"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7529
+    nextIndex: 7530
+    chatPartnerName: "\u6211"
+    content: "\u4E0D\u8981\u6025\u7740\u53CD\u5BF9\uFF01\u6211\u4EEC\u8981\u4EE5\u5305\u5BB9\u7684\u5FC3\u6001\\n\u9762\u5BF9\u8FD9\u4E9B\u6CA1\u6709\u653B\u51FB\u6027\u7684\u5C0F\u53EF\u7231\uFF01"
+    choices: 
+    animiation: 
+    pic: '%s_EvilThink'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7530
+    nextIndex: 7531
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u5B83\u662F\u756A\u8304\u7528\u81EA\u5DF1\u7684\u76AE\u505A\u6210\u7684\u54E6\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7531
+    nextIndex: 7532
+    chatPartnerName: "\u6211"
+    content: "\u2026\uFF1F"
+    choices: 
+    animiation: 
+    pic: '%s_EvilShock'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7532
+    nextIndex: 7533
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u628A\u76AE\u6574\u4E2A\u5265\u4E0B\u6765\uFF0C\u9634\u5E72\u7136\u540E\u6D82\u4E0A\u690D\u7269\u80F6\u3002\\n\u5C31\u53D8\u6210\u73B0\u5728\u8FD9\u4E2A\u6837\u5B50\u4E86\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7533
+    nextIndex: 7534
+    chatPartnerName: "\u6211"
+    content: "\u5B83\u4EEC\u756A\u8304\u7684\u4E60\u4FD7\u53EF\u771F\u662F\u8BB2\u7A76\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilErr'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7534
+    nextIndex: 7535
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u5443\u5443\u2026\u8FD9\u5E94\u8BE5\u4E0D\u662F\u4E60\u4FD7\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7535
+    nextIndex: 7536
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u4E4B\u524D\u6709\u4E00\u6B21\uFF0C\u5B83\u95EE\u6211\u4E3A\u4EC0\u4E48\u559C\u6B22\u6E38\u620F\u91CC\u7684\u89D2\u8272\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7536
+    nextIndex: 7537
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u6211\u8BF4\uFF0C\u56E0\u4E3A\u5B83\u4EEC\u662F\u4E8C\u7EF4\u7684\u3002\\n\u8FD9\u5C31\u80DC\u8FC7\u4E09\u7EF4\u4E16\u754C\u91CC\u7684\u4E00\u5207\u4E86\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7537
+    nextIndex: 7538
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u7B2C\u4E8C\u5929\uFF0C\u5B83\u5C31\u628A\u4E8C\u7EF4\u7684\u81EA\u5DF1\uFF0C\u6302\u5728\u6211\u7684\u623F\u95E8\u524D\u4E86\u3002\\n\u2026\u5C31\u662F\u8FD9\u4EF6\u8863\u670D\u3002\u88AB\u538B\u5F97\u6241\u6241\u7684\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7538
+    nextIndex: 7539
+    chatPartnerName: "\u751F\u547D\u7684\u6B22\u6B23"
+    content: "\u2026\u2026"
+    choices: 
+    animiation: 
+    pic: Clothes_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7539
+    nextIndex: 7540
+    chatPartnerName: "\u6211"
+    content: "\u6211\u660E\u767D\u4E86\u3002\u8FD9\u5C31\u628A\u5B83\u8D76\u8D70\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilDown'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7540
+    nextIndex: 7541
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u8D76\u4E0D\u8D70\u7684\uFF0C\u653E\u5F03\u5427\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7541
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u5443\u554A\u2014\u2014\uFF01"
+    choices: 
+    animiation: 
+    pic: '%s_EvilShock'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7550
+    nextIndex: 7551
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u4E0D\u8BB0\u5F97\u662F\u6700\u597D\u7684\u5566\u3002\\n\u5982\u679C\u4F60\u558A\u5BF9\u4E86\u540D\u5B57\uFF0C\u4E4B\u540E\u4E00\u5B9A\u4F1A\u540E\u6094\u7684\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7551
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u5443\u554A\uFF0C\u8FD9\u4E48\u53EF\u6015\u7684\u5417\uFF1F"
+    choices: 
+    animiation: 
+    pic: '%s_EvilAsk'
+    triggerName: Tomato
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 0
+    nextIndex: 7560
+    chatPartnerName: "\u9E21\u86CB"
+    content: "\u4E0D\u8981\u9760\u8FD1\u5B83\u3002\\n\u5C0F\u5FC3\u88AB\u54AC\u3002"
+    choices: 
+    animiation: 
+    pic: Egg_0
+    triggerName: Mushroom,Potato,Lemon
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
+  - index: 7560
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\uFF1F\uFF1F\uFF1F"
+    choices: 
+    animiation: 
+    pic: '%s_EvilAsk'
+    triggerName: Mushroom,Potato,Lemon
+    teamMembers: 3
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'

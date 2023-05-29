@@ -19,7 +19,7 @@ MonoBehaviour:
     content: "\u5582\u3002\u4E0D\u8BB8\u52A8\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -31,7 +31,7 @@ MonoBehaviour:
     content: "\u90FD\u8BF4\u4E86\u4E0D\u8BB8\u52A8\u4E86\uFF01"
     choices: 
     animiation: '%s_Dark_Punch,Corn_BePunch'
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
     content: "\u8FD9\u91CC\u8FD9\u4E48\u9ED1\uFF0C\\n\u4F60\u600E\u4E48\u77E5\u9053\u6211\u5728\u52A8\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilAsk'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     content: "\u56E0\u4E3A\u4F60\u5728\u649E\u6211\u554A\uFF01"
     choices: 
     animiation: '%s_Dark_Punch,Corn_BePunch'
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -67,7 +67,7 @@ MonoBehaviour:
     content: "\u539F\u6765\u5982\u6B64\uFF01\\n\u6240\u4EE5\uFF0C\u8FD9\u91CC\u4E3A\u4EC0\u4E48\u8FD9\u4E48\u9ED1\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
     content: "\u8DDF\u4F60\u6CA1\u6709\u5173\u7CFB\uFF01\u4F60\u662F\u6765\u5E72\u561B\u7684\uFF1F\\n\u2026\u7B97\u4E86\uFF0C\u4E0D\u7528\u56DE\u7B54\u4E86\u3002\u73B0\u5728\u51FA\u53BB\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
     content: "\u6240\u4EE5\u4F60\u60F3\u5417\uFF1F\\n\u673A\u4E0D\u53EF\u5931\u54E6\uFF01"
     choices: 
     animiation: Corn_Run
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilYeah'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
     content: "\u600E\u4E48\u4E0D\u89C1\u4E86\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilAsk'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
     content: "\u5582\u2014\u2014\u4F60\u8FD8\u5728\u5417\u2014\u2014\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilErr'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 1
@@ -139,7 +139,7 @@ MonoBehaviour:
     content: "\u5582\uFF0C\u4E0D\u8BB8\u52A8\uFF01"
     choices: 
     animiation: '%s_Dark_Punch,Corn_BePunch'
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -151,7 +151,7 @@ MonoBehaviour:
     content: "\u4E0D\u8BB8\u649E\u6211\uFF01\u4E5F\u4E0D\u8BB8\u8BF4\u8BDD\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -163,7 +163,7 @@ MonoBehaviour:
     content: "\u73B0\u5728\uFF0C\u8F6C\u5934\uFF0C\u51FA\u53BB\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -175,7 +175,7 @@ MonoBehaviour:
     content: "\u5982\u679C\u6211\u4E0D\u5462\uFF1F"
     choices: 
     animiation: Corn_Run
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDown'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -187,7 +187,7 @@ MonoBehaviour:
     content: "\u5582\u2014\u2014\u4F60\u8FD8\u5728\u5417\u2014\u2014\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -199,7 +199,7 @@ MonoBehaviour:
     content: "\u5207\uFF0C\u771F\u6CA1\u610F\u601D\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilScold'
     triggerName: Mushroom,Potato,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 2
@@ -211,7 +211,7 @@ MonoBehaviour:
     content: "\u5582\uFF0C\u4F60\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -223,7 +223,7 @@ MonoBehaviour:
     content: "\u5582\uFF0C\u4E0D\u8BB8\u649E\u6211\uFF01"
     choices: 
     animiation: '%s_Dark_Punch,Corn_BePunch'
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -235,7 +235,7 @@ MonoBehaviour:
     content: "\u90FD\u8BF4\u4E86\u4E0D\u8BB8\u649E\u6211\u4E86\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -247,7 +247,7 @@ MonoBehaviour:
     content: "\u4F60\u662F\u4E0D\u662F\u90FD\u8BB0\u5F97\u5440\uFF1F\\n\u603B\u89C9\u5F97\u6BCF\u6B21\u8FC7\u6765\uFF0C\u4F60\u7684\u53CD\u5E94\u90FD\u4E0D\u4E00\u6837\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -259,7 +259,7 @@ MonoBehaviour:
     content: "\u4EC0\u4E48\uFF1F\uFF01\u4F60\u662F\u8C01\uFF1F\u4F60\u4E5F\u8BB0\u5F97\u5417\uFF01\u662F\u8C01\u6D3E\u4F60\u6765\u7684\u5417\uFF1F\\n\u2026\u7B97\u4E86\uFF0C\u65E0\u6240\u8C13\u4E86\uFF01\u65E2\u7136\u4F60\u8BB0\u5F97\uFF0C\u5C31\u4E00\u5B9A\u8981\u5E2E\u6211\u7684\u5FD9\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -271,7 +271,7 @@ MonoBehaviour:
     content: "\u6211\u624D\u4E0D\u8981\u5462\u3002\u4E3A\u4EC0\u4E48\u4F60\u89C9\u5F97\\n\u6211\u4EEC\u6709\u76F8\u4F3C\u7684\u5730\u65B9\uFF0C\u6211\u5C31\u4F1A\u6B7B\u5FC3\u584C\u5730\u5730\u5E2E\u4F60\u8DD1\u817F\u5462\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -283,7 +283,7 @@ MonoBehaviour:
     content: "\u4E0D\u8981\u60F3\u7740\u7528\u56E2\u961F\u8BA4\u540C\u611F\u6765\u7ED1\u67B6\u6211\u54E6\uFF01\\n\u51B5\u4E14\uFF0C\u4F60\u4E4B\u524D\u6001\u5EA6\u8FD8\u90A3\u4E48\u5DEE\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilScold'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -295,7 +295,7 @@ MonoBehaviour:
     content: "\u2026\u2026\u62B1\u6B49\u3002\u6211\u4E4B\u524D\u592A\u7740\u6025\u4E86\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -307,7 +307,7 @@ MonoBehaviour:
     content: "\u6CA1\u4E8B\u5566\u6211\u4E0D\u5728\u610F\u3002\\n\u4F60\u53EF\u4EE5\u7EE7\u7EED\u7740\u6025\uFF0C\u6211\u5462\uFF0C\u7EE7\u7EED\u8F6C\u5934\u79BB\u5F00\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -319,7 +319,7 @@ MonoBehaviour:
     content: "\u6211\u771F\u7684\u6709\u5F88\u91CD\u8981\u7684\u4E8B\uFF01\\n\u518D\u8FC7\u51E0\u6B21\uFF0C\u6211\u5C31\u6CA1\u6CD5\u4FDD\u7559\u6211\u7684\u8BB0\u5FC6\u4E86\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -331,7 +331,7 @@ MonoBehaviour:
     content: "\u5230\u4E86\u90A3\u65F6\u5019\uFF0C\\n\u5C31\u771F\u7684\u4E00\u5207\u90FD\u65E0\u6CD5\u633D\u56DE\u4E86\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -343,7 +343,7 @@ MonoBehaviour:
     content: "\u545C\u54C7\u2026\u8BF4\u5F97\u8FD9\u4E48\u5938\u5F20\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -355,7 +355,7 @@ MonoBehaviour:
     content: "\u90A3\u4F60\u8FD8\u662F\u8BF4\u8BF4\u5427\uFF0C\u6709\u4EC0\u4E48\u4E8B\uFF1F\\n\u6211\u6CA1\u6709\u8BF4\u8FC7\u4E00\u5B9A\u4F1A\u5E2E\u4F60\u54E6\uFF01\u8BF4\u4E0D\u5B9A\u8D70\u51FA\u95E8\u6211\u5C31\u7ED9\u5FD8\u4E86\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDown'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -367,7 +367,7 @@ MonoBehaviour:
     content: "\u6211\u6709\u4E00\u4E2A\u9752\u6885\u7AF9\u9A6C\uFF01\\n\u6211\u60F3\u5728\u5931\u53BB\u8BB0\u5FC6\u4EE5\u524D\uFF0C\u518D\u89C1\u5B83\u4E00\u9762\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -379,7 +379,7 @@ MonoBehaviour:
     content: "\u2026\u2026"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilAsk'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -391,7 +391,7 @@ MonoBehaviour:
     content: "\u2026\u2026"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -403,7 +403,7 @@ MonoBehaviour:
     content: "\u6211\u8D70\u4E86\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilScold'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -415,7 +415,7 @@ MonoBehaviour:
     content: "\u6211\u8FD8\u6CA1\u6709\u544A\u8BC9\u4F60\u9752\u6885\u7AF9\u9A6C\u7684\u957F\u76F8\uFF01\\n\u5B83\u957F\u5F97\uFF0C\u50CF\u4E2A\u571F\u8C46\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 3
@@ -427,7 +427,7 @@ MonoBehaviour:
     content: "\u4F60\u6765\u4E86\uFF01\u4F60\u6709\u627E\u5230\u571F\u8C46\u5417\uFF1F\\n\u73B0\u5728\u5C31\u5E26\u6211\u53BB\u5427\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -439,7 +439,7 @@ MonoBehaviour:
     content: "\u6709\u627E\u5230\u5417\uFF1F\u8FD8\u662F\u6CA1\u6709\u627E\u5230\u5462\uFF1F\\n\u8BB0\u4E0D\u6E05\u4E86\u8036\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -451,7 +451,7 @@ MonoBehaviour:
     content: "\u8FD8\u6709\u65F6\u95F4\uFF0C\u4E5F\u5F88\u91CD\u8981\u5462\u3002\\n\u8BF4\u4E0D\u5B9A\u6211\u4EEC\u521A\u4E00\u51FA\u95E8\uFF0C\u4E16\u754C\u5C31\u6BC1\u706D\u4E86\u8036\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDisagree'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -463,7 +463,7 @@ MonoBehaviour:
     content: "\u4EC0\u4E48\uFF0C\u8FD9\u4E48\u5FEB\u5C31\u627E\u5230\u4E86\u5417\uFF01\\n\u4E0D\u6127\u662F\u4F60\uFF01\u8FD9\u5C31\u5E26\u6211\u53BB\u5427\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -475,7 +475,7 @@ MonoBehaviour:
     content: "\u6211\u8BF4\u7684\u548C\u4F60\u7B54\u7684\uFF0C\u6709\u90A3\u4E48\u4E00\u4E1D\u4E00\u6BEB\u7684\u8054\u7CFB\u5417\uFF1F"
     choices: "\u201C\u2026\u60F3\u6765\u5C31\u8DDF\u7740\u6765\u5427\uFF0C\u6211\u53EF\u6CA1\u8BF4\u6211\u627E\u5230\u4E86\u54E6\u3002\u201D+-3+2"
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilScold'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -487,7 +487,7 @@ MonoBehaviour:
     content: "\u597D\u597D\u597D\uFF01\u5FEB\u5E26\u6211\u53BB\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 4
@@ -499,7 +499,7 @@ MonoBehaviour:
     content: "\u6211\u6709\u9884\u611F\uFF0C\u4E0B\u4E00\u6B21\uFF0C\\n\u6211\u7684\u8BB0\u5FC6\u5C31\u4F1A\u4E0D\u5B8C\u6574\u4E86\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -511,7 +511,7 @@ MonoBehaviour:
     content: "\u6240\u4EE5\u8FD9\u6B21\u4E5F\u62DC\u6258\u4F60\u4E86\u3002\\n\u5E26\u6211\u53BB\u89C1\u571F\u8C46\u5427\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -523,7 +523,7 @@ MonoBehaviour:
     content: "\u6211\u5176\u5B9E\u4E00\u76F4\u5F88\u597D\u5947\u8036\u3002\\n\u4E3A\u4EC0\u4E48\u4F60\u73B0\u5728\u80FD\u8BB0\u4F4F\uFF0C\u4E0B\u6B21\u5C31\u8BB0\u4E0D\u4F4F\u4E86\u5462\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilAsk'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -535,7 +535,7 @@ MonoBehaviour:
     content: "\u89E3\u91CA\u8D77\u6765\u4F1A\u5F88\u957F\uFF0C\u65F6\u95F4\u8FD8\u591F\u5417\uFF1F\\n\u8981\u4E0D\u8FD8\u662F\u4F18\u5148\u53BB\u89C1\u571F\u8C46\u5427\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -547,7 +547,7 @@ MonoBehaviour:
     content: "\u4E0D\u89E3\u91CA\u5C31\u4E0D\u5E26\u4F60\u53BB\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDown'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -559,7 +559,7 @@ MonoBehaviour:
     content: "\u90A3\u5C31\u4ECE\u5934\u8BF4\u8D77\u3002\\n\u5230\u76EE\u524D\u4E3A\u6B62\uFF0C\u4F60\u5E94\u8BE5\u5DF2\u7ECF\u77E5\u9053\u4E16\u754C\u7684\u672C\u8D28\u4E86\u5427\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -583,7 +583,7 @@ MonoBehaviour:
     content: "\u6CA1\u9519\uFF0C\u5C31\u662F\u4E00\u4E2A\u51B0\u7BB1\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -595,7 +595,7 @@ MonoBehaviour:
     content: "\u4E0D\u7BA1\u6211\u8BF4\u4EC0\u4E48\uFF0C\\n\u4F60\u90FD\u53EA\u4F1A\u56DE\u7B54\u8FD9\u4E48\u4E00\u53E5\u5427\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilErr'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -607,7 +607,7 @@ MonoBehaviour:
     content: "\u800C\u8FD9\u91CC\u7684\u6BCF\u4E00\u4E2A\u623F\u95F4\uFF0C\u5C31\u662F\u2026"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -631,7 +631,7 @@ MonoBehaviour:
     content: "\u6CA1\u9519\uFF01\u8FD9\u4E2A\u623F\u95F4\u91CC\uFF0C\\n\u66FE\u7ECF\u4F4F\u8FC7\u5F88\u591A\u4F1F\u5927\u7684\u7389\u7C73\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -643,7 +643,7 @@ MonoBehaviour:
     content: "\u5B83\u4EEC\u4F1A\u628A\u6240\u6709\u7684\u8BB0\u5FC6\uFF0C\u8BB2\u8FF0\u7ED9\u7389\u7C73\u7C92\u542C\u3002\\n\u7136\u540E\uFF0C\u62D4\u4E0B\u7389\u7C73\u7C92\uFF0C\u85CF\u5728\u9ED1\u6697\u4E4B\u4E2D\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -655,7 +655,7 @@ MonoBehaviour:
     content: "\u591A\u4E8F\u4E86\u623F\u95F4\u91CC\u7684\u706F\u603B\u662F\u4FEE\u4E0D\u597D\uFF0C\\n\u7389\u7C73\u7C92\u4EEC\u624D\u4E0D\u4F1A\u88AB\u53D1\u73B0\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -667,7 +667,7 @@ MonoBehaviour:
     content: "\u4F46\u662F\u3001\u4F46\u662F\uFF01\u7389\u7C73\u7C92\u5DF2\u7ECF\u79EF\u6512\u5F97\u592A\u591A\u4E86\u2026\u2026"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -679,7 +679,7 @@ MonoBehaviour:
     content: "\u90FD\u4E0D\u9700\u8981\u7528\u773C\u775B\u770B\uFF0C\u53EA\u8981\u4F38\u51FA\u624B\u6765\uFF0C\\n\u5C31\u80FD\u6293\u5230\u4E00\u5927\u628A\u7389\u7C73\u7C92\u4E86\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -691,7 +691,7 @@ MonoBehaviour:
     content: "\u5594\u5594\u2026\u771F\u662F\u4E2A\u60B2\u4F24\u7684\u6545\u4E8B\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilThink'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -703,7 +703,7 @@ MonoBehaviour:
     content: "\u65E2\u7136\u4F60\u90FD\u544A\u8BC9\u6211\u4E86\uFF0C\u90A3\u6211\u4E5F\u6765\\n\u548C\u4F60\u5206\u4EAB\u4E00\u4E0B\u5427\uFF01\u5173\u4E8E\u6211\u662F\u600E\u4E48\u4FDD\u7559\u8BB0\u5FC6\u7684\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilThink'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -715,7 +715,7 @@ MonoBehaviour:
     content: "\u554A\u3002\u4E0D\u611F\u5174\u8DA3\u3002\\n\u6211\u53EA\u60F3\u53BB\u89C1\u571F\u8C46\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -727,7 +727,7 @@ MonoBehaviour:
     content: "\u5567\u3002\u53BB\u53BB\u53BB\u3002\u8FD9\u5C31\u53BB\u3002"
     choices: "\u201C\u8DDF\u7D27\u6211\u3002\u201D+-3+2"
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilScold'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -739,7 +739,7 @@ MonoBehaviour:
     content: "\u597D\u561E\u6CA1\u95EE\u9898\u6765\u4E86\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 5
@@ -763,7 +763,7 @@ MonoBehaviour:
     content: "\u4E0D\u8BB8\u649E\u6211\uFF01\\n\u4F60\u662F\u8C01\uFF1F\u4F60\u6765\u5E72\u4EC0\u4E48\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 6
@@ -775,7 +775,7 @@ MonoBehaviour:
     content: "\u2026\u4E0D\u5E72\u561B\u3002\u968F\u4FBF\u901B\u901B\u5566\u3002"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilDown'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 6
@@ -787,7 +787,7 @@ MonoBehaviour:
     content: "\u4E4C\u6F06\u9EBB\u9ED1\u7684\uFF0C\u6709\u4EC0\u4E48\u597D\u901B\u7684\uFF1F\\n\u6211\u53BB\u4FEE\u706F\u4E86\uFF0C\u6CA1\u4E8B\u5C31\u5FEB\u51FA\u53BB\uFF01"
     choices: 
     animiation: Corn_Run
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: 6
@@ -811,7 +811,7 @@ MonoBehaviour:
     content: "\u4E0D\u8BB8\u649E\u6211\uFF01\\n\u4F60\u662F\u8C01\uFF1F\u4F60\u6765\u5E72\u4EC0\u4E48\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: '>7'
@@ -823,7 +823,7 @@ MonoBehaviour:
     content: "\u4E16\u754C\u4F1A\u5728\u5341\u5206\u949F\u4EE5\u5185\u6BC1\u706D\uFF01\\n\u6211\u662F\u6765\u7EA6\u4F60\u4E00\u8D77\u53BB\u6B7B\u7684\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilYeah'
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: '>7'
@@ -835,7 +835,7 @@ MonoBehaviour:
     content: "\u2026\u2026\uFF1F\\n\u795E\u7ECF\u75C5\u554A\uFF01"
     choices: 
     animiation: Corn_Run
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Mushroom,Egg,Tomato,Lemon
     teamMembers: 
     openDoorTimes: '>7'
@@ -859,7 +859,7 @@ MonoBehaviour:
     content: "\u5E72\u561B\uFF1F\uFF01\u5FD9\u7740\u5462\u3002\u53BB\u53BB\u53BB\uFF01"
     choices: 
     animiation: Corn_Run
-    pic: '%s_EvilSmile'
+    pic: Corn_0
     triggerName: Potato
     teamMembers: 
     openDoorTimes: '>3'

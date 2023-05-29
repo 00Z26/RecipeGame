@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public NpcData npcData;
     public RecipeList recipeList;
     public OpenDoorTimes openDoorTimes;
-
+    public GameObject player;
     public void OnEnable()
     {
         EventHandler.TriggerSwapNewGameEvent += GameStartExcu;
@@ -26,6 +26,14 @@ public class GameController : MonoBehaviour
     //开始新游戏时更新所有数据
     public void GameStartExcu(string str1,string str2,Vector3 vec3)
     {
+        foreach(Transform t in player.transform.GetComponentInChildren<Transform>())
+        {
+            if(t.gameObject.tag == "NPC")
+            {
+                Destroy(t.gameObject);
+            }
+        }
+
         //npc状态恢复，循环次数恢复
         npcData.loop = 1;
         npcData.controllerIndex = 0;
@@ -58,6 +66,13 @@ public class GameController : MonoBehaviour
     //所以，切换场景+增加loop,其他数据保持不变
     public void ContinueNextLoop(string str1,string str2, Vector3 vec3)
     {
+        foreach (Transform t in player.transform.GetComponentInChildren<Transform>())
+        {
+            if (t.gameObject.tag == "NPC")
+            {
+                Destroy(t.gameObject);
+            }
+        }
         npcData.loop++;
         npcData.controllerIndex = 0;
         for (int i = 0; i < openDoorTimes.openTimes.Count; i++)

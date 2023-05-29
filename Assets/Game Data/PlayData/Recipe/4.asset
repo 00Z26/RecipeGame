@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dishName: "\u8377\u5305\u86CB"
   dishPic: {fileID: 21300000, guid: d13ac672d055b4645a1af93b424a18e4, type: 3}
-  dishDescription: 
+  dishDescription: "\u5F88\u8003\u9A8C\u57FA\u672C\u529F\u7684\u4E00\u9053\u83DC\uFF0C\u9E21\u86CB\u603B\u7231\u6ED1\u6E9C\u6E9C\u5730\u9003\u8D70\uFF0C\u8981\u60F3\u8BA9\u5B83\u4FDD\u7559\u5982\u6B64\u5B8C\u7F8E\u7684\u5F62\u72B6\uFF0C\u9700\u8981\u597D\u597D\u4E0B\u4E00\u756A\u82E6\u529F\u3002"
   isShow: 0

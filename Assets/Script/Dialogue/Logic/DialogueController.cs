@@ -120,7 +120,11 @@ public class DialogueController : MonoBehaviour
         {   if (!isAuto)
                 currentDialogue =  dialogueState.GetNextDialogueStart();
             if (isAuto)
+            {
+                Debug.Log("自动");
                 currentDialogue = dialogueState.GetAutoBegin();
+            }
+                
             if(currentDialogue == null)
                 throw new Exception("未找到对应第一句");
             if (isAuto == false)
@@ -165,7 +169,7 @@ public class DialogueController : MonoBehaviour
         }
 
         //对nextIndex根据状态或判断条件重赋值 这里应该elif 在没有选项的时候进行触发
-        if (nextIndex == -1 )//&& currentDialogue.choices.Count == 0)
+        if (nextIndex == -1 && currentDialogue.choices == "")
         {
             if(isAuto == true)
             {
@@ -173,7 +177,11 @@ public class DialogueController : MonoBehaviour
                 //获取自动触发的物体
                 autoObj = this.gameObject.transform.GetChild(0).gameObject;
                 dialogueState.hasAutoDialogue = true;
-             
+                autoObj.SetActive(false);
+                if(dialogueState.npcData.loop == 1)
+                {
+                    //EventHandler.CallControllTipEvent();
+                }
             }
             //choiceNextIndex = new List<int>();
             nextIndex = dialogueState.resetDialogueIndex(nextIndex); //将index复原为0，由于多状态转换不能在本次获得下次起始
