@@ -23,7 +23,7 @@
 1. Excel转换工具：保持Excel文件名与表名不变，复制粘贴待导入的表，保存。同级目录生成对应Asset，修改并保存到`GameData`对应位置
 2. AutoDialogue: 修改场景Outside下`Auto`的子物体`AutoCheck`激活状态来开关开场的自动触发
 3. 配置与NPC对话时，镜头的下移幅度：修改对应NPC物体的`Component <DialogueController>` 中`Y Move Dis`的值
-4. 场景镜头移动限制：对应场景下Background物体的`Component <Background>`配置为当前场景下x最左/右的坐标，Y最上/下的坐标
+4. 场景镜头移动限制：对应场景下Background物体的`Component <Background>`配置为当前场景下,`CameraSystem`坐标中x最左/右的坐标，Y最上/下的坐标
 1. 切换场景后player物体的位置：对应场景下Door的子物体`<Npcname>Door`中的脚本`SwapScene`,修改`PlayerToPos`为切换后在To场景的位置
 5. Player镜头跟随设置：Persisent场景下`CameraSystem`,`MoveTime`为镜头的移动的延迟时间（0-1），`Delta Y Pos`为镜头垂直方向与player物体的距离
 6. Player：`PlayerController`的基本参数
