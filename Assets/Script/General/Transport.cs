@@ -49,6 +49,9 @@ public class Transport : MonoBehaviour
 
                
         player.transform.position = playerToPos;
+
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector3(rb.velocity.x, 0, 0);
     }
 
     private IEnumerator TransitionToScene(string from, string to)
