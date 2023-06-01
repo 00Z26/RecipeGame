@@ -184,7 +184,7 @@ MonoBehaviour:
   m_text: "\u624D\u602A\u5566\uFF01\u4F60\u4EE5\u4E3A\u4F60\u4F1A\u5F71\u54CD\u5230\u6211\u5417\uFF1F\\n\u8FD9\u662F\u6C38\u8FDC\u4E0D\u53EF\u80FD\u7684\uFF01\u5728\u8FD9\u4E2A\u4E16\u754C\u91CC\uFF0C\u53EA\u6709\u6211\u5F71\u54CD\u4F60\u624D\u662F\u88AB\u5141\u8BB8\u7684\uFF01\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28eb8078859930941a44f11696b6dace, type: 2}
-  m_sharedMaterial: {fileID: 28096077830753197, guid: 81f4e1847c19ce84ca839127a20f22e9, type: 2}
+  m_sharedMaterial: {fileID: -6810695085154178227, guid: 28eb8078859930941a44f11696b6dace, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_text: "\u8611\u83C7\u554A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28eb8078859930941a44f11696b6dace, type: 2}
-  m_sharedMaterial: {fileID: 28096077830753197, guid: 81f4e1847c19ce84ca839127a20f22e9, type: 2}
+  m_sharedMaterial: {fileID: -6810695085154178227, guid: 28eb8078859930941a44f11696b6dace, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1059,14 +1059,14 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28eb8078859930941a44f11696b6dace, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 6584125af92565d4a8e635309016e01b, type: 2}
+  m_sharedMaterial: {fileID: -6810695085154178227, guid: 28eb8078859930941a44f11696b6dace, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288443995
-  m_fontColor: {r: 0.35686275, g: 0.46274513, b: 0.6117647, a: 1}
+    rgba: 4288243514
+  m_fontColor: {r: 0.227451, g: 0.4039216, b: 0.6, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1089,7 +1089,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -664.20276, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &727792773
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1155,9 +1155,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.7735849, g: 0.22988607, b: 0.22988607, a: 1}
-    m_PressedColor: {r: 0.14150941, g: 0.12215199, b: 0.12215199, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.87058824, g: 0.41568628, b: 0.3882353, a: 1}
+    m_PressedColor: {r: 0.8705883, g: 0.4156863, b: 0.38823533, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1625,10 +1625,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.23137257, g: 0.40784317, b: 0.6039216, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.87058824, g: 0.41568628, b: 0.3882353, a: 1}
+    m_PressedColor: {r: 0.87058824, g: 0.41568628, b: 0.3882353, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1695,14 +1695,14 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28eb8078859930941a44f11696b6dace, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 6584125af92565d4a8e635309016e01b, type: 2}
+  m_sharedMaterial: {fileID: -6810695085154178227, guid: 28eb8078859930941a44f11696b6dace, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294964975
-  m_fontColor: {r: 0.9386792, g: 0.9638107, b: 1, a: 1}
+    rgba: 4288243514
+  m_fontColor: {r: 0.227451, g: 0.4039216, b: 0.6, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -697.7023, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1203765073
@@ -2365,14 +2365,14 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28eb8078859930941a44f11696b6dace, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 6584125af92565d4a8e635309016e01b, type: 2}
+  m_sharedMaterial: {fileID: -6810695085154178227, guid: 28eb8078859930941a44f11696b6dace, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287852374
-  m_fontColor: {r: 0.3372549, g: 0.43529415, b: 0.5764706, a: 1}
+    rgba: 4288243514
+  m_fontColor: {r: 0.227451, g: 0.4039216, b: 0.6, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2395,7 +2395,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -697.7023, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1616757363
@@ -2452,7 +2452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2461,9 +2461,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.87058824, g: 0.41568628, b: 0.3882353, a: 1}
+    m_PressedColor: {r: 0.87058824, g: 0.41568628, b: 0.3882353, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
