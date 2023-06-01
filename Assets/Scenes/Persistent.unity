@@ -1581,6 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputDirection: {x: 0, y: 0}
   isDialogueUI: 0
+  dialogueObj: {fileID: 1760991767}
   speed: 400
   swimSpeed: 300
   jumpForce: 13

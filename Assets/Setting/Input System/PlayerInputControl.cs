@@ -287,17 +287,6 @@ public partial class @PlayerInputControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""881ddfc4-59c6-4551-88e2-1993ee46b8e4"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""16bdc208-40f5-4860-bca5-60aaf4f406da"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": ""Hold(duration=2,pressPoint=0.5)"",

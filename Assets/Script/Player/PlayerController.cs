@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     //获取到方向键传入的二维向量
     public Vector2 inputDirection;
     public bool isDialogueUI = false;
+
+    public GameObject dialogueObj;
     [Header("基本参数")]
     public float speed;
     public float swimSpeed;
@@ -118,7 +120,7 @@ public class PlayerController : MonoBehaviour
         }
         this.transform.localScale = new Vector3(face, this.transform.localScale.y, this.transform.localScale.z);
     }
-
+    
     private void Jump(InputAction.CallbackContext obj)
     {
         if(physicsCheck.isGround == true)
@@ -143,7 +145,9 @@ public class PlayerController : MonoBehaviour
     {
         if(GameObject.Find("Choice0") == null)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue)
+            if ((Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue&& !GetDialogueUI()) 
+                || (Mouse.current.leftButton.wasPressedThisFrame && GetDialogueUI())
+                || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI()))
             {   //按e触发对话
                 Debug.Log("触发对话");
                 physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
@@ -161,6 +165,11 @@ public class PlayerController : MonoBehaviour
         physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
         physicsCheck.isDialogue = true;
 
+    }
+
+    private bool GetDialogueUI()
+    {
+        return dialogueObj.GetComponent<DialogueUI>().isDialogueOn;
     }
 
 }
