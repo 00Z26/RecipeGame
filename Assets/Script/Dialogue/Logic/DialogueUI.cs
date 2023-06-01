@@ -12,8 +12,18 @@ public class DialogueUI : MonoBehaviour
     public Image headImg;
     public GameObject dialogueChoices;
     public bool isDialogueOn;
-   
+    [Header("选项设置")]
+    public TMP_Text choice0;
+    public TMP_Text choice1;
+    public TMP_Text choice2;
+    private List<TMP_Text> choiceList = new List<TMP_Text>();
 
+    private void Awake()
+    {
+        choiceList.Add(choice0);
+        choiceList.Add(choice1);
+        choiceList.Add(choice2);
+    }
     private void OnEnable()
     {
         EventHandler.ShowDialogueEvent += onShowDialogueEvent;
@@ -60,15 +70,24 @@ public class DialogueUI : MonoBehaviour
             if(choices[i] != "" && choices[i] != null)
             {
                 
-                GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
+                //GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
                
-                choice.GetComponentInChildren<TMP_Text>().text = choices[i];
-                //Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
-                choice.SetActive(true);
+                //choice.GetComponentInChildren<TMP_Text>().text = choices[i];
+                ////Debug.Log(choice.GetComponentInChildren<TMP_Text>().name);
+                //choice.SetActive(true);
+
+                choiceList[i].text = choices[i];
+                choiceList[i].transform.parent.parent.gameObject.SetActive(true);
+                //调整图标位置
+                Transform bubble = choiceList[i].transform.parent.parent.Find("Image");
+                Debug.Log(bubble.gameObject.name);
+                bubble.localPosition = new Vector3(choiceList[i].transform.parent.localPosition.x-50f, bubble.localPosition.y, bubble.localPosition.z); ;
+                
             }else
             {
-                GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
-                choice.SetActive(false);
+                //GameObject choice = dialogueChoices.transform.GetChild(i).gameObject;
+                //choice.SetActive(false);
+                choiceList[i].transform.parent.parent.gameObject.SetActive(false);
             }
         }
         choices.Clear();
