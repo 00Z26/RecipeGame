@@ -114,10 +114,16 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
     }
 
 
-    public static event Action ControllTipEvent;
+    public static event Action ControllTipEvent; //控制自动触发对话后，出现的操作提示，在starttip里
     public static void CallControllTipEvent()
     {
         ControllTipEvent?.Invoke();
+    }
+
+    public static event Action<bool> ShowTipButtonEvent; //触发player头上的提示框是否显示
+    public static void CallShowTipButtonEvent(bool isShow)
+    {
+        ShowTipButtonEvent?.Invoke(isShow);
     }
 
 

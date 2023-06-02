@@ -55,6 +55,14 @@ public class PhysicsCheck : MonoBehaviour
             
             
         }
+        if (collision.gameObject.tag == "NPC")
+        {
+
+            isDialogue = true;
+            //Debug.Log(isDialogue);
+            talkNPC = collision.gameObject;
+            EventHandler.CallShowTipButtonEvent(isDialogue);
+        }
     }
 
     private void OnResetInDialogue(bool dialogueVanish)
@@ -69,13 +77,14 @@ public class PhysicsCheck : MonoBehaviour
         {
             isInWater = true;
         }
-        if (collision.gameObject.tag == "NPC")
-        {   
+        //if (collision.gameObject.tag == "NPC")
+        //{   
             
-            isDialogue = true;
-            //Debug.Log(isDialogue);
-            talkNPC = collision.gameObject;
-        }
+        //    isDialogue = true;
+        //    //Debug.Log(isDialogue);
+        //    talkNPC = collision.gameObject;
+        //    EventHandler.CallShowTipButtonEvent(isDialogue);
+        //}
 
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -87,6 +96,7 @@ public class PhysicsCheck : MonoBehaviour
         if ((collision.gameObject.tag == "NPC" || collision.gameObject.tag == "AutoDialogue") && !GameObject.Find("DialogueBackground"))
         {
             isDialogue = false;
+            EventHandler.CallShowTipButtonEvent(isDialogue);
         }
         if (collision.gameObject.tag == "AutoDialogue")
         {

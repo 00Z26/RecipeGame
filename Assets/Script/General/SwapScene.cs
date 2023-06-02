@@ -49,12 +49,14 @@ public class SwapScene : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             isTransport = true;
+            EventHandler.CallShowTipButtonEvent(isTransport);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTransport = false;
+        EventHandler.CallShowTipButtonEvent(isTransport);
     }
 
     private void switchLight()

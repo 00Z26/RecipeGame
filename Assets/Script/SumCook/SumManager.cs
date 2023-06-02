@@ -27,16 +27,17 @@ public class SumManager : MonoBehaviour
         //修改那个菜的bool
         //循环所有的dish显示总结
         //string playerName = playerObj.GetComponent<SpriteRenderer>().sprite.name;
-        string playerName = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
-        Debug.Log(playerName);
+        //////string playerName = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
+        //////Debug.Log(playerName);
         rawMaterial = new List<int>();
 
-        rawMaterial.Add(npcData.GetPlayerIndex(playerName));
+        //////rawMaterial.Add(npcData.GetPlayerIndex(playerName));
         //把队伍内的index也加到原料组里
         for (int i = 0; i < playerObj.GetComponent<PlayerController>().teamMembers.Count; i++)
         {
             rawMaterial.Add(playerObj.GetComponent<PlayerController>().teamMembers[i]);
         }
+        rawMaterial.Add(npcData.controllerIndex);
         //根据原料判断菜的函数，返回int
 
 
