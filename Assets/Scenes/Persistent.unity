@@ -3423,9 +3423,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonReply: 0
-  button0: {fileID: 0}
-  button1: {fileID: 0}
-  button2: {fileID: 0}
+  button0: {fileID: 1261259076}
+  button1: {fileID: 38498909}
+  button2: {fileID: 1990047783}
 --- !u!4 &1826777874
 Transform:
   m_ObjectHideFlags: 0

@@ -33,9 +33,10 @@ public class ButtonClick : MonoBehaviour
         button0.text = null;
         button1.text = null;
         button2.text = null;
-        button0.gameObject.SetActive(false);
-        button1.gameObject.SetActive(false);
-        button2.gameObject.SetActive(false);
+        button0.gameObject.transform.parent.parent.gameObject.SetActive(false);
+        button1.gameObject.transform.parent.parent.gameObject.SetActive(false);
+        button2.gameObject.transform.parent.parent.gameObject.SetActive(false);
+
     }
 
 
