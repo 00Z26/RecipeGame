@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: 
   to: 
-  playerPos: {x: 5, y: 0, z: 0}
+  playerPos: {x: 0.6, y: 0, z: 0}
 --- !u!4 &59803258
 Transform:
   m_ObjectHideFlags: 0
