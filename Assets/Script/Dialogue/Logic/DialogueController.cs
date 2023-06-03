@@ -116,7 +116,13 @@ public class DialogueController : MonoBehaviour
     public void ShowDialogue(bool isAuto, GameObject player = null)//这个player当前没用到，应该会在state里获取
     {   //获取该显示的那句话 or 两个选项
         //加载数据库和第一句的判断
-        if(nextIndex == 0)
+        if (nextIndex == -1)
+        {
+            textContent[0] = null;
+            textContent[1] = null;
+            //textContent = new string[2];
+        }
+        else if (nextIndex == 0)
         {   if (!isAuto)
                 currentDialogue =  dialogueState.GetNextDialogueStart();
             if (isAuto)
@@ -147,10 +153,7 @@ public class DialogueController : MonoBehaviour
             speakerImage = GetDialogueImage();
 
         }
-        else if(nextIndex == -1)
-        {
-            textContent = null;
-        }
+
         //触发执行动画的事件
         ExcuAnimObj();
 

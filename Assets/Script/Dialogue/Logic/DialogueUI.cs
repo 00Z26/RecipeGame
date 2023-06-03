@@ -39,7 +39,8 @@ public class DialogueUI : MonoBehaviour
 
     private void onShowDialogueEvent(string[] dialogue, float YMoveDis,Sprite speakerImg,GameObject autoObj)
     {
-        if (dialogue != null)
+        if(dialogue[0] != null && dialogue[1] != null)
+        //if (dialogue != null)
         {
             isDialogueOn = true;
             headImg.sprite = speakerImg;
@@ -58,7 +59,7 @@ public class DialogueUI : MonoBehaviour
             EventHandler.CallExitDialogueState(isDialogueOn);
         }
         nameText.text = dialogue?[0];
-        textBox.text = dialogue?[1].Replace("\\n", "\n");
+        textBox.text = dialogue[1]?.Replace("\\n", "\n");
     }
 
     private void onUpdateChoicesEvent(List<string> choices)
