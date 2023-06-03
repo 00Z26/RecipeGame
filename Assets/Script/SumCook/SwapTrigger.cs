@@ -9,6 +9,9 @@ public class SwapTrigger : MonoBehaviour
     public Vector3 pos;
     public void triggerSwap()
     {
+        GameObject player = GameObject.FindWithTag("Player");
+        player.transform.localScale = Vector3.one;
         EventHandler.CallTriggerSumToMenuEvent(from, to, pos);
+
     }
 }
