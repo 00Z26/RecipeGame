@@ -2,22 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SumManager : MonoBehaviour
 {
     private GameObject playerObj;
     public NpcData npcData;
     public float duration;
-
+    public GameObject chipBg;
+    public GameObject chipImg;
+    public RecipeList recipeList;
+    public bool isDishShow;
 
     private List<int> rawMaterial;
     private int dishIndex;
+
+    private Animator chipBgAnim;
 
 
 
     private void Awake()
     {
         playerObj = GameObject.FindWithTag("Player");
+        
     }
 
     private void Start()
@@ -26,9 +33,8 @@ public class SumManager : MonoBehaviour
         //判断出哪个菜
         //修改那个菜的bool
         //循环所有的dish显示总结
-        //string playerName = playerObj.GetComponent<SpriteRenderer>().sprite.name;
-        //////string playerName = GameObject.FindWithTag("Player").transform.GetChild(0).gameObject.tag;
-        //////Debug.Log(playerName);
+        chipBgAnim = chipBg.GetComponent<Animator>();  
+
         rawMaterial = new List<int>();
 
         //////rawMaterial.Add(npcData.GetPlayerIndex(playerName));
@@ -46,23 +52,42 @@ public class SumManager : MonoBehaviour
         //假设是0
         //dishIndex = 0;
         //执行显示和隐藏
-        StartCoroutine(WaitForSecondsRealtime(duration,dishIndex,this.gameObject));
-        Debug.Log("调用弹出");
-        //this.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
+        StartCoroutine(WaitForSecondsRealtime(duration, chipBg));
+        
+        chipImg.GetComponent<SpriteRenderer>().sprite = recipeList.recipeList[dishIndex].dishPic;
 
     }
+
+    private void Update()
+    {
+        if (isDishShow)
+            chipImg.SetActive(true);
+        if(isDishShow && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Debug.Log("info");
+            //播放放大动画
+            //移动到左侧
+            chipBgAnim.SetBool("isInfo", true);
+            chipImg.GetComponent<MoveImg>().enabled = true;
+            //显示文字内容
+            this.GetComponent<CardShow>().ShowCardInfo(dishIndex);
+        }
+    }
+
+
     /// <summary>
     /// 等待时间（不会受到Time.timeScale的影响）
     /// </summary>
     /// <param name="duration">等待时间</param>
     /// <param name="action">等待后执行的函数</param>
     /// <returns></returns>
-    public static IEnumerator WaitForSecondsRealtime(float duration,int dishIndex, GameObject obj)
+    public static IEnumerator WaitForSecondsRealtime(float duration, GameObject chipBg)
     {
         yield return new WaitForSecondsRealtime(duration);
-        obj.GetComponent<HightLightAnim>().ExcuHighlightAnim(dishIndex);
+        chipBg.SetActive(true);
 
     }
+
 
 
     private int GetNewChipIndex()

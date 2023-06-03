@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 7
   m_EditorClassIdentifier: 
   dishName: "\u751C\u5FC3\u6C99\u62C9"
-  dishPic: {fileID: 21300000, guid: 270b82b4225e67f449f3efe54c8b3efc, type: 3}
+  dishPic: {fileID: 21300000, guid: 588ce6a310269844587f5cede205f756, type: 3}
   dishDescription: "\u662F\u751C\u53E3\u7684\u54E6\uFF01\u54C1\u5C1D\u7684\u65F6\u5019\uFF0C\u4EFF\u4F5B\u80FD\u611F\u53D7\u5230\u591A\u5E74\u4EE5\u524D\u7684\u6E05\u6668\uFF0C\u9633\u5149\u6E29\u67D4\uFF0C\u6CE5\u571F\u6E05\u9999\u3002"
   isShow: 0
