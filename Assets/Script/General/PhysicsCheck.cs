@@ -121,7 +121,8 @@ public class PhysicsCheck : MonoBehaviour
             {
                 if(obj.gameObject.name != "Cook")
                 {
-                    obj.enabled = false;
+                    //obj.enabled = false;
+                    obj.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     obj.gameObject.GetComponent<SpriteRenderer>().color = new Color32(152, 92, 92, 255);
                 }
             }
