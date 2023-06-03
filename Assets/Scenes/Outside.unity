@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: Outside
   to: PotatoRoom
-  playerToPos: {x: -7.87, y: -4.75, z: 0}
+  playerToPos: {x: -5.15, y: -4.75, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &141399465
 BoxCollider2D:
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: Outside
   to: TomatoRoom
-  playerToPos: {x: -7.87, y: -4.75, z: 0}
+  playerToPos: {x: -5.17, y: -4.75, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &1350351489
 BoxCollider2D:
