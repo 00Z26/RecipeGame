@@ -456,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545538679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.84, y: 2.84, z: 0}
+  m_LocalPosition: {x: -1.84, y: 1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587598058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.12, y: -5.93, z: 0}
+  m_LocalPosition: {x: 4, y: -5.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -755,8 +755,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589142878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.74, y: -3.1581, z: 0}
-  m_LocalScale: {x: 1.1620096, y: 0.92847157, z: 1}
+  m_LocalPosition: {x: -2.06, y: -3.29, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 806522257}
@@ -1004,7 +1004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708984337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: -6.04, z: 0}
+  m_LocalPosition: {x: -1.81, y: -6.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1190,8 +1190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraXLeftScale: -1.79
   cameraXRightScale: -1.79
-  cameraYUpScale: -1.03
-  cameraYDownScale: -1.03
+  cameraYUpScale: 0
+  cameraYDownScale: -1.7
 --- !u!1 &911579376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990804486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.653451, y: -1.0827, z: 0}
+  m_LocalPosition: {x: -1.653451, y: -1.81, z: 0}
   m_LocalScale: {x: 1, y: 1.1612, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1600,8 +1600,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298139398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.23, y: -2.73, z: 0}
-  m_LocalScale: {x: 1.160851, y: 1.0572058, z: 1}
+  m_LocalPosition: {x: -8.18, y: -3.36, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1950512461}
@@ -1633,7 +1633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395540882}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7646, y: -0.5972, z: 0}
+  m_LocalPosition: {x: -1.7646, y: -1.7, z: 0}
   m_LocalScale: {x: 0.97752243, y: 0.97914445, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1678,9 +1678,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1724713777
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a1b52a10a84642b42b6a52713a0733cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1991,7 +1991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674059240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -0.94, z: 0}
+  m_LocalPosition: {x: 3.66, y: -0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2082,7 +2082,7 @@ Transform:
   m_GameObject: {fileID: 1950512460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.05541789, y: -0.07087166, z: 0}
-  m_LocalScale: {x: 0.36945355, y: 0.44294828, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1298139400}
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: PotatoRoom
   to: Outside
-  playerToPos: {x: 4.79, y: 16.64, z: 0}
+  playerToPos: {x: 1.37, y: 14.4, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &1950512463
 BoxCollider2D:
