@@ -27,22 +27,29 @@ public class SwapState : MonoBehaviour
         if (npcData.animPrefab[index].isNormal)
         {
             npcData.animPrefab[index].isNormal = false;
-            //Transform temp = player.transform.Find(npcData.GetPlayerName(index));
-            Transform temp = GameObject.Find(npcData.GetPlayerName(index)).transform;
-            Debug.Log("实例化不正常状态1");
-            Debug.Log(temp.gameObject.name);
-            if (temp != null)
+            if(index == 2) //玉米变
             {
-                Animator temp2 = temp.GetComponentInChildren<Animator>();
-                Vector3 scale = temp.gameObject.transform.localScale;
-                Destroy(temp.gameObject);
-                Debug.Log("实例化不正常状态");
-                GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
+                Transform temp = player.transform.Find(npcData.GetPlayerName(index));
+                Debug.Log("实例化不正常状态1");
+                Debug.Log(temp.gameObject.name);
+                if (temp != null)
+                {
+                    Animator temp2 = temp.GetComponentInChildren<Animator>();
+                    Vector3 scale = temp.gameObject.transform.localScale;
+                    Destroy(temp.gameObject);
+                    Debug.Log("实例化不正常状态");
+                    GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
 
                     obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0); //玉米切换状态
                     obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);//玉米切换状态
 
+                }
+                if(index == 4) //番茄变
+                {
+
+                }
             }
+
         }
         else
         {

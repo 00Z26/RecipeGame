@@ -409,3 +409,15 @@ MonoBehaviour:
     openDoorTimes: '>1'
     loop: 0
     Conversations: '>1'
+  - index: 0
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "2D\u7684\u756A\u8304\u3002"
+    choices: 
+    animiation: 
+    pic: '%s_EvilSmile'
+    triggerName: Mushroom,Potato,Lemon
+    teamMembers: 
+    openDoorTimes: '>1'
+    loop: 0
+    Conversations: '>1'
