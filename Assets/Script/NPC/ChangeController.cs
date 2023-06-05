@@ -44,19 +44,32 @@ public class ChangeController : MonoBehaviour
         {
 
             //npc下的子物体换到player下面
-            npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
-            
+            //npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
+            npc.transform.gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
+
             //关闭触发
-            npc.SetActive(false);
+            //npc.SetActive(false);
+            //npc.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            Destroy(npc.GetComponent<Rigidbody2D>());
             //把当前player的主角删除
-            Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+            if(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).name == "Mushroom")
+            {
+                dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).SetActive(false);
+            }
+            else
+            {
+                Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+            }
+
+            npc.transform.localPosition = Vector3.zero;
             if(npc.name == "Lemon")
             {
-                player.transform.Find(name).transform.localPosition = new Vector3(-5.53999996f, -3.1400001f, 0); //柠檬夺舍后的位置
+                npc.transform.localPosition = new Vector3(-1.08000004f, 2.6099999f, 0);
+                
             }
             if(npc.name == "Potato")
             {
-                player.transform.Find(name).transform.localPosition = new Vector3(0, -8.94999981f, 0);
+                //player.transform.Find(name).transform.localPosition = new Vector3(0, -8.94999981f, 0);
             }
             npcData.controllerIndex = npcIndex;
 

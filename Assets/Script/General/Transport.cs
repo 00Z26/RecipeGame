@@ -68,7 +68,7 @@ public class Transport : MonoBehaviour
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1); //获取新加载场景的序号
         SceneManager.SetActiveScene(newScene);
         //已跟随的npc不加载
-        LoadNpc();
+        //LoadNpc();
         //已经进过的门修改颜色
         DoorSwap(to,from);
         //触发事件去让相机修改边界值

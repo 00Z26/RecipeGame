@@ -1904,7 +1904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6944241e4ba184ca18626e16b225d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 20
+  followSpeed: 9
   npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!114 &1324642043
 MonoBehaviour:
@@ -2078,7 +2078,7 @@ GameObject:
   - component: {fileID: 1580571451}
   - component: {fileID: 1580571452}
   - component: {fileID: 1580571453}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lemon
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2250,7 +2250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6944241e4ba184ca18626e16b225d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 5
+  followSpeed: 9
   npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!50 &1580571453
 Rigidbody2D:
@@ -2674,20 +2674,56 @@ PrefabInstance:
     m_TransformParent: {fileID: 1580571445}
     m_Modifications:
     - target: {fileID: 14690737491386439, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 14690737491386439, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
     - target: {fileID: 174179093443092760, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 174179093443092760, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 690621839428252557, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 861575656942412208, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 917490760976008608, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367412763765813160, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679405305979478264, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2679405305979478264, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
     - target: {fileID: 2965520715110229387, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2965520715110229387, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110416366726469358, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3110416366726469358, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
@@ -2701,25 +2737,65 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1724713777
       objectReference: {fileID: 0}
+    - target: {fileID: 3279773975779746796, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564840746904668334, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3564840746904668334, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
     - target: {fileID: 3573106475503738384, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3573106475503738384, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 3722457584267241572, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118474683996387853, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277566839347756008, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928981040324167065, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4928981040324167065, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
     - target: {fileID: 5178510524407427857, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178510524407427857, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
     - target: {fileID: 5490543134472581155, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490543134472581155, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604223500916573205, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5604223500916573205, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
@@ -2786,20 +2862,56 @@ PrefabInstance:
       value: Lemon
       objectReference: {fileID: 0}
     - target: {fileID: 6726072502328326871, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726072502328326871, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Lemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727605405793746106, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6727605405793746106, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 6806991203413762805, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6893272166146032883, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6893272166146032883, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 7122587036027473580, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712301714234544959, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7712301714234544959, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993807024718165294, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8859284618571574761, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920885843231032522, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8920885843231032522, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString

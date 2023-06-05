@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public RecipeList recipeList;
     public OpenDoorTimes openDoorTimes;
     public GameObject player;
+    private DataTools dataTools;
     public void OnEnable()
     {
         EventHandler.TriggerSwapNewGameEvent += GameStartExcu;
@@ -20,7 +21,10 @@ public class GameController : MonoBehaviour
         EventHandler.TriggerSwapNewGameEvent -= GameStartExcu;
         EventHandler.TriggerContinue -= ContinueNextLoop;
     }
-
+    private void Start()
+    {
+        dataTools = new DataTools();
+    }
 
 
     //开始新游戏时更新所有数据
@@ -37,7 +41,8 @@ public class GameController : MonoBehaviour
         //npc状态恢复，循环次数恢复
         npcData.loop = 1;
         npcData.controllerIndex = 0;
-        foreach( NpcStruct anim in npcData.animPrefab)
+        dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).SetActive(true);
+        foreach ( NpcStruct anim in npcData.animPrefab)
         {
             anim.isNormal = true;
         }
@@ -75,6 +80,7 @@ public class GameController : MonoBehaviour
         }
         npcData.loop++;
         npcData.controllerIndex = 0;
+        dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).SetActive(true);
         for (int i = 0; i < openDoorTimes.openTimes.Count; i++)
         {
             openDoorTimes.thisLoopDoorTimes[i] = 0;
