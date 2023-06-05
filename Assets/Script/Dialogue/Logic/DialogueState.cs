@@ -192,7 +192,7 @@ public class DialogueState : MonoBehaviour
         {
             teamList.Add(item);
          }
-        teamList.Add(npcData.controllerIndex);
+        //teamList.Add(npcData.controllerIndex);
         if(teamReuire >= 0)
         {
             if(teamList.Contains(teamReuire))
