@@ -27,7 +27,8 @@ public class SwapState : MonoBehaviour
         if (npcData.animPrefab[index].isNormal)
         {
             npcData.animPrefab[index].isNormal = false;
-            Transform temp = player.transform.Find(npcData.GetPlayerName(index));
+            //Transform temp = player.transform.Find(npcData.GetPlayerName(index));
+            Transform temp = GameObject.Find(npcData.GetPlayerName(index)).transform;
             Debug.Log("实例化不正常状态1");
             Debug.Log(temp.gameObject.name);
             if (temp != null)

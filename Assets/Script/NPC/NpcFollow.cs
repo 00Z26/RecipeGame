@@ -22,17 +22,18 @@ public class NpcFollow : MonoBehaviour
             //判断小队人数
             int index = npcData.GetPlayerIndex(this.name);
             int teamNum = player.GetComponent<PlayerController>().teamMembers.IndexOf(index);
+            Debug.Log(teamNum);
             //判断自己位置
             float distance = (transform.position - playerTransform.position).sqrMagnitude;
             //添加npc时右移位置
             if(player.transform.localScale.x < 0)
             {
-                Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum + 4), this.transform.position.y);
+                Vector2 targetPosition = new Vector2(playerTransform.position.x + (teamNum * 3 + 3), this.transform.position.y);
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
             }
             else if(player.transform.localScale.x> 0)
             {
-                Vector2 targetPosition = new Vector2(playerTransform.position.x - (teamNum + 4), this.transform.position.y);
+                Vector2 targetPosition = new Vector2(playerTransform.position.x - (teamNum * 3 + 3), this.transform.position.y);
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, followSpeed * Time.deltaTime);
             }
             

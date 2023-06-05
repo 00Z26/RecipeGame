@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour
             dish.isShow = false;
         }
         GameObject.FindWithTag("Player").GetComponent<PhysicsCheck>().thisLoopOpenDoorTimes = 0;
+        player.GetComponent<PlayerController>().teamMembers.Clear();
 
 
     }
@@ -81,6 +82,7 @@ public class GameController : MonoBehaviour
         npcData.loop++;
         npcData.controllerIndex = 0;
         dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).SetActive(true);
+        player.GetComponent<PlayerController>().teamMembers.Clear();
         for (int i = 0; i < openDoorTimes.openTimes.Count; i++)
         {
             openDoorTimes.thisLoopDoorTimes[i] = 0;

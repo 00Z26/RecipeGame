@@ -45,6 +45,12 @@ public class FollowController : MonoBehaviour
         npcObj.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         //改变场景时不被刷掉
         npcObj.transform.SetParent(player.transform);
+
+        if(player.transform.localScale.x > 0)
+            npcObj.transform.localScale = new Vector3(Mathf.Abs(npcObj.transform.localScale.x),npcObj.transform.localScale.y,npcObj.transform.localScale.z);
+        else if(player.transform.localScale.x < 0)
+            npcObj.transform.localScale = new Vector3(-Mathf.Abs(npcObj.transform.localScale.x), npcObj.transform.localScale.y, npcObj.transform.localScale.z);
+
         npcObj.GetComponentInChildren<Collider2D>().excludeLayers = LayerMask.NameToLayer("Player");
     }
 }
