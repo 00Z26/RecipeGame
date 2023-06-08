@@ -685,6 +685,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1724713777
       objectReference: {fileID: 0}
+    - target: {fileID: 781191761852655743, guid: 83bfd40108ca1be4c8408ad90c86a8bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 812398600116091377, guid: 83bfd40108ca1be4c8408ad90c86a8bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1132440392824400662, guid: 83bfd40108ca1be4c8408ad90c86a8bd, type: 3}
       propertyPath: m_SortingLayer
       value: 1
@@ -1597,6 +1605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1324642041}
     m_Modifications:
+    - target: {fileID: 871549593124182959, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2324575891900943320, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -1604,6 +1616,10 @@ PrefabInstance:
     - target: {fileID: 2324575891900943320, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
       propertyPath: m_SortingLayerID
       value: -1724713777
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931850830463094951, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3413121366770059735, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
       propertyPath: m_SortingLayer
@@ -1778,7 +1794,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.47, y: -0.04}
+  m_Offset: {x: 2.4040806, y: -0.04000002}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1789,7 +1805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9980705}
+  m_Size: {x: 0.8681588, y: 0.9980705}
   m_EdgeRadius: 0
 --- !u!1 &1251832772 stripped
 GameObject:
