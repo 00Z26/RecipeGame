@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class TVanim : MonoBehaviour
 {
-    public NpcData npcData;
+
+    public OpenDoorTimes openDoorTimes;
     public GameObject animObj;
     private Animator anim;
-    public void Update()
+    public void Start()
     {
         //animObj.GetComponent<Animator>().Play("TV_State1");
         anim = animObj.GetComponent<Animator>();
-        if (npcData.loop == 1 || npcData.loop == 2 || npcData.loop == 3)
-        {           
-            anim.SetBool("1", true);
-        }
-        if (npcData.loop == 4 )
+        if (openDoorTimes.openTimes[2] == 1 || openDoorTimes.openTimes[2] == 2 || openDoorTimes.openTimes[2] == 3)
         {
+            anim.Play("Tv_State1");
             
-            anim.SetBool("2", true);
         }
-        if(npcData.loop == 5)
+        if (openDoorTimes.openTimes[2] == 4 )
         {
+            anim.Play("Tv_State2");
             
-            anim.SetBool("3", true);
         }
-        if(npcData.loop >= 6)
+        if(openDoorTimes.openTimes[2] == 5)
         {
-            anim.SetBool("2", true);
+            anim.Play("Tv_State3");
+            
+        }
+        if(openDoorTimes.openTimes[2] >= 6)
+        {
+            anim.Play("Tv_State2");
+            
 
         }
 

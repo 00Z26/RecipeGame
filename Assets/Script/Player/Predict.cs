@@ -140,7 +140,7 @@ public class Predict : MonoBehaviour
                 else
                 {
                     preDishes[i].sprite = recipeList.recipeList[preChips[i]].dishPic;
-                    preDishes[i].color = Color.black;
+                    preDishes[i].color = new Color32(63, 63, 63, 255);
                 }
                 preDishes[i].color = new Color(preDishes[i].color.r, preDishes[i].color.g, preDishes[i].color.b,255);
             }            

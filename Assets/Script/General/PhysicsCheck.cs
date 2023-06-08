@@ -119,7 +119,7 @@ public class PhysicsCheck : MonoBehaviour
             SwapScene[] swapObjs = GameObject.FindObjectsOfType<SwapScene>();
             foreach(SwapScene obj in swapObjs)
             {
-                if(obj.gameObject.name != "Cook")
+                if(obj.gameObject.name != "Cook2")
                 {
                     //obj.enabled = false;
                     obj.gameObject.GetComponent<BoxCollider2D>().enabled = false;

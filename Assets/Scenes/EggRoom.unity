@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 1046902305}
   - component: {fileID: 1046902307}
   m_Layer: 0
-  m_Name: TV
+  m_Name: Tv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,6 +1475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
+  openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
   animObj: {fileID: 166005575}
 --- !u!1 &1096105307
 GameObject:

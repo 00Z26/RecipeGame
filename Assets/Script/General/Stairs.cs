@@ -10,12 +10,15 @@ public class Stairs : MonoBehaviour
     public Vector3 portalPos;
     private void Update()
     {
+        if (isStairs)
+            EventHandler.CallShowTipButtonEvent(isStairs);
         if (isStairs && Keyboard.current.eKey.wasPressedThisFrame)
         {
             playerGameObj.SetActive(false);
             playerGameObj.transform.position = portalPos;
             playerGameObj.SetActive(true);
             isStairs = false;
+            //EventHandler.CallShowTipButtonEvent(isStairs);
         }
     }
 
@@ -30,5 +33,6 @@ public class Stairs : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isStairs = false;
+        EventHandler.CallShowTipButtonEvent(isStairs);
     }
 }
