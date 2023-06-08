@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befcdefd9b5b57541b1f22fcde27ca86, type: 3}
   m_Name: NpcData
   m_EditorClassIdentifier: 
-  loop: 0
+  loop: 9
   controllerIndex: 0
   playerName:
   - Mushroom
