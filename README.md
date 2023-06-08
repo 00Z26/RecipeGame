@@ -16,6 +16,7 @@
     - Data
       - ExcelSwapData: excel转换工具实例
 - setting
+  - Audio Mixer\MainAudioMixer:在unity-windows中开启选项框观察和调节bgm和音效的音量
 - TextMeshPro
   - Resources:
     - Fonts & Materials: 字体的Asset文件存放
