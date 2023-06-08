@@ -36,6 +36,8 @@ TagManager:
   - Bone
   - Bass
   - Clothes
+  - Tip
+  - Dark
   layers:
   - Default
   - TransparentFX

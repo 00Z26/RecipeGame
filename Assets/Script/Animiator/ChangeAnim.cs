@@ -30,23 +30,80 @@ public class ChangeAnim : MonoBehaviour
         //}
         //list.Add(npcData.controllerIndex);
         Transform[] objList = player.transform.GetComponentsInChildren<Transform>(true);
-        foreach(Transform obj in objList)
+        //foreach(Transform obj in objList)
+        //{
+        //    if (isLightOff)
+        //    {
+        //        if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone" && obj.gameObject.GetComponent<SpriteRenderer>())
+        //        {
+        //            obj.gameObject.SetActive(false);
+        //        }
+        //    } else
+        //    {
+        //        if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone"&& obj.gameObject.GetComponent<SpriteRenderer>())
+        //        {
+        //            obj.gameObject.SetActive(true);
+        //        }
+        //    }
+
+        //}
+
+        foreach (Transform obj in objList)
         {
-            if (isLightOff)
+            if(isLightOff)
             {
-                if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone" && obj.gameObject.GetComponent<SpriteRenderer>())
+                if (obj.gameObject.name == "Mushroom") //蘑菇层级不同，单独处理
                 {
+                    GameObject darkObj = Instantiate(npcData.animPrefab[0].dark, player.transform);
+                    darkObj.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                    darkObj.gameObject.tag = "Dark";
+                    darkObj.gameObject.name = darkObj.name.Replace("(Clone)", "");
                     obj.gameObject.SetActive(false);
+                }
+                if (obj.gameObject.tag == "NPC")
+                {
+                    obj.GetChild(0).gameObject.SetActive(false);
+                    GameObject darkObj = Instantiate(npcData.animPrefab[npcData.GetPlayerIndex(obj.gameObject.name)].dark, obj.transform);
+                    darkObj.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                    darkObj.gameObject.tag = "Dark";
+
+                    //obj.gameObject.SetActive(false);
                 }
             } else
             {
-                if (obj.gameObject.tag != "eyes" && obj.gameObject.tag != "Bone"&& obj.gameObject.GetComponent<SpriteRenderer>())
+                if(obj.gameObject.tag == "Dark")
                 {
-                    obj.gameObject.SetActive(true);
+                    Destroy(obj.gameObject);
                 }
+
+                //if(obj.gameObject.name == "Mushroom")
+                //{
+                //    if(npcData.controllerIndex == 0)
+                //        obj.gameObject.SetActive(true);
+                //}
+                //if(obj.gameObject.tag == "NPC")
+                //{
+                //    foreach(Transform npcSon in obj.transform.GetComponentsInChildren<Transform>(true))
+                //    {
+                //        if(npcSon.tag == obj.gameObject.name) {
+                //            npcSon.gameObject.SetActive(true);
+                //        }
+                //        else
+                //        {
+                //            npcSon.gameObject.SetActive(false);
+                //        }
+                //    }
+                //}
+                //if(obj.gameObject.tag == "Tip")
+                //{
+                //    continue;
+                //}
+
             }
 
+
         }
+
 
 
         //Destroy(player.transform.GetChild(0).gameObject);
