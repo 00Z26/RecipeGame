@@ -126,8 +126,36 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         ShowTipButtonEvent?.Invoke(isShow);
     }
 
+    public static event Action ClickUIAudioEvent; //点击对话框、提示框、结算框的音效
+    public static void CallPlayClickUIAudioEvent()
+    {
+        ClickUIAudioEvent?.Invoke();
+    }
+
+    public static event Action ClickSumAudioEvent; //结算界面点击记录的音效
+    public static void CallPlaySumAudio()
+    {
+        ClickSumAudioEvent?.Invoke();
+    }
+
+    public static event Action ClickMenuBtnAudioEvent; //主界面选项点击的音效
+    public static void CallPlayMenuBtnAudio()
+    {
+        ClickMenuBtnAudioEvent?.Invoke();
+    }
+
+    public static event Action HoverBtnAudioEvent; //所有按钮悬浮时触发音效
+    public static void CallHoverAudio()
+    {
+        HoverBtnAudioEvent?.Invoke();
+    }
 
 
+    public static event Action ClickDishAudioEvent; //食谱图鉴点击某个菜音效
+    public static void CallDishAudio()
+    {
+        ClickDishAudioEvent?.Invoke();
+    }
 
 
 

@@ -37,4 +37,13 @@ public class RecipeManager : MonoBehaviour
         EventHandler.CallRecipeExitEvent(from, to, new Vector3(-1000f,0,0));
     }
 
+    public void PlayMenuAudio()
+    {
+        EventHandler.CallPlayMenuBtnAudio();
+    }
+
+    public void PlayDishAudio()
+    {
+        EventHandler.CallDishAudio();
+    }
 }

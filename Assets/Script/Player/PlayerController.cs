@@ -150,6 +150,8 @@ public class PlayerController : MonoBehaviour
                 || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI()))
             {   //按e触发对话
                 Debug.Log("触发对话");
+                if (GetDialogueUI())
+                    EventHandler.CallPlayClickUIAudioEvent();
                 physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);
                 //EventHandler.CallTriggerDialogueEvent(physicsCheck.isAutoDialogue, this.gameObject);
 

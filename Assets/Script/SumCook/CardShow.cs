@@ -30,4 +30,9 @@ public class CardShow : MonoBehaviour
         dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription + "\n\n" + chefData.GetChefText(npcData.loop);
 
     }
+
+    public void PlayLogAudio()
+    {
+        EventHandler.CallPlaySumAudio();
+    }
 }

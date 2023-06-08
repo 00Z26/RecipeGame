@@ -52,4 +52,9 @@ public class NewGameStart : MonoBehaviour
         Application.Quit();
 
     }
+
+    public void PlayMenuAudio()
+    {
+        EventHandler.CallPlayMenuBtnAudio();
+    }
 }

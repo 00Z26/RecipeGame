@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 673659012}
   - component: {fileID: 673659011}
   - component: {fileID: 673659010}
+  - component: {fileID: 673659013}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -686,6 +687,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1333680279}
+        m_TargetAssemblyTypeName: CardShow, Assembly-CSharp
+        m_MethodName: PlayLogAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &673659011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +737,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673659008}
   m_CullTransparentMesh: 1
+--- !u!114 &673659013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673659008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1211449796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,7 +1476,7 @@ AudioSource:
   m_GameObject: {fileID: 1974162620}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5853555626818144445, guid: 80713598acf9c0042b23999bab6334b8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 224d7a12f6a89a54d9858f01b860ad2f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

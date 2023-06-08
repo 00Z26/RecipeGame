@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 320109800}
   - component: {fileID: 320109799}
   - component: {fileID: 320109798}
+  - component: {fileID: 320109802}
   m_Layer: 5
   m_Name: 4
   m_TagString: Dish
@@ -525,6 +526,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320109799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +592,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320109796}
   m_CullTransparentMesh: 1
+--- !u!114 &320109802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320109796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &394806384
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +617,7 @@ GameObject:
   - component: {fileID: 394806388}
   - component: {fileID: 394806387}
   - component: {fileID: 394806386}
+  - component: {fileID: 394806390}
   m_Layer: 5
   m_Name: 8
   m_TagString: Dish
@@ -675,6 +701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394806387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +767,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394806384}
   m_CullTransparentMesh: 1
+--- !u!114 &394806390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394806384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403237204
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +945,7 @@ GameObject:
   - component: {fileID: 444929523}
   - component: {fileID: 444929522}
   - component: {fileID: 444929521}
+  - component: {fileID: 444929525}
   m_Layer: 5
   m_Name: 15
   m_TagString: Dish
@@ -978,6 +1029,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &444929522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1032,6 +1095,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444929519}
   m_CullTransparentMesh: 1
+--- !u!114 &444929525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444929519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &545551733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1442,7 @@ GameObject:
   - component: {fileID: 683513536}
   - component: {fileID: 683513535}
   - component: {fileID: 683513534}
+  - component: {fileID: 683513538}
   m_Layer: 5
   m_Name: 14
   m_TagString: Dish
@@ -1450,6 +1526,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &683513535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,6 +1592,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683513532}
   m_CullTransparentMesh: 1
+--- !u!114 &683513538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683513532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &726968078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1693,7 @@ GameObject:
   - component: {fileID: 820898516}
   - component: {fileID: 820898515}
   - component: {fileID: 820898514}
+  - component: {fileID: 820898518}
   m_Layer: 5
   m_Name: 6
   m_TagString: Dish
@@ -1676,6 +1777,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &820898515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,6 +1843,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820898512}
   m_CullTransparentMesh: 1
+--- !u!114 &820898518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820898512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &825774672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,6 +2097,7 @@ GameObject:
   - component: {fileID: 1004129549}
   - component: {fileID: 1004129548}
   - component: {fileID: 1004129547}
+  - component: {fileID: 1004129551}
   m_Layer: 5
   m_Name: 7
   m_TagString: Dish
@@ -2055,6 +2181,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1004129548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2109,6 +2247,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004129545}
   m_CullTransparentMesh: 1
+--- !u!114 &1004129551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004129545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014983021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2173,6 +2323,7 @@ GameObject:
   - component: {fileID: 1015473969}
   - component: {fileID: 1015473968}
   - component: {fileID: 1015473967}
+  - component: {fileID: 1015473971}
   m_Layer: 5
   m_Name: 10
   m_TagString: Dish
@@ -2256,6 +2407,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1015473968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,6 +2473,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015473965}
   m_CullTransparentMesh: 1
+--- !u!114 &1015473971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015473965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1076880329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,6 +2832,7 @@ GameObject:
   - component: {fileID: 1189747601}
   - component: {fileID: 1189747600}
   - component: {fileID: 1189747599}
+  - component: {fileID: 1189747603}
   m_Layer: 5
   m_Name: 5
   m_TagString: Dish
@@ -2740,6 +2916,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1189747600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2794,6 +2982,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189747597}
   m_CullTransparentMesh: 1
+--- !u!114 &1189747603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189747597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1191809717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2960,6 +3160,7 @@ GameObject:
   - component: {fileID: 1255331882}
   - component: {fileID: 1255331881}
   - component: {fileID: 1255331880}
+  - component: {fileID: 1255331884}
   m_Layer: 5
   m_Name: 12
   m_TagString: Dish
@@ -3043,6 +3244,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255331881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3097,6 +3310,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255331878}
   m_CullTransparentMesh: 1
+--- !u!114 &1255331884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255331878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1271379654
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,6 +3335,7 @@ GameObject:
   - component: {fileID: 1271379658}
   - component: {fileID: 1271379657}
   - component: {fileID: 1271379656}
+  - component: {fileID: 1271379660}
   m_Layer: 5
   m_Name: 9
   m_TagString: Dish
@@ -3193,6 +3419,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1271379657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3247,6 +3485,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271379654}
   m_CullTransparentMesh: 1
+--- !u!114 &1271379660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271379654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1309728267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3978,6 +4228,7 @@ GameObject:
   - component: {fileID: 1619996163}
   - component: {fileID: 1619996165}
   - component: {fileID: 1619996167}
+  - component: {fileID: 1619996168}
   m_Layer: 5
   m_Name: 0
   m_TagString: Dish
@@ -4115,6 +4366,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1619996168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619996161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1643974073
 GameObject:
   m_ObjectHideFlags: 0
@@ -4365,6 +4640,7 @@ GameObject:
   - component: {fileID: 1660070031}
   - component: {fileID: 1660070030}
   - component: {fileID: 1660070029}
+  - component: {fileID: 1660070033}
   m_Layer: 5
   m_Name: 13
   m_TagString: Dish
@@ -4448,6 +4724,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1660070030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4502,6 +4790,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660070027}
   m_CullTransparentMesh: 1
+--- !u!114 &1660070033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660070027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1694920474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4514,6 +4814,7 @@ GameObject:
   - component: {fileID: 1694920477}
   - component: {fileID: 1694920476}
   - component: {fileID: 1694920478}
+  - component: {fileID: 1694920479}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -4694,6 +4995,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayMenuAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1694920479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694920474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1724926474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4707,6 +5032,7 @@ GameObject:
   - component: {fileID: 1724926478}
   - component: {fileID: 1724926477}
   - component: {fileID: 1724926476}
+  - component: {fileID: 1724926480}
   m_Layer: 5
   m_Name: 3
   m_TagString: Dish
@@ -4790,6 +5116,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1724926477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4844,6 +5182,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724926474}
   m_CullTransparentMesh: 1
+--- !u!114 &1724926480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724926474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1771571018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,6 +5570,7 @@ GameObject:
   - component: {fileID: 1885879432}
   - component: {fileID: 1885879435}
   - component: {fileID: 1885879434}
+  - component: {fileID: 1885879436}
   m_Layer: 5
   m_Name: 1
   m_TagString: Dish
@@ -5341,6 +5692,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1885879435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5357,6 +5720,18 @@ MonoBehaviour:
   image: {fileID: 1885879432}
   bigImage: {fileID: 403237206}
   unknownPic: {fileID: 21300000, guid: 2850dd24b32a09746a120fed478a4b27, type: 3}
+--- !u!114 &1885879436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885879430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1925824442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5599,6 +5974,7 @@ GameObject:
   - component: {fileID: 2026538754}
   - component: {fileID: 2026538753}
   - component: {fileID: 2026538752}
+  - component: {fileID: 2026538756}
   m_Layer: 5
   m_Name: 11
   m_TagString: Dish
@@ -5682,6 +6058,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2026538753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5736,6 +6124,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026538750}
   m_CullTransparentMesh: 1
+--- !u!114 &2026538756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026538750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029747946
 GameObject:
   m_ObjectHideFlags: 0
@@ -6018,6 +6418,7 @@ GameObject:
   - component: {fileID: 2109722514}
   - component: {fileID: 2109722517}
   - component: {fileID: 2109722516}
+  - component: {fileID: 2109722518}
   m_Layer: 5
   m_Name: 2
   m_TagString: Dish
@@ -6139,6 +6540,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1409318653}
+        m_TargetAssemblyTypeName: RecipeManager, Assembly-CSharp
+        m_MethodName: PlayDishAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2109722517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6155,3 +6568,15 @@ MonoBehaviour:
   image: {fileID: 2109722514}
   bigImage: {fileID: 403237206}
   unknownPic: {fileID: 21300000, guid: 2850dd24b32a09746a120fed478a4b27, type: 3}
+--- !u!114 &2109722518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109722512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86cc3e703826ba041bccf4cb48d59f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

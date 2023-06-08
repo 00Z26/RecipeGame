@@ -64,13 +64,17 @@ public class SumManager : MonoBehaviour
             chipImg.SetActive(true);
         if(isDishShow && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Debug.Log("info");
+            //播放音效
+            if(isDishShow)
+                EventHandler.CallPlayClickUIAudioEvent();
+            
             //播放放大动画
             //移动到左侧
             chipBgAnim.SetBool("isInfo", true);
             chipImg.GetComponent<MoveImg>().enabled = true;
             //显示文字内容
             this.GetComponent<CardShow>().ShowCardInfo(dishIndex);
+            isDishShow = false;
         }
     }
 
