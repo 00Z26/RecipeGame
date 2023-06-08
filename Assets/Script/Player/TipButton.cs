@@ -24,6 +24,8 @@ public class TipButton : MonoBehaviour
     {
         if((isShowButton && Keyboard.current.eKey.wasPressedThisFrame) || !isShowButton)  //离开范围或者触发过按钮
         {
+            if(isShowButton)
+                this.GetComponent<AudioSource>().Play();
             isShowButton = false;
             tipButton.SetActive(false);
         }
