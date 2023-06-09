@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: Outside
   to: Cook
-  playerToPos: {x: -7.87, y: -4.75, z: 0}
+  playerToPos: {x: -7.02, y: 3.46, z: 0}
   openDoorTimes: {fileID: 11400000, guid: 3b7ea279726e1ff40a77d01a3c87cef0, type: 2}
 --- !u!61 &396405783
 BoxCollider2D:

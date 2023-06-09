@@ -33,8 +33,12 @@ public class SumManager : MonoBehaviour
         //判断出哪个菜
         //修改那个菜的bool
         //循环所有的dish显示总结
-        chipBgAnim = chipBg.GetComponent<Animator>();  
-
+        chipBgAnim = chipBg.GetComponent<Animator>();
+        playerObj.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        foreach(NpcFollow npc in playerObj.transform.GetComponentsInChildren<NpcFollow>())
+        {
+            npc.enabled = false;
+        }
         rawMaterial = new List<int>();
 
         //////rawMaterial.Add(npcData.GetPlayerIndex(playerName));
