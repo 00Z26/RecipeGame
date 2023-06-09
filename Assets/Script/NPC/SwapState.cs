@@ -44,9 +44,21 @@ public class SwapState : MonoBehaviour
                     obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);//ÓñÃ×ÇÐ»»×´Ì¬
 
                 }
-                if(index == 4) //·¬ÇÑ±ä
-                {
 
+            }
+            if (index == 4) //·¬ÇÑ±ä ¶áÉá¼¦µ°È¥¼û·¬ÇÑ
+            {
+                GameObject[] tomatoes = GameObject.FindGameObjectsWithTag("NPC");
+                Debug.Log("·¬ÇÑºÚ»¯");
+                foreach (GameObject obj in tomatoes)
+                {
+                    if (obj.name == "Tomato")
+                    {
+                        Destroy(obj.transform.GetChild(0).gameObject);
+                        GameObject crazy = Instantiate(npcData.animPrefab[4].abnormal, obj.transform);
+                        crazy.transform.localScale = new Vector3(0.6f, 0.6f, 1);
+
+                    }
                 }
             }
 
