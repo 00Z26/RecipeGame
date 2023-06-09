@@ -45,6 +45,10 @@ public class ChangeController : MonoBehaviour
 
             //npc下的子物体换到player下面
             //npc.transform.GetChild(0).gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
+            if (player.transform.localScale.x > 0)
+                npc.transform.localScale = new Vector3(Mathf.Abs(npc.transform.localScale.x), npc.transform.localScale.y, npc.transform.localScale.z);
+            else if (player.transform.localScale.x < 0)
+                npc.transform.localScale = new Vector3(-Mathf.Abs(npc.transform.localScale.x), npc.transform.localScale.y, npc.transform.localScale.z);
             npc.transform.gameObject.transform.SetParent(GameObject.FindWithTag("Player").transform);
 
             //关闭触发
