@@ -287,13 +287,22 @@ public class DialogueController : MonoBehaviour
             //List<string> aniList = new List<string>();
             foreach (string str in animArray)
             {
-                //Debug.Log(str);
+                int spiltCount =  str.Count(f => f == '_');
                 string[] temp = str.Split("_");
+
+                //Debug.Log(str);
+                
                 if(temp[0] == "%s")
                 {
                     temp[0] = dialogueState.npcData.GetPlayerName(dialogueState.npcData.controllerIndex);
                 }
-               
+                if (spiltCount > 1)
+                {
+                    temp[0] = temp[0] + "_" + temp[1];
+                    temp[1] = temp[2];
+                }
+
+                Debug.Log(temp[0]);
                 objList.Add(temp[0]);
                 animNameList.Add(temp[1]);
             }
@@ -301,7 +310,7 @@ public class DialogueController : MonoBehaviour
             {
               if(animArray[i].Contains("%s"))
                 {
-                    animArray[i] = animArray[i].Replace("%s", objList[i]);
+                    animArray[i] = animArray[i].Replace("%s", dialogueState.npcData.GetPlayerName(dialogueState.npcData.controllerIndex));//objList[i]);
                     //Debug.Log(animArray[i]);
                 } 
             }

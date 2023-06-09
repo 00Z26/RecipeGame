@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3928230901697619851}
   m_Layer: 0
   m_Name: Tomato_Dark
-  m_TagString: Tomato_Dark
+  m_TagString: Dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,6 +70,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4006565432346914343, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4006565432346914343, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1724713777
+      objectReference: {fileID: 0}
     - target: {fileID: -1432898469429874785, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -117,8 +125,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -9062860838508083281, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3639258670362118495}
   m_SourcePrefab: {fileID: -3393679973374763420, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+--- !u!1 &3799244939827555088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9062860838508083281, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+  m_PrefabInstance: {fileID: 3928230901153164479}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &3639258670362118495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799244939827555088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.8010814, y: 2.729265}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0865374, y: 3.2542052}
+  m_EdgeRadius: 0
 --- !u!4 &6529853726857626400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1432898469429874785, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}

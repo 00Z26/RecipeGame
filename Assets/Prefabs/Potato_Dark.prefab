@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8693754723005545436}
   m_Layer: 0
   m_Name: Potato_Dark
-  m_TagString: Potato_Dark
+  m_TagString: Dark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

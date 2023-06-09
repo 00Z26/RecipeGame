@@ -52,15 +52,16 @@ public class ChangeAnim : MonoBehaviour
         {
             if(isLightOff)
             {
-                if (obj.gameObject.name == "Mushroom") //蘑菇层级不同，单独处理
+                if (obj.gameObject.tag == "Mushroom" && obj.gameObject.activeSelf) //蘑菇层级不同，单独处理
                 {
+                    Debug.Log(obj.gameObject.activeSelf);
                     GameObject darkObj = Instantiate(npcData.animPrefab[0].dark, player.transform);
                     darkObj.transform.localScale = new Vector3(0.5f, 0.5f, 1);
                     darkObj.gameObject.tag = "Dark";
                     darkObj.gameObject.name = darkObj.name.Replace("(Clone)", "");
                     obj.gameObject.SetActive(false);
                 }
-                if (obj.gameObject.tag == "NPC")
+                else if (obj.gameObject.tag == "NPC")
                 {
                     obj.GetChild(0).gameObject.SetActive(false);
                     GameObject darkObj = Instantiate(npcData.animPrefab[npcData.GetPlayerIndex(obj.gameObject.name)].dark, obj.transform);
@@ -74,6 +75,15 @@ public class ChangeAnim : MonoBehaviour
                 if(obj.gameObject.tag == "Dark")
                 {
                     Destroy(obj.gameObject);
+                }else
+                {
+                    if(npcData.controllerIndex == 0)
+                        obj.gameObject.SetActive(true);
+                    else
+                    {
+                        if(obj.gameObject.name != "Mushroom")
+                            obj.gameObject.SetActive(true);
+                    }
                 }
 
                 //if(obj.gameObject.name == "Mushroom")
