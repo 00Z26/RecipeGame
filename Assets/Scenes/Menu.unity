@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 59803258}
   - component: {fileID: 59803257}
   - component: {fileID: 59803259}
+  - component: {fileID: 59803260}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -267,6 +268,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &59803260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59803256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bdf91872877aa4b8823e7d81d1efca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loopsUI:
+  - {fileID: 879195220}
+  - {fileID: 1608209160}
+  - {fileID: 1999071271}
+  - {fileID: 497243110}
+  - {fileID: 1219248321}
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
+  recipeList: {fileID: 11400000, guid: 9b3f924547d94e34ab09d8b9ee1327b5, type: 2}
 --- !u!1 &222290524
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,35 +978,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 59803257}
         m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
-        m_MethodName: TriggerSwapStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 59803257}
-        m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
         m_MethodName: PlayMenuAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 59803256}
-        m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1191,7 +1188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &497243111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1706,35 +1703,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 59803257}
         m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
-        m_MethodName: TriggerSwapStart
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 59803257}
-        m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
         m_MethodName: PlayMenuAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 59803256}
-        m_TargetAssemblyTypeName: NewGameStart, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1937,7 +1910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &879195221
 Transform:
   m_ObjectHideFlags: 0
@@ -2128,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1219248322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2502,7 +2475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1608209161
 Transform:
   m_ObjectHideFlags: 0
@@ -3045,7 +3018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1999071272
 Transform:
   m_ObjectHideFlags: 0
