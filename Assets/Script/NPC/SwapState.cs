@@ -29,21 +29,31 @@ public class SwapState : MonoBehaviour
             npcData.animPrefab[index].isNormal = false;
             if(index == 2) //玉米变
             {
-                Transform temp = player.transform.Find(npcData.GetPlayerName(index));
-                Debug.Log("实例化不正常状态1");
-                Debug.Log(temp.gameObject.name);
-                if (temp != null)
+
+                Transform temp = player.transform.GetComponentInChildren<Transform>();
+                foreach (Transform t in temp)
                 {
-                    Animator temp2 = temp.GetComponentInChildren<Animator>();
-                    Vector3 scale = temp.gameObject.transform.localScale;
-                    Destroy(temp.gameObject);
-                    Debug.Log("实例化不正常状态");
-                    GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
-
-                    obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0); //玉米切换状态
-                    obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);//玉米切换状态
-
+                    if(t.gameObject.tag == "NPC" && t.gameObject.name == "Corn")
+                    {
+                        Destroy(t.transform.GetChild(0).gameObject);
+                        GameObject crazy = Instantiate(npcData.animPrefab[2].abnormal, t.transform);
+                        crazy.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                    }
                 }
+                //Debug.Log("实例化不正常状态1");
+                //Debug.Log(temp.gameObject.name);
+                //if (temp != null)
+                //{
+                //    Animator temp2 = temp.GetComponentInChildren<Animator>();
+                //    Vector3 scale = temp.gameObject.transform.localScale;
+                //    Destroy(temp.gameObject);
+                //    Debug.Log("实例化不正常状态");
+                //    GameObject obj = Instantiate(npcData.animPrefab[index].abnormal, player.transform);
+
+                //    obj.transform.localPosition = new Vector3(-17.2000008f, -11.5f, 0); //玉米切换状态
+                //    obj.transform.localScale = new Vector3(2.21000004f, 2.22781062f, 2.87219882f);//玉米切换状态
+
+                //}
 
             }
             if (index == 4) //番茄变 夺舍鸡蛋去见番茄
