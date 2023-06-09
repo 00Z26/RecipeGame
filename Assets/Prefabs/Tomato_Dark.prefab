@@ -75,6 +75,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4006565432346914343, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
+      propertyPath: m_SortingOrder
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: -4006565432346914343, guid: 65cd75460f1f1a54a9f8bf9c6357fc00, type: 3}
       propertyPath: m_SortingLayerID
       value: -1724713777
       objectReference: {fileID: 0}

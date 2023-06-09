@@ -2817,6 +2817,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Bone
       objectReference: {fileID: 0}
+    - target: {fileID: 185594656234834855, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 480203409327890273, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 517676900033387753, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 690621839428252557, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -2832,6 +2844,10 @@ PrefabInstance:
     - target: {fileID: 2367412763765813160, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2407039033536572592, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2679405305979478264, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
@@ -2862,6 +2878,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3207464782189257829, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207464782189257829, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_SortingLayerID
       value: -1724713777
       objectReference: {fileID: 0}
@@ -2889,6 +2909,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3886631995931308487, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3972357269763399784, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 4118474683996387853, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -2897,6 +2925,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4383859029488992608, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4753272828366740948, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 4928981040324167065, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -2920,6 +2956,10 @@ PrefabInstance:
     - target: {fileID: 5490543134472581155, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537632406033538654, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 5604223500916573205, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
@@ -3028,6 +3068,10 @@ PrefabInstance:
     - target: {fileID: 7712301714234544959, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_TagString
       value: Bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881907280950706694, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7993807024718165294, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
       propertyPath: m_Layer
