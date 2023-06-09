@@ -107,43 +107,55 @@ public class Predict : MonoBehaviour
         {
             preChips.Add(13);
         }
-        if (rawMaterial.Contains(0))
+        else if (rawMaterial.Contains(0))
         {
             preChips.Add(1);
         }
-        if(rawMaterial.Contains(2) || rawMaterial.Contains(1))
+        else if(rawMaterial.Contains(2) || rawMaterial.Contains(1))
         {
             preChips.Add(8);
         }
-        if(rawMaterial.Contains(4))
+        else if(rawMaterial.Contains(4))
         {
             preChips.Add(15);
         }
-        if (rawMaterial.Contains(5))
+        else if (rawMaterial.Contains(5))
             preChips.Add(11);
-        if(rawMaterial.Contains(3))
+        else if(rawMaterial.Contains(3))
             preChips.Add(5);
         //去重
         preChips.Distinct();
         //显示前三个
         int num = preChips.Count >= 3 ? 3 : preChips.Count;
+        if (num == 1)
+        {
+            preDishes[1].enabled = false;
+            preDishes[2].enabled = false;
+        }
+        if (num == 2)
+        {
+            preDishes[2].enabled = false;
+
+        }
         for (int i = 0; i < num; i++)
         {
             if(i < preChips.Count)
             {
                 if (recipeList.recipeList[preChips[i]].isShow)
                 {
-                    
+                    preDishes[i].enabled = true;
                     preDishes[i].sprite = recipeList.recipeList[preChips[i]].dishPic;
-                    
+                    preDishes[i].color = new Color32(255, 255, 255, 255);
                 }
-                else
+                if(!recipeList.recipeList[preChips[i]].isShow)
                 {
+                    preDishes[i].enabled = true;
                     preDishes[i].sprite = recipeList.recipeList[preChips[i]].dishPic;
                     preDishes[i].color = new Color32(63, 63, 63, 255);
                 }
-                preDishes[i].color = new Color(preDishes[i].color.r, preDishes[i].color.g, preDishes[i].color.b,255);
-            }            
+                //preDishes[i].color = new Color(preDishes[i].color.r, preDishes[i].color.g, preDishes[i].color.b,255);
+            }
         }
+
     }
 }

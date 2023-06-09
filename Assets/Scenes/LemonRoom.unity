@@ -656,7 +656,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.12, y: 0.18}
+  m_Offset: {x: 1.1214886, y: 0.18}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -667,7 +667,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.9970226, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &360195930
 PrefabInstance:
@@ -962,7 +962,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.09352815, y: 2.0976982}
-  m_Size: {x: 1.274946, y: 5.1953964}
+  m_Size: {x: 1.581886, y: 5.1953964}
   m_Direction: 0
 --- !u!1 &688706553
 GameObject:
@@ -1794,7 +1794,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.4040806, y: -0.04000002}
+  m_Offset: {x: 1.7925783, y: -0.04000002}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1805,7 +1805,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8681588, y: 0.9980705}
+  m_Size: {x: 2.0911634, y: 0.9980705}
   m_EdgeRadius: 0
 --- !u!1 &1251832772 stripped
 GameObject:
@@ -2066,7 +2066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   YMoveDis: -2.4
-  dialoges: {fileID: 11400000, guid: 90272f0daff48be4e8b9f25c9182b115, type: 2}
+  dialoges: {fileID: 11400000, guid: 3c7bedbdbb8fcaf46b40d2a87c977730, type: 2}
   autoDialoges: {fileID: 0}
   nextIndex: 0
   currentDialogue:
@@ -2116,8 +2116,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22392607, y: 0.9100001}
-  m_Size: {x: 1.7079649, y: 2.27}
+  m_Offset: {x: 0.16443846, y: 0.9100001}
+  m_Size: {x: 2.1711326, y: 2.27}
   m_Direction: 0
 --- !u!50 &1324642047
 Rigidbody2D:

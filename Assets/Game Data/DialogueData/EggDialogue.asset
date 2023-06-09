@@ -19,7 +19,7 @@ MonoBehaviour:
     content: "\u54DF\uFF0C\u6253\u6E38\u620F\u5462\uFF1F\\n\u5176\u5B9E\u6211\u4E5F\u5F88\u64C5\u957F\u6253\u6E38\u620F\u54E6\uFF01\u8981\u4E0D\u8981\u6211\u5E2E\u5FD9\u554A\uFF1F"
     choices: 
     animiation: 
-    pic: '%s_EvilYeah'
+    pic: '%s_EvilSmile'
     triggerName: Mushroom,Potato,Lemon
     teamMembers: -4
     openDoorTimes: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
     content: "\u8BA9\u6211\u770B\u770B...\\n\u300A\u5FC3\u52A8\uFF01\u9634\u6697\u7684\u6211\u4E0E\u95EA\u4EAE\u4EAE\u75C5\u5A07\u4E07\u4EBA\u8FF7\u7684\u751C\u871C\u65E5\u5E38\u300B\uFF01"
     choices: 
     animiation: 
-    pic: '%s_EvilDisagree'
+    pic: '%s_EvilAsk'
     triggerName: Mushroom,Potato,Lemon
     teamMembers: -4
     openDoorTimes: 1
@@ -55,7 +55,7 @@ MonoBehaviour:
     content: "\u201C\u4E07\u4EBA\u8FF7\uFF1A\u54FC~\u6211\u558A\u4E86\u4E94\u5341\u4E2A\u4FDD\u9556\u5C01\u9501\u524D\u95E8\uFF0C\u4E94\u5341\u4E2A\u4FDD\u9556\u5C01\u9501\u540E\u95E8\u3002\\n\u767D\u53D1\u7EA2\u77B3\u86CB\u795E\uFF0C\u4F60\u5DF2\u7ECF\u9003\u4E0D\u51FA\u6211\u7684\u624B\u638C\u5FC3\u4E86\uFF01\u201D"
     choices: 
     animiation: 
-    pic: '%s_EvilThink'
+    pic: '%s_EvilSay'
     triggerName: Mushroom,Potato,Lemon
     teamMembers: -4
     openDoorTimes: 1
@@ -91,7 +91,7 @@ MonoBehaviour:
     content: "\u201C\u9009\u9879\u4E00\uFF0C\u6CA1\u529E\u6CD5\u4E86\uFF0C\u6682\u65F6\u59A5\u534F\u5427\u3002\\n\u9009\u9879\u4E8C\uFF0C\u7EDD\u5BF9\u4E0D\u884C\uFF0C\u5F97\u60F3\u529E\u6CD5\u9003\u8D70\uFF01\u201D"
     choices: 
     animiation: 
-    pic: '%s_EvilSmile'
+    pic: '%s_EvilThink'
     triggerName: Mushroom,Potato,Lemon
     teamMembers: -4
     openDoorTimes: 1
@@ -103,7 +103,7 @@ MonoBehaviour:
     content: "\u8FD9\u5E94\u8BE5\u5C31\u662F\u5173\u952E\u5206\u652F\u4E86\u5427\uFF01\\n\u542C\u6211\u7684\uFF0C\u8FD9\u91CC\u5E94\u8BE5\u9009\u2026"
     choices: "\u201C\u9009\u4E00\uFF0C\u6682\u65F6\u59A5\u534F\u3002\u201D+6010;\u201C\u9009\u4E8C\uFF0C\u8BBE\u6CD5\u9003\u8D70\u3002\u201D+6012"
     animiation: 
-    pic: '%s_EvilYeah'
+    pic: '%s_EvilSad'
     triggerName: Mushroom,Potato,Lemon
     teamMembers: -4
     openDoorTimes: 1

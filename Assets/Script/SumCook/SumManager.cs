@@ -18,7 +18,24 @@ public class SumManager : MonoBehaviour
     private int dishIndex;
 
     private Animator chipBgAnim;
-
+    private int[][] chips = new int[][]
+{
+        new int[]{0},
+        new int[]{-1},
+        new int[]{3,-4},
+        new int[]{3,4,6},
+        new int[] {3},
+        new int[] {-1},
+        new int[] {2 },
+        new int[] {2,1},
+        new int[] {-1},
+        new int[] {5,8},
+        new int[] {5},
+        new int[] {-1},
+        new int[] {1},
+        new int[] {-1},
+        new int[]{4,6}
+};
 
 
     private void Awake()
@@ -100,6 +117,9 @@ public class SumManager : MonoBehaviour
 
     private int GetNewChipIndex()
     {
+        //按照预测方式重写
+
+
         //有蘑菇
         if(rawMaterial.Contains(0))
         {
