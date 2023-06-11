@@ -82,9 +82,10 @@ public class DialogueController : MonoBehaviour
             
             nextIndex = choiceNextIndex[buttonVal];
             Debug.Log(nextIndex);
+            Debug.Log("触发选项下一句");
             this.ShowDialogue(false);
             //choiceNextIndex = new List<int>();
-            Debug.Log("结束选项下一句对话事件");
+
 
         }
         if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)

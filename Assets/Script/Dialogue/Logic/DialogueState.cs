@@ -185,7 +185,7 @@ public class DialogueState : MonoBehaviour
             return true;
         }
         int teamReuire = int.Parse(dialogues.dialogueList[i].teamMembers);
-        Debug.Log(i);
+        //Debug.Log(i);
         //当前队伍内容
         List<int> teamList = new List<int>(); 
         foreach(int  item in GameObject.FindWithTag("Player").GetComponent<PlayerController>().teamMembers)

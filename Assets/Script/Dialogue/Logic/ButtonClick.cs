@@ -15,17 +15,20 @@ public class ButtonClick : MonoBehaviour
     {
         //Debug.Log("click");
         buttonReply = 0;
+        Clear();
         EventHandler.CallSendButtionValEvent(buttonReply);
         
     }
     public void SetButton1Val()
     {
         buttonReply = 1;
+        Clear();
         EventHandler.CallSendButtionValEvent(buttonReply);
     }
     public void SetButton2Val()
     {
         buttonReply = 2;
+        Clear();
         EventHandler.CallSendButtionValEvent(buttonReply);
     }
     public void Clear()
