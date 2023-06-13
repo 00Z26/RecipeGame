@@ -422,10 +422,10 @@ MonoBehaviour:
     loop: 0
     Conversations: 1
   - index: 3848
-    nextIndex: 3849
+    nextIndex: 0
     chatPartnerName: "\u6211"
     content: "\u554A\u2026"
-    choices: "\u51FA\u62F3\u3002"
+    choices: "\u51FA\u62F3\u3002+3849"
     animiation: 
     pic: '%s_EvilThink'
     triggerName: Mushroom,Potato,Egg,Tomato
