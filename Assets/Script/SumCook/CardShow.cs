@@ -9,6 +9,7 @@ public class CardShow : MonoBehaviour
     [Header("UI组件")]
     public GameObject cardPanel;
     public TMP_Text dishText;
+    public TMP_Text chefText;
 
 
    [Header("数据连接")]
@@ -27,8 +28,8 @@ public class CardShow : MonoBehaviour
         }
 
 
-        dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription + "\n\n" + "厨师笔记" + npcData.loop + ":" + "\n" + chefData.GetChefText(npcData.loop);
-
+        dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription;
+        chefText.text = "厨师笔记" + npcData.loop+":"+"\n\n" + chefData.GetChefText(npcData.loop);
     }
 
     public void PlayLogAudio()

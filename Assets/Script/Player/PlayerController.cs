@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         groundGravity = rb.gravityScale;
 
         teamMembers = new List<int>(); //统计小队里有谁
-        inputControl.Gameplay.Jump.started += Jump;
+        //inputControl.Gameplay.Jump.started += Jump;
     }
 
 
