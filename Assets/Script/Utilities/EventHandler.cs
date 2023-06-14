@@ -157,6 +157,48 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         ClickDishAudioEvent?.Invoke();
     }
 
+    public static event Action<float> ChangeMainAudioVolumeEvent; //修改音量时，把主音量滑动条的数值变化传递给控制器
+    public static void CallChangeMainAudioVol(float volVal)
+    {
+        ChangeMainAudioVolumeEvent?.Invoke(volVal);
+    }
+
+    public static event Action<float> ChangeBgAudioVolumeEvent; //修改音量时，把背景音乐滑动条的数值变化传递给控制器
+    public static void CallChangeBgAudioVol(float volVal)
+    {
+        ChangeBgAudioVolumeEvent?.Invoke(volVal);
+    }
+
+
+    public static event Action<float> ChangeUIAudioVolumeEvent; //修改音量时，把音效音乐滑动条的数值变化传递给控制器
+    public static void CallChangeUIAudioVol(float volVal)
+    {
+        ChangeUIAudioVolumeEvent?.Invoke(volVal);
+    }
+
+
+    public static event Action<float> SyncMainVolumeEvent; //打开音量界面时，把当前主音量值同步表现到UI上
+    public static void CallSyncMainVolumeEvent(float volVal)
+    {
+        SyncMainVolumeEvent?.Invoke(volVal);
+    }
+    public static event Action<float> SyncBGMVolumeEvent; //打开音量界面时，把当前背景音乐音量值同步表现到UI上
+    public static void CallSyncBGMVolumeEvent(float volVal)
+    {
+        SyncBGMVolumeEvent?.Invoke(volVal);
+    }
+
+    public static event Action OpenVolumeSettingEvent;//打开音量控制，用来触发音量的同步
+    public static void CallOpenVolumeSetting()
+    {
+        OpenVolumeSettingEvent?.Invoke();
+    }
+    public static event Action<float> SyncUIVolumeEvent; //打开音量界面时，把当前UI音效音乐音量值同步表现到UI上
+    public static void CallSyncUIVolumeEvent(float volVal)
+    {
+        SyncUIVolumeEvent?.Invoke(volVal);
+    }
+
 
 
 

@@ -27,7 +27,7 @@ public class CardShow : MonoBehaviour
         }
 
 
-        dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription + "\n\n" + chefData.GetChefText(npcData.loop);
+        dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription + "\n\n" + "³øÊ¦±Ê¼Ç" + npcData.loop + ":" + "\n" + chefData.GetChefText(npcData.loop);
 
     }
 

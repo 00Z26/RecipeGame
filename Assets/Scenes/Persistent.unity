@@ -3158,6 +3158,7 @@ MonoBehaviour:
   clickSumAudio: {fileID: 1641740134}
   clickMenuAudio: {fileID: 1641740135}
   hoverBtnAudio: {fileID: 1641740136}
+  audioMixer: {fileID: 24100000, guid: 80713598acf9c0042b23999bab6334b8, type: 2}
 --- !u!82 &1641740133
 AudioSource:
   m_ObjectHideFlags: 0

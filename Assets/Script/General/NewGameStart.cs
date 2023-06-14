@@ -3,20 +3,49 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NewGameStart : MonoBehaviour
 {
     public string from;
     public string to;
     public Vector3 playerPos;
+
+    public Slider mainVolume;
+    public Slider bgVolume;
+    public Slider UIVolume;
     //public TMP_Text time;
     //public TMP_Text predict;
+
+    private void OnEnable()
+    {
+        EventHandler.SyncMainVolumeEvent += OnChangeMainSlider;
+        EventHandler.SyncBGMVolumeEvent += OnChangeBGMSlider;
+        EventHandler.SyncUIVolumeEvent += OnChangeUISlider;
+
+
+    }
+    private void OnDisable()
+    {
+        EventHandler.SyncMainVolumeEvent -= OnChangeMainSlider;
+        EventHandler.SyncBGMVolumeEvent -= OnChangeBGMSlider;
+        EventHandler.SyncUIVolumeEvent -= OnChangeUISlider;
+
+
+
+    }
+
+
 
     private void Start()
     {
         //time.enabled = false;
         //predict.enabled = false;
         //SceneManager.LoadScene(0);
+        mainVolume.onValueChanged.AddListener((amount) => EventHandler.CallChangeMainAudioVol(amount));
+        bgVolume.onValueChanged.AddListener((amount) => EventHandler.CallChangeBgAudioVol(amount));
+        UIVolume.onValueChanged.AddListener((amount) => EventHandler.CallChangeUIAudioVol(amount));
+
     }
     public void TriggerSwapStart()
     {
@@ -56,5 +85,24 @@ public class NewGameStart : MonoBehaviour
     public void PlayMenuAudio()
     {
         EventHandler.CallPlayMenuBtnAudio();
+    }
+
+    public void OpenAudioSetting()
+    {
+        EventHandler.CallOpenVolumeSetting();
+    }
+
+    private void OnChangeMainSlider(float val)
+    {
+        mainVolume.value = (val + 80) / 100;
+
+    }
+    private void OnChangeBGMSlider(float val)
+    {
+        bgVolume.value = (val + 80) / 100;
+    }
+    private void OnChangeUISlider(float val)
+    {
+        UIVolume.value = (val + 80) / 100;
     }
 }
