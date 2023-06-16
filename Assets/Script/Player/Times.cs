@@ -25,10 +25,12 @@ public class Times : MonoBehaviour
             point2.gameObject.SetActive(false);
             point1.gameObject.SetActive(false);
             tmpText.text = "行动点已用尽，请前往1L右侧。";
+            tmpText.fontSize = 31f;
         }
         if (currentTimes == 0)
         {
             tmpText.text = "行动点：";
+            tmpText.fontSize = 46f;
             point1.gameObject.SetActive(true);
             point2.gameObject.SetActive(true);
         }
