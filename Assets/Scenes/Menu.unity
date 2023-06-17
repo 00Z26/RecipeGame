@@ -3200,7 +3200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<u><b>\u672B\u65E5\u83DC\u8C31</b></u>\n\n2023.05.06~\u81F3\u4ECA\r\n\u6301\u7EED\u4F18\u5316\u4E2D\uFF0C\u6B22\u8FCE\u63D0\u51FA\u610F\u89C1~\r\n\n\n<u><b>\u5236\u4F5C\u56E2\u961F</b></u>\n\n\u7B56\u5212\uFF1A\u6843\u96E8\r\n\u7A0B\u5E8F\uFF1A\u5C71\u96EA\r\n\u7F8E\u672F\uFF1A\u677E\u96FE\n\n\n<u><b>\u5B57\u4F53\u6765\u6E90</b></u>\n\n\u963F\u91CC\u5DF4\u5DF4\u666E\u60E0\u4F532.0\r\nhttps://www.alibabafonts.com/\n\n\u62FE\u9646\u5B57\u6FD1\u62372.0\r\nhttps://osdn.net/projects/setofont/\n\n\n<u><b>\u97F3\u4E50\u6765\u6E90</u></b>\n\nMore
+  m_text: "<u><b>\u672B\u65E5\u83DC\u8C31</b></u>\n\n2023.05.06~\u81F3\u4ECA\r\n\u6301\u7EED\u4F18\u5316\u4E2D\uFF0C\u6B22\u8FCE\u524D\u5F80\u673A\u6838\u4E3B\u9875\u63D0\u51FA\u610F\u89C1~\r\n\n\n<u><b>\u5236\u4F5C\u56E2\u961F</b></u>\n\n\u7B56\u5212\uFF1A\u6843\u96E8\r\n\u7A0B\u5E8F\uFF1A\u5C71\u96EA\r\n\u7F8E\u672F\uFF1A\u677E\u96FE\n\n\n<u><b>\u5B57\u4F53\u6765\u6E90</b></u>\n\n\u963F\u91CC\u5DF4\u5DF4\u666E\u60E0\u4F532.0\r\nhttps://www.alibabafonts.com/\n\n\u62FE\u9646\u5B57\u6FD1\u62372.0\r\nhttps://osdn.net/projects/setofont/\n\n\n<u><b>\u97F3\u4E50\u6765\u6E90</u></b>\n\nMore
     Farty Crooks\nQuirky Rhythm 2\nQuirky Rhythm 6\nMousing Behind the Cafe\nThe
     Hard Luck Gang\nBass Invaders\nFun with Doctor Strangevolt\nCaptain Kook\n\n<b>All
     by Eric Matyas</b>\nwww.soundimage.org\n\n\n<u><b>\u97F3\u6548\u6765\u6E90</u></b>\n\n\"turnPage.mp3\"
@@ -3614,7 +3614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1231881714
 RectTransform:
   m_ObjectHideFlags: 0
