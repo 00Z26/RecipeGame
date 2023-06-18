@@ -28,8 +28,8 @@ public class CardShow : MonoBehaviour
         }
 
 
-        dishText.text = dishData.dishName + ":\n\n" + dishData.dishDescription;
-        chefText.text = "厨师笔记" + npcData.loop+":"+"\n\n" + chefData.GetChefText(npcData.loop);
+        dishText.text = dishData.dishName + "\n\n" + dishData.dishDescription;
+        chefText.text = "厨师笔记" + npcData.loop +"\n" + chefData.GetChefText(npcData.loop);
     }
 
     public void PlayLogAudio()

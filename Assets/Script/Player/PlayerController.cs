@@ -146,8 +146,8 @@ public class PlayerController : MonoBehaviour
         if(GameObject.Find("Choice0") == null)
         {
             if ((Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue&& !GetDialogueUI()) 
-                || (Mouse.current.leftButton.wasPressedThisFrame && GetDialogueUI())
-                || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI()))
+                || (Mouse.current.leftButton.wasPressedThisFrame && GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null)
+                || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null))
             {   //按e触发对话
                 Debug.Log("触发对话");
                 if (GetDialogueUI())

@@ -38,6 +38,7 @@ TagManager:
   - Clothes
   - Tip
   - Dark
+  - ESC
   layers:
   - Default
   - TransparentFX
