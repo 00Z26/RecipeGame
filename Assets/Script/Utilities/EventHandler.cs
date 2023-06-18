@@ -188,7 +188,7 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
         SyncBGMVolumeEvent?.Invoke(volVal);
     }
 
-    public static event Action OpenVolumeSettingEvent;//打开音量控制，用来触发音量的同步
+    public static event Action OpenVolumeSettingEvent;//打开esc音量控制，用来触发音量的同步
     public static void CallOpenVolumeSetting()
     {
         OpenVolumeSettingEvent?.Invoke();
@@ -198,6 +198,13 @@ public static class EventHandler //改成静态方法，在任何地方都可以呼叫订阅
     {
         SyncUIVolumeEvent?.Invoke(volVal);
     }
+
+    public static event Action OpenMenuVolumeSettingEvent;//打开Menu音量控制，用来触发音量的同步
+    public static void CallOpenMenuVolumeSetting()
+    {
+        OpenMenuVolumeSettingEvent?.Invoke();
+    }
+
 
 
 

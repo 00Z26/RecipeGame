@@ -12,6 +12,7 @@ public class AudioController : MonoBehaviour
     public AudioSource hoverBtnAudio;
 
     public AudioMixer audioMixer;
+    public GameObject volumeSetWin;
 
     private void OnEnable()
     {
@@ -23,9 +24,14 @@ public class AudioController : MonoBehaviour
         EventHandler.ClickDishAudioEvent += ClickChoicePlay;//食谱界面点击 
 
         //音量控制部分
+        EventHandler.OpenVolumeSettingEvent += ShowVolumeWin;
         EventHandler.OpenVolumeSettingEvent += SyncMainVolumeVal;
         EventHandler.OpenVolumeSettingEvent += SyncBGMVolumeVal;
         EventHandler.OpenVolumeSettingEvent += SyncUIVolumeVal;
+
+        EventHandler.OpenMenuVolumeSettingEvent += SyncMainVolumeVal;
+        EventHandler.OpenMenuVolumeSettingEvent += SyncBGMVolumeVal;
+        EventHandler.OpenMenuVolumeSettingEvent += SyncUIVolumeVal;
 
 
         EventHandler.ChangeMainAudioVolumeEvent += OnChangeMainVol;
@@ -45,10 +51,14 @@ public class AudioController : MonoBehaviour
         EventHandler.ClickDishAudioEvent -= ClickChoicePlay;//食谱界面点击 
 
         //音乐控制部分
+        EventHandler.OpenVolumeSettingEvent -= ShowVolumeWin;
         EventHandler.OpenVolumeSettingEvent -= SyncMainVolumeVal;
         EventHandler.OpenVolumeSettingEvent -= SyncBGMVolumeVal;
         EventHandler.OpenVolumeSettingEvent -= SyncUIVolumeVal;
 
+        EventHandler.OpenMenuVolumeSettingEvent -= SyncMainVolumeVal;
+        EventHandler.OpenMenuVolumeSettingEvent -= SyncBGMVolumeVal;
+        EventHandler.OpenMenuVolumeSettingEvent -= SyncUIVolumeVal;
 
 
         EventHandler.ChangeMainAudioVolumeEvent -= OnChangeMainVol;
@@ -61,7 +71,10 @@ public class AudioController : MonoBehaviour
     }
 
 
-
+    private void ShowVolumeWin()
+    {
+        volumeSetWin.SetActive(true);
+    }
     //对话框选项播放音效
     public void ClickChoicePlay()
     {

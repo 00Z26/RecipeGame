@@ -89,7 +89,7 @@ public class NewGameStart : MonoBehaviour
 
     public void OpenAudioSetting()
     {
-        EventHandler.CallOpenVolumeSetting();
+        EventHandler.CallOpenMenuVolumeSetting();
     }
 
     private void OnChangeMainSlider(float val)

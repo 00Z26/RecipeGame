@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class InGameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && SceneManager.GetSceneAt(1).name != "Menu")
         {
             if (isSetting)
             {
@@ -33,6 +34,10 @@ public class InGameMenu : MonoBehaviour
             }
         }
 
+    }
+    public void OpenVolumeSet()
+    {
+        EventHandler.CallOpenVolumeSetting();
     }
     public void Setting(InputAction.CallbackContext obj)
     {
