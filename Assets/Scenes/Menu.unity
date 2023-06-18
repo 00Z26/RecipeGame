@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1167771595}
-  startPos: {x: 17.16278, y: -1332, z: 0}
+  startPos: {x: 17.16278, y: -2007, z: 0}
 --- !u!1 &448591545
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.16278, y: -2334}
+  m_AnchoredPosition: {x: 0, y: -2007}
   m_SizeDelta: {x: 1832.5256, y: 2873.9697}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167771597
@@ -3300,8 +3300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FontMoveSpeed: 1
-  startPos: {x: 17.16278, y: -2334, z: 0}
-  stopPos: {x: 17.16278, y: 905, z: 0}
+  startPos: {x: 0, y: -2007, z: 0}
+  stopPos: {x: 0, y: 905, z: 0}
   about: {fileID: 1231881713}
 --- !u!1 &1172173828
 GameObject:
