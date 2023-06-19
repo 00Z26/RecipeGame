@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: befcdefd9b5b57541b1f22fcde27ca86, type: 3}
   m_Name: NpcData
   m_EditorClassIdentifier: 
-  loop: 1
+  loop: 29
   controllerIndex: 0
   playerName:
   - Mushroom
@@ -49,15 +49,3 @@ MonoBehaviour:
     normal: {fileID: 6726072502328326871, guid: f4229cea138f7814eac5e2cc2326e56d, type: 3}
     abnormal: {fileID: 0}
     dark: {fileID: 1123584664296899059, guid: d952c32372839324c9affd28b286d21a, type: 3}
-  - isNormal: 1
-    normal: {fileID: 7912891379767886762, guid: 7a47d103ee6204a49a174de343edb7cb, type: 3}
-    abnormal: {fileID: 0}
-    dark: {fileID: 0}
-  - isNormal: 1
-    normal: {fileID: 2686296469494997275, guid: 2f42b2f92f252a240980bac0fdb55222, type: 3}
-    abnormal: {fileID: 0}
-    dark: {fileID: 0}
-  - isNormal: 1
-    normal: {fileID: 5115845654138966154, guid: 2dc12fc2a603a874e955b9480022f2fb, type: 3}
-    abnormal: {fileID: 0}
-    dark: {fileID: 0}

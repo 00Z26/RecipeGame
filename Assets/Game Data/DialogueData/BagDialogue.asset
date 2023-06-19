@@ -445,3 +445,27 @@ MonoBehaviour:
     openDoorTimes: 5
     loop: 0
     Conversations: 1
+  - index: 0
+    nextIndex: 0
+    chatPartnerName: "\u6211"
+    content: "\u2026\u2026"
+    choices: "\u4E00\u62F3\u63CD\u98DE\uFF01+3860"
+    animiation: 
+    pic: '%s_EvilDown'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>6'
+    loop: 0
+    Conversations: 1
+  - index: 3860
+    nextIndex: -1
+    chatPartnerName: "\u6211"
+    content: "\u2026\u2026"
+    choices: 
+    animiation: Bag_HangFly
+    pic: '%s_EvilDown'
+    triggerName: Mushroom,Potato,Egg,Tomato
+    teamMembers: 
+    openDoorTimes: '>6'
+    loop: 0
+    Conversations: 1

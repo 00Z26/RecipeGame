@@ -56,13 +56,15 @@ public class ChangeController : MonoBehaviour
             //npc.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             Destroy(npc.GetComponent<Rigidbody2D>());
             //把当前player的主角删除
-            if(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).name == "Mushroom")
+            if(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex))?.name == "Mushroom")
             {
                 dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)).SetActive(false);
             }
             else
             {
-                Destroy(dataTools.GetChildWithTag(player, npcData.GetPlayerName(npcData.controllerIndex)));
+                Debug.Log("销毁");
+                Debug.Log(npcData.controllerIndex);
+                Destroy(dataTools.GetChildWithName(player, npcData.GetPlayerName(npcData.controllerIndex)));
             }
 
             npc.transform.localPosition = Vector3.zero;

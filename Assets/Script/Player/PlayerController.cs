@@ -150,6 +150,8 @@ public class PlayerController : MonoBehaviour
                 || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null))
             {   //按e触发对话
                 Debug.Log("触发对话");
+                //对话时速度归零
+                rb.velocity = new Vector2(0, 0);
                 if (GetDialogueUI())
                     EventHandler.CallPlayClickUIAudioEvent();
                 physicsCheck.talkNPC.GetComponent<DialogueController>().ShowDialogue(physicsCheck.isAutoDialogue, this.gameObject);

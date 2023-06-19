@@ -64,9 +64,18 @@ public class ChangeAnim : MonoBehaviour
                 else if (obj.gameObject.tag == "NPC")
                 {
                     obj.GetChild(0).gameObject.SetActive(false);
-                    GameObject darkObj = Instantiate(npcData.animPrefab[npcData.GetPlayerIndex(obj.gameObject.name)].dark, obj.transform);
-                    darkObj.transform.localScale = new Vector3(0.5f, 0.5f, 1);
-                    darkObj.gameObject.tag = "Dark";
+                    if (npcData.GetPlayerIndex(obj.gameObject.name) <= 5)//&& npcData.animPrefab[npcData.GetPlayerIndex(obj.gameObject.name)] != null)
+                    {
+                        Debug.Log(npcData.GetPlayerIndex(obj.gameObject.name));
+                        GameObject darkObj = Instantiate(npcData.animPrefab[npcData.GetPlayerIndex(obj.gameObject.name)].dark, obj.transform);
+                        darkObj.transform.localScale = new Vector3(0.5f, 0.5f, 1);
+                        darkObj.gameObject.tag = "Dark";
+                    } else
+                    {
+                        GameObject noDarjObj = dataTools.GetChildWithName(player, obj.gameObject.name);
+                        noDarjObj.gameObject.SetActive(false);
+                    }
+
 
                     //obj.gameObject.SetActive(false);
                 }
@@ -84,6 +93,9 @@ public class ChangeAnim : MonoBehaviour
                         if(obj.gameObject.name != "Mushroom")
                             obj.gameObject.SetActive(true);
                     }
+                    //如果带了贝斯和沙袋
+                    if (obj.gameObject.tag == "NPC")
+                        obj.gameObject.SetActive(true);
                 }
 
                 //if(obj.gameObject.name == "Mushroom")

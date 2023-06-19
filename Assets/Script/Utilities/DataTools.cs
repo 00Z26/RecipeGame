@@ -57,5 +57,18 @@ public class DataTools
         return null;
 
     }
+    public GameObject GetChildWithName(GameObject farher, string name)
+    {
+        foreach (Transform child in farher.transform)
+        {
+            if (child.name == name)
+            {
+                return child.gameObject;
+            }
+
+        }
+        return null;
+
+    }
 
 }
