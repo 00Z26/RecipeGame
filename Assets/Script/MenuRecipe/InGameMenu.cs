@@ -56,10 +56,7 @@ public class InGameMenu : MonoBehaviour
 
     public void ExitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-         Application.Quit();
-#endif
+        Debug.Log("ÍË³öÓÎÏ·");
+        Application.Quit();
     }
 }

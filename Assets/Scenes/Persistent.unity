@@ -6055,8 +6055,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -32}
-  m_SizeDelta: {x: 152.6651, y: 70.4269}
+  m_AnchoredPosition: {x: -30.785, y: -32.486}
+  m_SizeDelta: {x: 240.5934, y: 64.972}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789872373
 MonoBehaviour:
@@ -6101,7 +6101,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1789872374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381942382}
+        m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1789872374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7170,7 +7182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 34.642, y: -20}
+  m_AnchoredPosition: {x: 8, y: -15}
   m_SizeDelta: {x: 69.2838, y: 6.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2083077744
@@ -7313,7 +7325,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083077744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 381942382}
+        m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &4703368137736617623
 PrefabInstance:
   m_ObjectHideFlags: 0

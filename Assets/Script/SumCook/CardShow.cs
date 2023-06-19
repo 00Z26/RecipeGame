@@ -30,7 +30,7 @@ public class CardShow : MonoBehaviour
 
         dishText.text = dishData.dishName + "\n\n" + dishData.dishDescription;
         chefText.text = "³øÊ¦±Ê¼Ç" + npcData.loop +"\n" + chefData.GetChefText(npcData.loop);
-        if (npcData.loop > 16)
+        if (npcData.loop > 15)
             chefText.text = "";
     }
 
