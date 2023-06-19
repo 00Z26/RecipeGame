@@ -19,7 +19,10 @@ public class InGameMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame && SceneManager.GetSceneAt(1).name != "Menu")
+        if (Keyboard.current.escapeKey.wasPressedThisFrame 
+            && SceneManager.GetSceneAt(1).name != "Menu" 
+            && SceneManager.GetSceneAt(1).name != "Cook" 
+            && SceneManager.GetSceneAt(1).name != "RecipeShow")
         {
             if (isSetting)
             {

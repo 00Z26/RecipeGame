@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if(!isDialogueUI)
+        if(!isDialogueUI && GameObject.FindGameObjectWithTag("ESC") == null)
             Move();
     }
     
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
     {
         if(GameObject.Find("Choice0") == null)
         {
-            if ((Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue&& !GetDialogueUI()) 
+            if ((Keyboard.current.eKey.wasPressedThisFrame && physicsCheck.isDialogue&& !GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null) 
                 || (Mouse.current.leftButton.wasPressedThisFrame && GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null)
                 || (Keyboard.current.spaceKey.wasPressedThisFrame && GetDialogueUI() && GameObject.FindGameObjectWithTag("ESC") == null))
             {   //按e触发对话
