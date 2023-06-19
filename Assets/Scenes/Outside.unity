@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17854569}
   - component: {fileID: 17854570}
+  - component: {fileID: 17854571}
   m_Layer: 0
   m_Name: AutoCheck
   m_TagString: AutoDialogue
@@ -200,6 +201,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.916435, y: 1.3629737}
   m_EdgeRadius: 0
+--- !u!114 &17854571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17854568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035bb31ee3b061d42b12e0424b98d6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcData: {fileID: 11400000, guid: 894dc6006567114488021385a02ff6c7, type: 2}
 --- !u!1 &28306002
 GameObject:
   m_ObjectHideFlags: 0
