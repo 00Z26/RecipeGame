@@ -91,9 +91,9 @@ public class DialogueController : MonoBehaviour
         if (choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -2)
         {
             //nextIndex = -1;
-            this.ShowDialogue(false);
             //¥•∑¢∂·…·
             EventHandler.CallTriggerChangeEvent(choiceOperation[buttonVal]);
+            this.ShowDialogue(false);
         }
         if(choiceNextIndex.Count != 0 && choiceNextIndex[buttonVal] == -3)
         {
@@ -259,6 +259,7 @@ public class DialogueController : MonoBehaviour
     {
         string temp = null;
         string name =  dialogueState.npcData.GetPlayerName(dialogueState.npcData.controllerIndex);
+
         if(currentDialogue.pic.Contains("%s"))
         {
             temp = currentDialogue.pic.Replace("%s",name);
